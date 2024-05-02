@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using PlasticPipe.PlasticProtocol.Server.Stubs;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
-using UnityEditor.Graphs;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 public class GraphViewDialogue : GraphView
@@ -17,8 +11,6 @@ public class GraphViewDialogue : GraphView
        AddStyle();
     
        AddManipulators();
-       
-       CreateElements();
    }
    
    private void GridBackgroundAdder()
@@ -41,12 +33,23 @@ public class GraphViewDialogue : GraphView
         this.AddManipulator(new RectangleSelector());
         this.AddManipulator(new ContentDragger());
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
+        this.AddManipulator(CreateNodeContextualMenu());
+    }
+    private IManipulator CreateNodeContextualMenu()
+    {
+        ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator(
+        menuEvent => menuEvent.menu.AppendAction("Add Node", action => CreateElements())
+            );
+        return contextualMenuManipulator;
     }
 
-    private void CreateElements()
+    private DialogueSystemNode CreateElements()
     {
         DialogueSystemNode node = new DialogueSystemNode();
+        
         node.Initialize();
-        AddElement(node);
+        node.Draw();
+
+        return node;
     }
 }
