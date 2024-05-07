@@ -27,9 +27,7 @@ public class DialogueSystemWindow : EditorWindow
     
     private void AddStyle()
     {
-        StyleSheet styleSheet = (StyleSheet) EditorGUIUtility.Load("DialogueSystem/DialogueVariableStyle.uss");
-        
-        rootVisualElement.styleSheets.Add(styleSheet);
+        rootVisualElement.AddStyleSheets("DialogueSystem/DialogueVariableStyle.uss");
     }
 
 }

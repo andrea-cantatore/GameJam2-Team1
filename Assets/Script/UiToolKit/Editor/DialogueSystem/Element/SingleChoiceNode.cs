@@ -21,7 +21,7 @@ public class SingleChoiceNode : DialogueSystemNode
 
         foreach (string choice in Choices)
         {
-            Port choicePort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            Port choicePort = ElementUtilitys.CreatePort(this, choice, Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
             
             choicePort.portName = choice;
             
