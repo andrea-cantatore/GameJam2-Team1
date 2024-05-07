@@ -1,5 +1,8 @@
+using System;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class GraphViewDialogue : GraphView
@@ -11,6 +14,7 @@ public class GraphViewDialogue : GraphView
        AddStyle();
     
        AddManipulators();
+       
    }
    
    private void GridBackgroundAdder()
@@ -23,8 +27,10 @@ public class GraphViewDialogue : GraphView
     private void AddStyle()
     {
         StyleSheet styleSheet = (StyleSheet) EditorGUIUtility.Load("DialogueSystem/DialogueStyle.uss");
+        StyleSheet styleSheet1 = (StyleSheet) EditorGUIUtility.Load("DialogueSystem/NodesStyler.uss");
         
         styleSheets.Add(styleSheet);
+        styleSheets.Add(styleSheet1);
     }
     
     private void AddManipulators()
@@ -33,21 +39,27 @@ public class GraphViewDialogue : GraphView
         this.AddManipulator(new RectangleSelector());
         this.AddManipulator(new ContentDragger());
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
-        this.AddManipulator(CreateNodeContextualMenu());
+        
+        this.AddManipulator(CreateNodeContextualMenu("Add Node (Single Choice)", DialogueSystemType.SingleChoice));
+        this.AddManipulator(CreateNodeContextualMenu("Add Node (Multiple Choice)", DialogueSystemType.MultipleChoice));
     }
-    private IManipulator CreateNodeContextualMenu()
+    private IManipulator CreateNodeContextualMenu(string actionTitle, DialogueSystemType dialogueType)
     {
         ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator(
-        menuEvent => menuEvent.menu.AppendAction("Add Node", action => CreateElements())
+        menuEvent => menuEvent.menu.AppendAction(actionTitle, action =>
+        {
+            AddElement(CreateElements(menuEvent.mousePosition, dialogueType));
+        })
             );
         return contextualMenuManipulator;
     }
 
-    private DialogueSystemNode CreateElements()
+    private DialogueSystemNode CreateElements(Vector2 mousePosition, DialogueSystemType dialogueType)
     {
-        DialogueSystemNode node = new DialogueSystemNode();
+        Type nodeType = Type.GetType($"{dialogueType}Node");
+        DialogueSystemNode node = (DialogueSystemNode)Activator.CreateInstance(nodeType);
         
-        node.Initialize();
+        node.Initialize(mousePosition);
         node.Draw();
 
         return node;

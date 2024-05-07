@@ -12,17 +12,26 @@ public class DialogueSystemNode : Node
     
     public DialogueSystemType DialogueType { get; set; }
 
-    public void Initialize()
+    public virtual void Initialize(Vector2 position)
     {
         DialogueName = "DialogueName";
         Choices = new List<string>();
         Text = "Text";
+        
+        SetPosition(new Rect(position, Vector2.zero));
+        
+        extensionContainer.AddToClassList("ds-node__main-container");
+        mainContainer.AddToClassList("ds-node__extension-container");
     }
 
-    public void Draw()
+    public virtual void Draw()
     {
         TextField dialogueNameField = new TextField();
         dialogueNameField.value = DialogueName;
+        
+        dialogueNameField.AddToClassList("ds-node__textfield");
+        dialogueNameField.AddToClassList("ds-node__filename-textfield");
+        dialogueNameField.AddToClassList("ds-node__textfield__hidden");
         
         titleContainer.Insert(0, dialogueNameField);
         
@@ -33,16 +42,21 @@ public class DialogueSystemNode : Node
         
         
         VisualElement customDataContainer = new VisualElement();
+        
+        customDataContainer.AddToClassList("ds-node__custom-data-container");
+        
         Foldout textFoldout = new Foldout();
         textFoldout.text = "Text";
         
         TextField textField = new TextField();
         textField.value = Text;
         
+        textField.AddToClassList("ds-node__textfield");
+        textField.AddToClassList("ds-node__quote-textfield");
+        
         textFoldout.Add(textField);
         customDataContainer.Add(textFoldout);
         extensionContainer.Add(customDataContainer);
-        RefreshExpandedState();
     }
 }
 
