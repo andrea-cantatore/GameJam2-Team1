@@ -1,0 +1,134 @@
+/* CONTAINERS */
+
+.ds-node__extension-container
+{
+    background-color: var(--ds-colors-grid-light-black);
+    padding: 8px;
+}
+
+.ds-node__main-container
+{
+    background-color: var(--ds-colors-grid-light-black);
+}
+
+.ds-node__custom-data-container
+{
+    background-color: var(--ds-colors-grid-light-pink);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+/* INPUTS */
+
+.ds-node__text-field > .unity-text-field__input
+{
+    background-color: var(--ds-colors-grid-light-black);
+    border-color: var(--ds-colors-grid-light-pink2);
+    border-radius: 4px;
+    max-width: 240px;
+    min-width: 160px;
+    padding: 8px;
+    white-space: normal;
+}
+
+.ds-node__text-field__hidden > .unity-text-field__input
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds-node__text-field__hidden > .unity-text-field__input:focus
+{
+    background-color: var(--ds-colors-grid-light-black);
+    border-color: var(--ds-colors-grid-light-pink);
+}
+
+.ds-node__filename-text-field > .unity-text-field__input
+{
+    max-width: 1000px;
+    margin: 4px;
+    padding: 4px;
+}
+
+.ds-node__choice-text-field > .unity-text-field__input
+{
+    font-size: 8px;
+    height: 25px;
+    max-width: 1000px;
+    min-width: 0px;
+}
+
+.ds-node__choice-text-field > .unity-text-field__input:focus
+{
+    height: 25px;
+    margin: 8px;
+    padding: 8px;
+}
+
+.ds-node__quote-text-field > .unity-text-field__input
+{
+    background-color: var(--ds-colors-grid-light-pink);
+    border-color: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--ds-colors-grid-light-pink2);
+    border-left-width: 4px;
+    padding: 16px;
+    max-width: 600px;
+}
+
+.ds-node__quote-text-field > .unity-text-field__input:hover
+{
+    background-color: var(--ds-colors-grid-light-pink);
+}
+
+.ds-node__quote-text-field > .unity-text-field__input:focus
+{
+    background-color: var(--ds-colors-grid-light-black);
+    border-color: var(--ds-colors-grid-light-pink2);
+}
+
+/* BUTTONS */
+
+.ds-node__button
+{
+    background-color: var(--ds-colors-grid-light-pink);
+    border-color: var(--ds-colors-grid-light-black);
+    margin: 4px;
+    max-height: 25px;
+}
+
+.ds-node__button:hover
+{
+    background-color: var(--ds-colors-grid-light-pink2);
+}
+
+.ds-node__button:active
+{
+    background-color: var(--ds-colors-grid-light-pink);
+    color: #FD0057;
+}
+
+/* ELEMENTS */
+
+TextField
+{
+    margin-left: 0px;
+}
+
+.ds-node__custom-data-container > Foldout
+{
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.ds-node__custom-data-container > Foldout > TextField
+{
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+/* BUILT IN */
+
+.unity-toggle__text
+{
+    margin-left: 2px;
+}

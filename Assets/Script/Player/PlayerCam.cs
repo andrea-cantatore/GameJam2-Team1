@@ -18,7 +18,7 @@ public class PlayerCam : MonoBehaviour
         Cursor.visible = false;
     }
     
-    private void Update()
+    private void LateUpdate()
     {
         float mouseY = InputManager.actionMap.PlayerInput.Camera.ReadValue<Vector2>().y * _sensitivity * Time.deltaTime;
         float mouseX = InputManager.actionMap.PlayerInput.Camera.ReadValue<Vector2>().x * _sensitivity * Time.deltaTime;
