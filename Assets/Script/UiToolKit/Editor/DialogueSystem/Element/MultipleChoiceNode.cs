@@ -23,22 +23,11 @@ public class MultipleChoiceNode : DialogueSystemNode
 
         Button addChoiceButton = ElementUtilitys.CreateButton("Add Choice", () =>
         {
-            Port choicePort = ElementUtilitys.CreatePort(this, "New Choice", Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            Port choicePort = CreateChoicePort("New Choice");
+            Button deleteButton = CreateDeleteButton();
+            TextField choiceTextField = CreateChoiceTextField("New Choice");
             
-            choicePort.portName = "";
-            
-            Button deleteButton = ElementUtilitys.CreateButton("X");
-            
-            deleteButton.AddToClassList("ds-node__button");
-            
-            TextField choiceTextField = ElementUtilitys.CreateTextField("New Choice");
-            
-            choiceTextField.AddClasses("ds-node__textfield", "ds-node__choice-textfield", "ds-node__textfield__hidden");
-            
-            outputContainer.Add(choicePort);
-            
-            choicePort.Add(choiceTextField);
-            choicePort.Add(deleteButton);
+            AddChoice(choicePort, choiceTextField, deleteButton);
         });
         
         addChoiceButton.AddToClassList("ds-node__button");
@@ -47,26 +36,41 @@ public class MultipleChoiceNode : DialogueSystemNode
         
         foreach (string choice in Choices)
         {
-            Port choicePort = ElementUtilitys.CreatePort(this, choice, Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            Port choicePort = CreateChoicePort(choice);
+            Button deleteButton = CreateDeleteButton();
+            TextField choiceTextField = CreateChoiceTextField(choice);
             
-            choicePort.portName = "";
-            
-            Button deleteButton = ElementUtilitys.CreateButton("X");
-            
-            deleteButton.AddToClassList("ds-node__button");
-            
-            TextField choiceTextField = ElementUtilitys.CreateTextField(choice);
-            
-            choiceTextField.AddToClassList("ds-node__textfield");
-            choiceTextField.AddToClassList("ds-node__choice-textfield");
-            choiceTextField.AddToClassList("ds-node__textfield__hidden");
-            
+            AddChoice(choicePort, choiceTextField, deleteButton);
+        }
+        
+        Port CreateChoicePort(string buttonName)
+        {
+            var port = ElementUtilitys.CreatePort(this, "New Choice", Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            port.portName = "";
+            return port;
+        }
+
+        Button CreateDeleteButton()
+        {
+            var button = ElementUtilitys.CreateButton("X");
+            button.AddToClassList("ds-node__button");
+            return button;
+        }
+
+        TextField CreateChoiceTextField(string choiceName)
+        {
+            var textField = ElementUtilitys.CreateTextField(choiceName);
+            textField.AddClasses("ds-node__textfield", "ds-node__choice-textfield", "ds-node__textfield__hidden");
+            return textField;
+        }
+
+        void AddChoice(Port choicePort, TextField choiceTextField, Button deleteButton)
+        {
             outputContainer.Add(choicePort);
-            
             choicePort.Add(choiceTextField);
             choicePort.Add(deleteButton);
         }
-        
-        
     }
+    
+    
 }

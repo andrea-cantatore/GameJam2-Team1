@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class SeachWindow : ScriptableObject, ISearchWindowProvider
+public class SearchWindow : ScriptableObject, ISearchWindowProvider
 {
     private GraphViewDialogue _graphViewDialogue;
     
