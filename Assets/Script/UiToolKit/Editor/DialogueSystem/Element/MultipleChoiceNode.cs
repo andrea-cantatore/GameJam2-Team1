@@ -60,7 +60,7 @@ public class MultipleChoiceNode : DialogueSystemNode
         TextField CreateChoiceTextField(string choiceName)
         {
             var textField = ElementUtilitys.CreateTextField(choiceName);
-            textField.AddClasses("ds-node__textfield", "ds-node__choice-textfield", "ds-node__textfield__hidden");
+            textField.AddClasses("ds-node__text-field", "ds-node__choice-text-field", "ds-node__text-field__hidden");
             return textField;
         }
 

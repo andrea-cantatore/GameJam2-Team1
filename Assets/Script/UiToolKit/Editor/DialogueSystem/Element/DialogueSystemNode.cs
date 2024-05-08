@@ -28,7 +28,7 @@ public class DialogueSystemNode : Node
     {
         TextField dialogueNameField = ElementUtilitys.CreateTextField(DialogueName);
 
-        dialogueNameField.AddClasses("ds-node__textfield", "ds-node__filename-textfield", "ds-node__textfield__hidden");
+        dialogueNameField.AddClasses("ds-node__text-field", "ds-node__filename-text-field", "ds-node__text-field__hidden");
         
         titleContainer.Insert(0, dialogueNameField);
         
@@ -45,7 +45,7 @@ public class DialogueSystemNode : Node
         
         TextField textField = ElementUtilitys.CreateTextFieldArea(Text);
         
-        textField.AddClasses("ds-node__textfield", "ds-node__quote-textfield");
+        textField.AddClasses("ds-node__text-field", "ds-node__quote-text-field");
         
         textFoldout.Add(textField);
         customDataContainer.Add(textFoldout);

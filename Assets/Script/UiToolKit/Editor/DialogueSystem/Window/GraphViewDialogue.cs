@@ -10,6 +10,7 @@ public class GraphViewDialogue : GraphView
 { 
     public SearchWindow _searchWindow;
     
+   public GridBackground gridBackground = new GridBackground();
    public GraphViewDialogue()
    {
        GridBackgroundAdder();
@@ -46,7 +47,8 @@ public class GraphViewDialogue : GraphView
    }
    private void GridBackgroundAdder()
    {
-       GridBackground gridBackground = new GridBackground();
+       //GridBackground gridBackground = new GridBackground();
+       
        gridBackground.StretchToParentSize();
        Insert(0, gridBackground);
    }
@@ -74,7 +76,8 @@ public class GraphViewDialogue : GraphView
         ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator(
         menuEvent => menuEvent.menu.AppendAction("Add Group", action =>
         {
-            AddElement(CreateGroup("Dialogue Group", action.eventInfo.localMousePosition));
+            AddElement(CreateGroup("Dialogue Group", viewTransform.matrix.inverse.MultiplyPoint(action.eventInfo.localMousePosition)));
+           
         })
             );
         return contextualMenuManipulator;
@@ -96,7 +99,7 @@ public class GraphViewDialogue : GraphView
         ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator(
         menuEvent => menuEvent.menu.AppendAction(actionTitle, action =>
         {
-            AddElement(CreateElements(action.eventInfo.localMousePosition, dialogueType));
+            AddElement(CreateElements(viewTransform.matrix.inverse.MultiplyPoint(action.eventInfo.localMousePosition), dialogueType));
         })
             );
         return contextualMenuManipulator;

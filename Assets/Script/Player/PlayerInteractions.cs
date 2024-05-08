@@ -8,6 +8,8 @@ public class PlayerInteractions : MonoBehaviour
     private Transform _cam;
     [SerializeField] private GameObject[] _interactables;
     [SerializeField] private float _interactionDistance = 5f;
+    private bool _isHandFull = false;
+    private GameObject _heldObject;
 
     private void Awake()
     {
@@ -25,14 +27,29 @@ public class PlayerInteractions : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Interacting with " + hit.transform.name);
-                    foreach (GameObject obj in _interactables)
+                    if(!_isHandFull)
                     {
-                        if(obj.tag == hit.transform.tag)
+                        foreach (GameObject obj in _interactables)
                         {
-                            obj.SetActive(obj.activeSelf ? false : true);
-                            return;
-                        }
+                            if(obj.tag == hit.transform.tag)
+                            {
+                                obj.SetActive(true);
+                                _heldObject = obj;
+                                _isHandFull = true;
+                                return;
+                            }
+                        }   
                     }
+                    if(hit.transform.tag == _heldObject.tag)
+                    {
+                        _heldObject.SetActive(false);
+                        _isHandFull = false;
+                    }
+                    else
+                    {
+                        Debug.Log("You can't hold more than one object at a time");
+                    }
+                    
                 }
             }
         }
