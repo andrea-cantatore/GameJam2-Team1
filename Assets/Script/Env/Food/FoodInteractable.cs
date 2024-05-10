@@ -19,7 +19,8 @@ public class FoodInteractable : MonoBehaviour, IInteract
 
     public void InteractionPopUp()
     {
-        InteractionManager.Instance.InteractionText.transform.position = _popUpPos.position;
+        InteractionManager.Instance.InteractionPannel.transform.position = _popUpPos.position;
+        InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text = "press E to Interact " + gameObject.name;
     }
 }
 
