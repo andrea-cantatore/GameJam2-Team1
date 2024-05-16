@@ -753,8 +753,8 @@ Transform:
   m_GameObject: {fileID: 563938286}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.822464, y: -4.861293, z: 3.679247}
-  m_LocalScale: {x: 0.31, y: 0.04291, z: 0.31}
+  m_LocalPosition: {x: 0, y: 2.45, z: 0}
+  m_LocalScale: {x: 0.30999997, y: 0.30999997, z: 0.36470583}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 817081146}
@@ -1048,8 +1048,9 @@ GameObject:
   m_Component:
   - component: {fileID: 817081146}
   - component: {fileID: 817081147}
+  - component: {fileID: 817081148}
   m_Layer: 0
-  m_Name: CuttingBoard
+  m_Name: Cutting Board
   m_TagString: CuttingBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,6 +1101,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &817081148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817081145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd267c2466f68d48af9244ca0a05ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _food:
+  - {fileID: 350268407}
+  - {fileID: 1089187044}
+  - {fileID: 467000123}
+  - {fileID: 953463689}
+  - {fileID: 1037905998}
+  - {fileID: 443031972}
+  _cameraOnInteraction: {fileID: 1015813144}
 --- !u!4 &860185203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3329381034464378717, guid: a6b24cccfecfd394981ad6857bfec438, type: 3}
@@ -2495,9 +2516,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1466690872}
     m_Modifications:
     - target: {fileID: 759193341853863849, guid: e715d49bd7fb2de44900996404aa09b5, type: 3}
+      propertyPath: _camPos
+      value: 
+      objectReference: {fileID: 294328731}
+    - target: {fileID: 759193341853863849, guid: e715d49bd7fb2de44900996404aa09b5, type: 3}
       propertyPath: _playerOrientation
       value: 
       objectReference: {fileID: 335455070}
+    - target: {fileID: 1077290245425828068, guid: e715d49bd7fb2de44900996404aa09b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1504490647601372905, guid: e715d49bd7fb2de44900996404aa09b5, type: 3}
       propertyPath: _cameraPos
       value: 
@@ -2559,6 +2588,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024449581}
     m_Modifications:
+    - target: {fileID: 5999107084668922166, guid: af2995c0d8be05547a8d1b4ebc62844c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7665690104964503315, guid: af2995c0d8be05547a8d1b4ebc62844c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.155
