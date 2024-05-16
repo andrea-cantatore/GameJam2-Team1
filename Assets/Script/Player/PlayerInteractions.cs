@@ -10,18 +10,18 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private float _interactionDistance = 5f;
     private bool _isHandFull = false;
     private GameObject _heldObject;
-    
+
 
     private void Awake()
     {
         _cam = Camera.main.transform;
     }
-    
+
     private void OnEnable()
     {
         EventManager.OnGrillPickUp += GrillPickUp;
     }
-    
+
     private void OnDisable()
     {
         EventManager.OnGrillPickUp -= GrillPickUp;
@@ -70,14 +70,18 @@ public class PlayerInteractions : MonoBehaviour
                         _heldObject.SetActive(false);
                         _heldObject = null;
                         _isHandFull = false;
+                        return;
                     }
-                    else
+                    if (hit.transform.tag == "CuttingBoard")
                     {
-                        Debug.Log("You can't hold more than one object at a time");
+                        interactable.Interact(true);
+                        return;
                     }
+
+                    Debug.Log("You can't hold more than one object at a time");
                 }
             }
-            if(hit.transform.TryGetComponent(out IStash stash))
+            if (hit.transform.TryGetComponent(out IStash stash))
             {
                 stash.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
@@ -98,7 +102,7 @@ public class PlayerInteractions : MonoBehaviour
         if (_isHandFull)
         {
             obj.TryGetComponent(out IGrill grill);
-            if(grill.GrillInteraction(_heldObject.tag, _heldObject.GetComponent<MeshRenderer>().material))
+            if (grill.GrillInteraction(_heldObject.tag, _heldObject.GetComponent<MeshRenderer>().material))
             {
                 _heldObject.SetActive(false);
                 _heldObject = null;
@@ -106,7 +110,7 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
     }
-    
+
     private void GrillPickUp(int state, String tag, Material material)
     {
         GameObject toChange = InteractableCicle(tag, material);
@@ -115,7 +119,7 @@ public class PlayerInteractions : MonoBehaviour
             Debug.Log(tag + " not found");
         }
     }
-    
+
     private GameObject InteractableCicle(String tag, Material material)
     {
         foreach (GameObject obj in _interactables)
