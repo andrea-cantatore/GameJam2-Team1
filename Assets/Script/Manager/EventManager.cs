@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public static Action<String> OnGrillInteraction;
-    public static Action<int, String> OnGrillPickUp;
+    public static Action<int, String, Material> OnGrillPickUp;
+    
 }
 

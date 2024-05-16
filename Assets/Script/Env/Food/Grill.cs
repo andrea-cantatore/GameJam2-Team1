@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Grill : MonoBehaviour, IInteract
+public class Grill : MonoBehaviour, IInteract, IGrill
 {
     [SerializeField] private GameObject[] _food;
     private GameObject _grillingFood;
@@ -12,50 +12,64 @@ public class Grill : MonoBehaviour, IInteract
     private bool _isGrilling = false, isCooked = false, isOverCooked = false;
     [SerializeField] private float _grillTime = 5f, overCookTime = 10f;
     private float _timer = 0f;
-    [SerializeField] Material _normalMaterial, _cookedMaterial, _overCookedMaterial;
+    [SerializeField] Material[] _steakMaterials, _potatoMaterials, _chickenMaterials, _fishMaterials;
 
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
     }
+    
 
-    private void OnEnable()
+    public bool GrillInteraction(String tag, Material _currentMaterial)
     {
-        EventManager.OnGrillInteraction += GrillInteraction;
-    }
-
-    private void OnDisable()
-    {
-        EventManager.OnGrillInteraction -= GrillInteraction;
-    }
-
-    public void GrillInteraction(String tag)
-    {
+        if (_isGrilling)
+        {
+            return false;
+        }
         foreach (GameObject obj in _food)
         {
             if (obj.tag == tag)
             {
                 if (!_isGrilling)
                 {
-                    obj.GetComponent<MeshRenderer>().material = _normalMaterial;
+                    obj.GetComponent<MeshRenderer>().material = _currentMaterial;
                     _grillingFood = obj;
                     obj.SetActive(true);
                     _isGrilling = true;
+                    if (_currentMaterial == _steakMaterials[1]
+                        || _currentMaterial == _potatoMaterials[1]
+                        || _currentMaterial == _chickenMaterials[1]
+                        || _currentMaterial == _fishMaterials[1])
+                    {
+                        _timer = _grillTime;
+                    }
+                    else if (_currentMaterial== _steakMaterials[2] 
+                             || _currentMaterial == _potatoMaterials[2] 
+                             || _currentMaterial == _chickenMaterials[2] 
+                             || _currentMaterial == _fishMaterials[2])
+                    {
+                        _timer = overCookTime;
+                    }
+                        
                     StartCoroutine(GrillFood(obj));
+                    return true;
                 }
             }
         }
+        return false;
     }
 
 
-    public void Interact()
+    public bool Interact(bool isToAdd = true)
     {
         _isGrilling = false;
         _timer = 0f;
-        EventManager.OnGrillPickUp?.Invoke(isCooked ? 1 : isOverCooked ? 2 : 0, _grillingFood.tag);
+        EventManager.OnGrillPickUp?.Invoke(isCooked ? 1 : isOverCooked ? 2 : 0,
+            _grillingFood.tag, _grillingFood.GetComponent<MeshRenderer>().material);
         isCooked = false;
         isOverCooked = false;
         _grillingFood.SetActive(false);
+        return true;
     }
     public void InteractionPopUp()
     {
@@ -68,17 +82,31 @@ public class Grill : MonoBehaviour, IInteract
     {
         while (_isGrilling)
         {
-            _timer += Time.deltaTime;
             if (_timer >= _grillTime && !isCooked)
             {
-                food.GetComponent<MeshRenderer>().material = _cookedMaterial;
+                if(food.tag == "SteakPick")
+                    food.GetComponent<MeshRenderer>().material = _steakMaterials[1];
+                else if(food.tag == "PotatoPick")
+                    food.GetComponent<MeshRenderer>().material = _potatoMaterials[1];
+                else if(food.tag == "ChickenPick")
+                    food.GetComponent<MeshRenderer>().material = _chickenMaterials[1];
+                else if(food.tag == "FishPick")
+                    food.GetComponent<MeshRenderer>().material = _fishMaterials[1];
                 isCooked = true;
             }
             if (_timer >= overCookTime && !isOverCooked)
             {
-                food.GetComponent<MeshRenderer>().material = _overCookedMaterial;
+                if(food.tag == "SteakPick")
+                    food.GetComponent<MeshRenderer>().material = _steakMaterials[2];
+                else if(food.tag == "PotatoPick")
+                    food.GetComponent<MeshRenderer>().material = _potatoMaterials[2];
+                else if(food.tag == "ChickenPick")
+                    food.GetComponent<MeshRenderer>().material = _chickenMaterials[2];
+                else if(food.tag == "FishPick")
+                    food.GetComponent<MeshRenderer>().material = _fishMaterials[2];
                 isOverCooked = true;
             }
+            _timer += Time.deltaTime;
             yield return null;
         }
     }

@@ -10,7 +10,6 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private float _interactionDistance = 5f;
     private bool _isHandFull = false;
     private GameObject _heldObject;
-    [SerializeField] Material _normalMaterial, _cookedMaterial, _overCookedMaterial;
     
 
     private void Awake()
@@ -43,30 +42,33 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         if (hit.transform.tag == "Grill")
                         {
-                            interactable.Interact();
+                            interactable.Interact(false);
                             return;
                         }
                         foreach (GameObject obj in _interactables)
                         {
                             if (obj.tag == hit.transform.tag)
                             {
-                                Debug.Log("holy " + obj.name);
-                                obj.GetComponent<MeshRenderer>().material = _normalMaterial;
-                                obj.SetActive(true);
-                                _heldObject = obj;
-                                _isHandFull = true;
-                                return;
+                                if (interactable.Interact(false))
+                                {
+                                    obj.SetActive(true);
+                                    _heldObject = obj;
+                                    _isHandFull = true;
+                                    return;
+                                }
                             }
                         }
                     }
                     if (hit.transform.tag == "Grill")
                     {
-                        GrillInteraction();
+                        GrillInteraction(hit.transform.gameObject);
                         return;
                     }
                     if (hit.transform.tag == _heldObject.tag)
                     {
+                        interactable.Interact(true);
                         _heldObject.SetActive(false);
+                        _heldObject = null;
                         _isHandFull = false;
                     }
                     else
@@ -75,49 +77,53 @@ public class PlayerInteractions : MonoBehaviour
                     }
                 }
             }
+            if(hit.transform.TryGetComponent(out IStash stash))
+            {
+                stash.InteractionPopUp();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if (_heldObject != null)
+                    {
+                        _isHandFull = false;
+                        _heldObject.SetActive(false);
+                        _heldObject = null;
+                    }
+                }
+            }
         }
     }
 
-    private void GrillInteraction()
+    private void GrillInteraction(GameObject obj)
     {
         if (_isHandFull)
         {
-            EventManager.OnGrillInteraction?.Invoke(_heldObject.tag);
-            _heldObject.SetActive(false);
-            _isHandFull = false;
+            obj.TryGetComponent(out IGrill grill);
+            if(grill.GrillInteraction(_heldObject.tag, _heldObject.GetComponent<MeshRenderer>().material))
+            {
+                _heldObject.SetActive(false);
+                _heldObject = null;
+                _isHandFull = false;
+            }
         }
     }
     
-    private void GrillPickUp(int state, String tag)
+    private void GrillPickUp(int state, String tag, Material material)
     {
-        GameObject toChange = InteractableCicle(tag);
+        GameObject toChange = InteractableCicle(tag, material);
         if (toChange == null)
         {
             Debug.Log(tag + " not found");
-            return;
-        }
-        switch (state)
-        {
-            case 0:
-                toChange.GetComponent<MeshRenderer>().material = _normalMaterial;
-                break;
-            case 1:
-                toChange.GetComponent<MeshRenderer>().material = _cookedMaterial;
-                break;
-            case 2:
-                toChange.GetComponent<MeshRenderer>().material = _overCookedMaterial;
-                break;
         }
     }
     
-    private GameObject InteractableCicle(String tag)
+    private GameObject InteractableCicle(String tag, Material material)
     {
         foreach (GameObject obj in _interactables)
         {
             if (obj.tag == tag)
             {
                 Debug.Log("Picking up " + obj.name);
-                obj.GetComponent<MeshRenderer>().material = _normalMaterial;
+                obj.GetComponent<MeshRenderer>().material = material;
                 obj.SetActive(true);
                 _heldObject = obj;
                 _isHandFull = true;
