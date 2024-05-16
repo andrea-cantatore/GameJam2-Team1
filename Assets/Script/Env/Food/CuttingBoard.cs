@@ -1,33 +1,23 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class FoodInteractable : MonoBehaviour, IInteract
+public class CuttingBoard : MonoBehaviour, IInteract
 {
-    private Transform _popUpPos;
 
-    [SerializeField] private int _stackSize = 1;
+    private Transform _popUpPos;
+    [SerializeField] private Transform _cameraOnInteraction;
+    private Camera _mainCamera;
 
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
+        _mainCamera = Camera.main;
     }
-
     public bool Interact(bool isToAdd)
     {
-        if (isToAdd)
-        {
-            _stackSize++;
-            return true;
-        }
-        if (!isToAdd && _stackSize > 0)
-        {
-            _stackSize--;
-            return true;
-        }
-        return false;
+        
+        return true;
     }
 
     public void InteractionPopUp()
@@ -36,4 +26,5 @@ public class FoodInteractable : MonoBehaviour, IInteract
         InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text =
             "press E to Interact " + gameObject.name;
     }
+
 }
