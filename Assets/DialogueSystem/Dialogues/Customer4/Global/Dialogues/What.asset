@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: What
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: What
+  <Text>k__BackingField: What?! You work in a tavern; cleanliness and care should
+    be standard practice for you, curse it!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: You're right, I'll be more careful next time. Perhaps
+      you'll give me some advice when there are fewer customers. I'll prepare your
+      mead.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: ea6bfabb7f0c01d4083396d9cf3c0142, type: 2}
+  - <Text>k__BackingField: I assure you that my establishment is clean, as befits
+      a tavern! I'll prepare the mead!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f5ba752a85cdb7a479a7435a4cb8082f, type: 2}
+  - <Text>k__BackingField: You don't try to insinuate that my tavern is dirty, it's
+      you who cares too much to be... a dwarf!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: a994cbfaa1eb15f418e120743a57422d, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

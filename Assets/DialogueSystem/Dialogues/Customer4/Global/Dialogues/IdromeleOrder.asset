@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: IdromeleOrder
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: IdromeleOrder
+  <Text>k__BackingField: Is there still some mead left, right?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: I see you're looking fantastically well today! Did you
+      use a new beard oil?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e7ebb8d756d5f334f90026b130b314a8, type: 2}
+  - <Text>k__BackingField: Of course, sir! A mug of mead coming right up for you
+      in no time!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: d9e7c317e61cfed4d8fb171bb67ffd52, type: 2}
+  - <Text>k__BackingField: Just mead?! Are you only ordering drinks??
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 8a73cc6c97cf8224f8b72e6ee0617219, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
