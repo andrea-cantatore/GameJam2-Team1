@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: CanYouMakeMeMead
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: CanYouMakeMeMead
+  <Text>k__BackingField: Can you prepare my mead now?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Okay, sorry again...
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 78182f1df72056d46b917498dcd80615, type: 2}
+  - <Text>k__BackingField: Okay
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 43d30487d0f7c2a49ab5eec37a1c936d, type: 2}
+  - <Text>k__BackingField: Only because you've paid
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 6a6c98343d27ed04cb5efc9749722681, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

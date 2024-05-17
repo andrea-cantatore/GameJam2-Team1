@@ -1,0 +1,570 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Customer4Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Customer4
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 709bbaab-471e-4207-840d-5e5e4953ce3c
+    <Name>k__BackingField: Mimmo
+    <Text>k__BackingField: Good evening, kind sir! You know what? Today I would very
+      much enjoy a good mug of mead!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 0813761e-ddbf-4dc6-b53d-dfa46dee6c74
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 55.2, y: 53.600002}
+  - <ID>k__BackingField: 0813761e-ddbf-4dc6-b53d-dfa46dee6c74
+    <Name>k__BackingField: IdromeleOrder
+    <Text>k__BackingField: Is there still some mead left, right?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I see you're looking fantastically well today! Did you
+        use a new beard oil?
+      <NodeID>k__BackingField: 5d26b1cd-22f5-40b4-80a5-2dd6413b8732
+    - <Text>k__BackingField: Of course, sir! A mug of mead coming right up for you
+        in no time!
+      <NodeID>k__BackingField: 4d4e92b0-0ba9-48d3-b43a-d7a53a5987e6
+    - <Text>k__BackingField: Just mead?! Are you only ordering drinks??
+      <NodeID>k__BackingField: 22ced71a-8733-4f7e-aa40-f88d1efe3b76
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 836.8, y: 16.8}
+  - <ID>k__BackingField: 3694df45-90dd-4322-9cc6-470ca7f80b77
+    <Name>k__BackingField: BeardMethod
+    <Text>k__BackingField: 'You''re right, not everyone has the right taste, a beard
+      isn''t just a bunch of hairs: its care is a lifestyle! How about you, how do
+      you care for your beard? Do you use any particular oil?'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Personally, I don't use anything, but I'd be curious
+        to know your tricks if you're so kind as to explain them.
+      <NodeID>k__BackingField: 7abdde40-271e-4692-baf9-086c37ca8c37
+    - <Text>k__BackingField: I'm not as skilled as you are, I'll prepare your mead!
+      <NodeID>k__BackingField: 8c98dd14-077f-41cf-af47-22f94b9a820b
+    - <Text>k__BackingField: Personally, I don't use anything, I just let it grow,
+        and when it gets too long, I trim it a bit.
+      <NodeID>k__BackingField: d160e2ae-573c-4fb2-835c-eb734afd5c05
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2620, y: -934.39996}
+  - <ID>k__BackingField: 5d26b1cd-22f5-40b4-80a5-2dd6413b8732
+    <Name>k__BackingField: GladToHear
+    <Text>k__BackingField: I'm glad you noticed! Absolutely, it's an essential oil
+      blend of sandalwood and eucalyptus, stuff for connoisseurs!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: And it shows that you know your stuff!
+      <NodeID>k__BackingField: 3694df45-90dd-4322-9cc6-470ca7f80b77
+    - <Text>k__BackingField: Absolutely! I prepare that mead for you!
+      <NodeID>k__BackingField: 9feb9ab1-cc41-473b-9844-e65d79db46eb
+    - <Text>k__BackingField: But dwarves shouldn't be more unkempt, in my opinion,
+        this oil doesn't  reveals your true nature!
+      <NodeID>k__BackingField: 6af55727-f388-46ef-8d77-e52afe6676e5
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1644.8, y: -548}
+  - <ID>k__BackingField: 4d4e92b0-0ba9-48d3-b43a-d7a53a5987e6
+    <Name>k__BackingField: Raccomandation
+    <Text>k__BackingField: I insist, I want it really good, I'm a picky dwarf
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1864, y: 64}
+  - <ID>k__BackingField: 9feb9ab1-cc41-473b-9844-e65d79db46eb
+    <Name>k__BackingField: Raccomandation2
+    <Text>k__BackingField: I insist, I want it really good, I'm a picky dwarf
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2620, y: -496.8}
+  - <ID>k__BackingField: 7abdde40-271e-4692-baf9-086c37ca8c37
+    <Name>k__BackingField: Explaining
+    <Text>k__BackingField: "Of course, don't worry, I'll be brief. \nFirst, prepare
+      your beard by washing and drying it thoroughly. Make sure it's completely dry
+      before proceeding.When your beard is ready, pour a few drops of beard oil into
+      the palm of your hand and rub your hands together to warm it up. Then, massage
+      the oil into your beard and the underlying skin, working from root to tip and
+      making sure to evenly cover all the hairs. \nNext, use scissors to trim any
+      wild or uneven hairs. Trim carefully and gradually to maintain a uniform length.\nAfter
+      trimming, use a razor to define the outline of your beard along the cheek and
+      neck line. You can choose to go for a clean shave or simply define the edges,
+      depending on your preferred style.\nFinally, reapply a bit of beard oil to
+      moisturize and soften your beard. Comb through again to distribute the oil
+      evenly and shape your beard to your liking.Repeat this process regularly to
+      keep your beard well-groomed and maintained.\n"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: All clear, thanks for your suggestions, now it's time
+        for your mead!
+      <NodeID>k__BackingField: f5e0ef12-f7e9-4d8a-97e3-d64b3c8ffe14
+    - <Text>k__BackingField: Ehm...Okay! I'll prepare yout mead!
+      <NodeID>k__BackingField: 6d779617-737c-4dfb-8e86-746f1bdebf91
+    - <Text>k__BackingField: Oh goodness, do you realize I'm working and I don't
+        have all this time?! I asked for advice, I didn't ask you to give me a whole
+        book!
+      <NodeID>k__BackingField: 7efe4fc8-2de3-4c24-9fa9-c9504eecb4f7
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3716, y: -1964.8}
+  - <ID>k__BackingField: 8c98dd14-077f-41cf-af47-22f94b9a820b
+    <Name>k__BackingField: Women
+    <Text>k__BackingField: you  should take an interest instead, doesn't you want
+      to surround youtself with beautiful maidens? Just like the one present here?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I'm unfortunately not good with women. Maybe one day
+        we could talk about it more and you could give me some advice, when perhaps
+        there are fewer customers.
+      <NodeID>k__BackingField: a7b444cf-7438-460c-9622-5125f277c8ac
+    - <Text>k__BackingField: I'm only a simple InKeeper, my priority is to serve
+        you a good drink, sir!
+      <NodeID>k__BackingField: 4e564aeb-a1e1-4d50-9daa-bb931382e232
+    - <Text>k__BackingField: Actually, I only see you here, where are these women
+        of yours?
+      <NodeID>k__BackingField: ab25ff76-f6ae-4fca-ad6c-313dece5bd03
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3716, y: -1207.2001}
+  - <ID>k__BackingField: 6d779617-737c-4dfb-8e86-746f1bdebf91
+    <Name>k__BackingField: Thirsty
+    <Text>k__BackingField: Great, I'm dying of thirst!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4894.4, y: -2291.2}
+  - <ID>k__BackingField: f5e0ef12-f7e9-4d8a-97e3-d64b3c8ffe14
+    <Name>k__BackingField: Thanks
+    <Text>k__BackingField: Thank's kind sir!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4894.4, y: -2690.4001}
+  - <ID>k__BackingField: 476bd2b1-80f2-4ac7-b9e1-5f20bc43e5dc
+    <Name>k__BackingField: Okay
+    <Text>k__BackingField: Okay..
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5799.2, y: -2024.8}
+  - <ID>k__BackingField: 2cdcf4cf-02b3-4e10-8e9a-59e7ef657480
+    <Name>k__BackingField: SorrySir
+    <Text>k__BackingField: Sorry...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5799.2, y: -1741.6001}
+  - <ID>k__BackingField: 9baecee7-7871-431a-b8a1-a6c610cf068f
+    <Name>k__BackingField: OkayThanks
+    <Text>k__BackingField: Okay...Thanks.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5799.2, y: -2321.6}
+  - <ID>k__BackingField: bbfcb949-5d04-4954-a906-d9259c022e75
+    <Name>k__BackingField: AsYouSay
+    <Text>k__BackingField: Okay...As you say!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5393.6, y: -177.6}
+  - <ID>k__BackingField: d160e2ae-573c-4fb2-835c-eb734afd5c05
+    <Name>k__BackingField: What
+    <Text>k__BackingField: What?! You work in a tavern; cleanliness and care should
+      be standard practice for you, curse it!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: You're right, I'll be more careful next time. Perhaps
+        you'll give me some advice when there are fewer customers. I'll prepare your
+        mead.
+      <NodeID>k__BackingField: 547b5598-82b2-4d3e-9078-2ac83fdc6a69
+    - <Text>k__BackingField: I assure you that my establishment is clean, as befits
+        a tavern! I'll prepare the mead!
+      <NodeID>k__BackingField: bbfcb949-5d04-4954-a906-d9259c022e75
+    - <Text>k__BackingField: You don't try to insinuate that my tavern is dirty,
+        it's you who cares too much to be... a dwarf!
+      <NodeID>k__BackingField: fd6fb8c7-6d85-4da1-8eb2-7dd771829515
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3737.6, y: -754.39996}
+  - <ID>k__BackingField: fd6fb8c7-6d85-4da1-8eb2-7dd771829515
+    <Name>k__BackingField: HowDareYou
+    <Text>k__BackingField: How dare you! Do you have any idea who you're talking
+      to? I was fighting wars when you were still a small and useless child, you
+      don't have the right to address me in this way! you can only cook and wash
+      stupid dishes!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Okay, you're right, we got off on the wrong foot, but
+        you started it!
+      <NodeID>k__BackingField: fd05637d-49b9-434a-be05-5569a7aa2b48
+    - <Text>k__BackingField: Let's end the discussion here, I'll prepare your mead.
+      <NodeID>k__BackingField: 676a9b1d-3977-442c-93c1-0f65d71d7ac4
+    - <Text>k__BackingField: You're only a dwarf, you're not a warrior, don't make
+        me laugh!
+      <NodeID>k__BackingField: b362af59-e6ce-40de-9657-9481e2157b2c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5289.6, y: 320}
+  - <ID>k__BackingField: 547b5598-82b2-4d3e-9078-2ac83fdc6a69
+    <Name>k__BackingField: ItWillBeDone2
+    <Text>k__BackingField: Consider it done, my young innkeeper! Now, prepare me
+      the finest mead you've got!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5440, y: -590.39996}
+  - <ID>k__BackingField: fd05637d-49b9-434a-be05-5569a7aa2b48
+    <Name>k__BackingField: CanYouMakeMeMead
+    <Text>k__BackingField: Can you prepare my mead now?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Okay, sorry again...
+      <NodeID>k__BackingField: a7eb75f5-948a-40d4-8ce2-bc83e82b2abe
+    - <Text>k__BackingField: Okay
+      <NodeID>k__BackingField: 2f83c5b7-167e-4583-a519-4f4339fb9ec7
+    - <Text>k__BackingField: Only because you've paid
+      <NodeID>k__BackingField: caf60aef-ff46-4a99-a29c-77a7530102b6
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 6292.8, y: 78.399994}
+  - <ID>k__BackingField: 7efe4fc8-2de3-4c24-9fa9-c9504eecb4f7
+    <Name>k__BackingField: Sorry
+    <Text>k__BackingField: I apologize, I did not mean to be verbose, but rather
+      to moderate your  language.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: No, it's my fault! I didn't mean to be confrontational.
+        I'll prepare your drink
+      <NodeID>k__BackingField: 9baecee7-7871-431a-b8a1-a6c610cf068f
+    - <Text>k__BackingField: No problm, but next time less details,  please. I'll
+        prepare your drink
+      <NodeID>k__BackingField: 476bd2b1-80f2-4ac7-b9e1-5f20bc43e5dc
+    - <Text>k__BackingField: Now, because of you, I have to rush all the orders.
+        Let me work!
+      <NodeID>k__BackingField: 2cdcf4cf-02b3-4e10-8e9a-59e7ef657480
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4894.4, y: -1907.2001}
+  - <ID>k__BackingField: 4e564aeb-a1e1-4d50-9daa-bb931382e232
+    <Name>k__BackingField: Understendable
+    <Text>k__BackingField: Understendable, so prepare my mead
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5039.2, y: -1250.4}
+  - <ID>k__BackingField: a7b444cf-7438-460c-9622-5125f277c8ac
+    <Name>k__BackingField: ItWillBeDone
+    <Text>k__BackingField: Consider it done, my young innkeeper! Now, prepare me
+      the finest mead you've got!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5039.2, y: -1512}
+  - <ID>k__BackingField: ab25ff76-f6ae-4fca-ad6c-313dece5bd03
+    <Name>k__BackingField: Ehm
+    <Text>k__BackingField: Um... when I come to the tavern, I like to come alone
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Right, sometimes it's a good thing stay alone drinking
+        a good mead!
+      <NodeID>k__BackingField: 94fdd3f2-2b5c-419e-bc69-50f59135ac23
+    - <Text>k__BackingField: Okay, i prepare your mead!
+      <NodeID>k__BackingField: 1d278148-7de5-4ac2-a85d-cf10f555cd7a
+    - <Text>k__BackingField: In my opinion, you're a big liar.
+      <NodeID>k__BackingField: f966fa29-c56f-4690-9003-f85e54018fde
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5141.6, y: -1009.6}
+  - <ID>k__BackingField: 94fdd3f2-2b5c-419e-bc69-50f59135ac23
+    <Name>k__BackingField: OhYes
+    <Text>k__BackingField: You're damn right
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6235.2, y: -1438.4}
+  - <ID>k__BackingField: 1d278148-7de5-4ac2-a85d-cf10f555cd7a
+    <Name>k__BackingField: Thanks3
+    <Text>k__BackingField: Oh, thanks!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6235.2, y: -1156}
+  - <ID>k__BackingField: f966fa29-c56f-4690-9003-f85e54018fde
+    <Name>k__BackingField: DontBeFrustrated
+    <Text>k__BackingField: Don't be frustrated just because you've never seen a woman
+      who isn't your mother.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "Touch\xE9"
+      <NodeID>k__BackingField: 7f74b2a3-44bf-406a-8eac-d3c68e73a303
+    - <Text>k__BackingField: Let's wrap up the discussion here, I'll prepare your
+        drink.
+      <NodeID>k__BackingField: 4c7120e1-31a8-47db-878e-ff04c594d053
+    - <Text>k__BackingField: Don't be frustrated just because the truth burns you.
+      <NodeID>k__BackingField: e6dd53ad-e6b9-444f-b076-9c5d04f48a17
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 6188, y: -882.39996}
+  - <ID>k__BackingField: 7f74b2a3-44bf-406a-8eac-d3c68e73a303
+    <Name>k__BackingField: DoIt
+    <Text>k__BackingField: Now prepare my drink!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7090.4, y: -1250.4}
+  - <ID>k__BackingField: 4c7120e1-31a8-47db-878e-ff04c594d053
+    <Name>k__BackingField: Good
+    <Text>k__BackingField: Good!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7090.4, y: -968}
+  - <ID>k__BackingField: e6dd53ad-e6b9-444f-b076-9c5d04f48a17
+    <Name>k__BackingField: If
+    <Text>k__BackingField: Boy, if I were you, I wouldn't look for trouble and I'd
+      focus on making some damn good mead!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7072, y: -684}
+  - <ID>k__BackingField: e9ca3cec-b6d3-4df7-9cf9-2a1437fd1157
+    <Name>k__BackingField: IKnow
+    <Text>k__BackingField: I know, now, give me a good mead
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3737.6, y: -365.59998}
+  - <ID>k__BackingField: 06d2afe1-5c3c-438c-abc7-9cff3597358a
+    <Name>k__BackingField: Wisdom
+    <Text>k__BackingField: And mine are just pearls of wisdom.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3737.6, y: -29.599998}
+  - <ID>k__BackingField: d6843e41-9eeb-449e-839c-6c4cdcc81b3c
+    <Name>k__BackingField: RealMan
+    <Text>k__BackingField: This isn't stench, it's the smell of a real man! Hehe!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Maybe...I prepare your Mead
+      <NodeID>k__BackingField: 2e3a524e-4c84-4319-99a6-50fd97f7b0ba
+    - <Text>k__BackingField: As you say!
+      <NodeID>k__BackingField: 96fdd3f1-7832-4936-add9-155e71054fde
+    - <Text>k__BackingField: No! You're really filling the place with a bad smell!
+      <NodeID>k__BackingField: 4f18597b-6841-4e35-9825-a21aa8e5b747
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3748, y: 353.6}
+  - <ID>k__BackingField: 6af55727-f388-46ef-8d77-e52afe6676e5
+    <Name>k__BackingField: FragrantDwarf
+    <Text>k__BackingField: What are you implying, a dwarf who takes care of himself
+      is still a dwarf... but more fragrant!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Maybe you're right!
+      <NodeID>k__BackingField: e9ca3cec-b6d3-4df7-9cf9-2a1437fd1157
+    - <Text>k__BackingField: As you say!
+      <NodeID>k__BackingField: 06d2afe1-5c3c-438c-abc7-9cff3597358a
+    - <Text>k__BackingField: In fact, I smell stench.
+      <NodeID>k__BackingField: d6843e41-9eeb-449e-839c-6c4cdcc81b3c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2620, y: -119.2}
+  - <ID>k__BackingField: 676a9b1d-3977-442c-93c1-0f65d71d7ac4
+    <Name>k__BackingField: Good3
+    <Text>k__BackingField: Good
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6360, y: 381.6}
+  - <ID>k__BackingField: b362af59-e6ce-40de-9657-9481e2157b2c
+    <Name>k__BackingField: Racist
+    <Text>k__BackingField: Your words reveal a deep-seated racism towards the dwarf
+      race, yet this is a place predominantly frequented by dwarves. We are the ones
+      who allow you to have bread on your table!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Maybe I overdid it.
+      <NodeID>k__BackingField: a330d12b-9c38-42b9-b6b2-3f841448968f
+    - <Text>k__BackingField: Let's forget about it, I'll prepare your mead.
+      <NodeID>k__BackingField: 7df13c1a-902e-4aea-a11f-0612bec85ee7
+    - <Text>k__BackingField: The success of my tavern doesn't depend on you dwarves,
+        but on the quality of my ingredients!
+      <NodeID>k__BackingField: 3d790765-09e2-40ff-b327-cfbd6e584255
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 6491.2, y: 777.60004}
+  - <ID>k__BackingField: a7eb75f5-948a-40d4-8ce2-bc83e82b2abe
+    <Name>k__BackingField: DoubleSorry
+    <Text>k__BackingField: No problem
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7446.4, y: -156}
+  - <ID>k__BackingField: 2f83c5b7-167e-4583-a519-4f4339fb9ec7
+    <Name>k__BackingField: Good2
+    <Text>k__BackingField: Good!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7460, y: 93.600006}
+  - <ID>k__BackingField: caf60aef-ff46-4a99-a29c-77a7530102b6
+    <Name>k__BackingField: Stupid
+    <Text>k__BackingField: Tsk...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7460, y: 381.6}
+  - <ID>k__BackingField: 2e3a524e-4c84-4319-99a6-50fd97f7b0ba
+    <Name>k__BackingField: Nice
+    <Text>k__BackingField: Nice!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4579.2, y: 23.2}
+  - <ID>k__BackingField: 96fdd3f1-7832-4936-add9-155e71054fde
+    <Name>k__BackingField: Waiting
+    <Text>k__BackingField: I'm waiting for my mead!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4513.6, y: 381.6}
+  - <ID>k__BackingField: 4f18597b-6841-4e35-9825-a21aa8e5b747
+    <Name>k__BackingField: ShutUp
+    <Text>k__BackingField: 'Shut up and prepare my mead! '
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4491.2, y: 811.2}
+  - <ID>k__BackingField: a330d12b-9c38-42b9-b6b2-3f841448968f
+    <Name>k__BackingField: YouDid
+    <Text>k__BackingField: You did! Prepare my mead now
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7460, y: 623.2}
+  - <ID>k__BackingField: 7df13c1a-902e-4aea-a11f-0612bec85ee7
+    <Name>k__BackingField: Good4
+    <Text>k__BackingField: Good
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7460, y: 877.60004}
+  - <ID>k__BackingField: 3d790765-09e2-40ff-b327-cfbd6e584255
+    <Name>k__BackingField: Argue
+    <Text>k__BackingField: I didn't come here to argue, I just want some damn mead.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7452, y: 1386.3999}
+  - <ID>k__BackingField: 22ced71a-8733-4f7e-aa40-f88d1efe3b76
+    <Name>k__BackingField: Yes
+    <Text>k__BackingField: Yes, only mead!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1746.4, y: 360.80002}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Mimmo
+  - IdromeleOrder
+  - BeardMethod
+  - GladToHear
+  - Raccomandation
+  - Raccomandation2
+  - Explaining
+  - Women
+  - Thirsty
+  - Thanks
+  - Okay
+  - SorrySir
+  - OkayThanks
+  - AsYouSay
+  - What
+  - HowDareYou
+  - ItWillBeDone2
+  - CanYouMakeMeMead
+  - Sorry
+  - Understendable
+  - ItWillBeDone
+  - Ehm
+  - OhYes
+  - Thanks3
+  - DontBeFrustrated
+  - DoIt
+  - Good
+  - If
+  - IKnow
+  - Wisdom
+  - RealMan
+  - FragrantDwarf
+  - Good3
+  - Racist
+  - DoubleSorry
+  - Good2
+  - Stupid
+  - Nice
+  - Waiting
+  - ShutUp
+  - YouDid
+  - Good4
+  - Argue
+  - Yes
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
