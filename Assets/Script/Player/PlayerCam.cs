@@ -7,7 +7,9 @@ public class PlayerCam : MonoBehaviour
 {
     [SerializeField] private float _sensitivity;
     
-    [SerializeField] private Transform _playerOrientation;
+    [SerializeField] private Transform _playerOrientation, _camPos;
+
+    private bool _isCameraLocked;
     
     private float _xRotation;
     private float _yRotation;
@@ -17,9 +19,23 @@ public class PlayerCam : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    
+
+    private void OnEnable()
+    {
+        EventManager.OnCuttingInteraction += OnLockedCamera;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnCuttingInteraction -= OnLockedCamera;
+    }
+
     private void LateUpdate()
     {
+        if (_isCameraLocked)
+        {
+            return;
+        }
+        
         float mouseY = InputManager.actionMap.PlayerInput.Camera.ReadValue<Vector2>().y * _sensitivity * Time.deltaTime;
         float mouseX = InputManager.actionMap.PlayerInput.Camera.ReadValue<Vector2>().x * _sensitivity * Time.deltaTime;
         
@@ -30,4 +46,14 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
         _playerOrientation.rotation = Quaternion.Euler(0, _yRotation, 0);
     }
+    
+    private void OnLockedCamera(bool isLocked)
+    {
+        _isCameraLocked = isLocked;
+        if (!isLocked)
+        {
+            Camera.main.transform.position = _camPos.position;
+        }
+    }
+    
 }

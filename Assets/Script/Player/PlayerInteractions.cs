@@ -64,17 +64,21 @@ public class PlayerInteractions : MonoBehaviour
                         GrillInteraction(hit.transform.gameObject);
                         return;
                     }
+                    if (hit.transform.tag == "CuttingBoard")
+                    {
+                        if (_isHandFull)
+                        {
+                            interactable.Interact(true);
+                            //hit.transform.GetComponent<ICutting>().CutInteraction(_heldObject.tag);
+                        }
+                        return;
+                    }
                     if (hit.transform.tag == _heldObject.tag)
                     {
                         interactable.Interact(true);
                         _heldObject.SetActive(false);
                         _heldObject = null;
                         _isHandFull = false;
-                        return;
-                    }
-                    if (hit.transform.tag == "CuttingBoard")
-                    {
-                        interactable.Interact(true);
                         return;
                     }
 
