@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: GladToHear
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: GladToHear
+  <Text>k__BackingField: I'm glad you noticed! Absolutely, it's an essential oil
+    blend of sandalwood and eucalyptus, stuff for connoisseurs!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: And it shows that you know your stuff!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9aafee94a3e781f4f8cfc3ec699c303f, type: 2}
+  - <Text>k__BackingField: Absolutely! I prepare that mead for you!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9896d9f47952df44d81c1fe96920b077, type: 2}
+  - <Text>k__BackingField: But dwarves shouldn't be more unkempt, in my opinion,
+      this oil doesn't  reveals your true nature!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f07c54c295ba66746b384b92df73fb25, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

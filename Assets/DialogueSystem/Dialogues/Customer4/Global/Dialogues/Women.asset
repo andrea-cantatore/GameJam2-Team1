@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Women
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Women
+  <Text>k__BackingField: you  should take an interest instead, doesn't you want to
+    surround youtself with beautiful maidens? Just like the one present here?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: I'm unfortunately not good with women. Maybe one day we
+      could talk about it more and you could give me some advice, when perhaps there
+      are fewer customers.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 1af64d5f0f143f441a32109c70528814, type: 2}
+  - <Text>k__BackingField: I'm only a simple InKeeper, my priority is to serve you
+      a good drink, sir!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 85e058abafb9a99488fa5ce25dd4af48, type: 2}
+  - <Text>k__BackingField: Actually, I only see you here, where are these women of
+      yours?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9df27625784ed734893d0f5f40e5669c, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

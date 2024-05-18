@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Ehm
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Ehm
+  <Text>k__BackingField: Um... when I come to the tavern, I like to come alone
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Right, sometimes it's a good thing stay alone drinking
+      a good mead!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 40356c8ebde9cef4fba9f743ea74cb8c, type: 2}
+  - <Text>k__BackingField: Okay, i prepare your mead!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 681c8d0467027f847b2c5e46ea6731e9, type: 2}
+  - <Text>k__BackingField: In my opinion, you're a big liar.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 866700d8a650de24594c597987411311, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

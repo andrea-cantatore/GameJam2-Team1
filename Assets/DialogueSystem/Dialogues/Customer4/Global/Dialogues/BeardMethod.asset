@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: BeardMethod
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: BeardMethod
+  <Text>k__BackingField: 'You''re right, not everyone has the right taste, a beard
+    isn''t just a bunch of hairs: its care is a lifestyle! How about you, how do
+    you care for your beard? Do you use any particular oil?'
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Personally, I don't use anything, but I'd be curious to
+      know your tricks if you're so kind as to explain them.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 281cb28578dd0104d85ba42d05ec34ea, type: 2}
+  - <Text>k__BackingField: I'm not as skilled as you are, I'll prepare your mead!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f5a3da508c1fcc6459e967148851181b, type: 2}
+  - <Text>k__BackingField: Personally, I don't use anything, I just let it grow,
+      and when it gets too long, I trim it a bit.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9e6747957ac7f664b882448d1c477d1b, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
