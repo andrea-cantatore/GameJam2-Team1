@@ -55,6 +55,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""CookInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""74628792-6551-4df7-934d-cc1df313d6d4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Camera"",
                     ""type"": ""Value"",
                     ""id"": ""b4bb3a44-2860-4fb4-9805-a150e26d0f27"",
@@ -229,6 +238,28 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""962e9684-122d-49cb-aee2-cc910ed25355"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CookInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aae5d12c-0c69-4dc1-a2cf-ddeb1cc534ef"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CookInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -268,6 +299,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
         m_PlayerInput_Jump = m_PlayerInput.FindAction("Jump", throwIfNotFound: true);
         m_PlayerInput_Interaction = m_PlayerInput.FindAction("Interaction", throwIfNotFound: true);
+        m_PlayerInput_CookInteraction = m_PlayerInput.FindAction("CookInteraction", throwIfNotFound: true);
         m_PlayerInput_Camera = m_PlayerInput.FindAction("Camera", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
@@ -336,6 +368,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerInput_Movement;
     private readonly InputAction m_PlayerInput_Jump;
     private readonly InputAction m_PlayerInput_Interaction;
+    private readonly InputAction m_PlayerInput_CookInteraction;
     private readonly InputAction m_PlayerInput_Camera;
     public struct PlayerInputActions
     {
@@ -344,6 +377,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PlayerInput_Movement;
         public InputAction @Jump => m_Wrapper.m_PlayerInput_Jump;
         public InputAction @Interaction => m_Wrapper.m_PlayerInput_Interaction;
+        public InputAction @CookInteraction => m_Wrapper.m_PlayerInput_CookInteraction;
         public InputAction @Camera => m_Wrapper.m_PlayerInput_Camera;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
         public void Enable() { Get().Enable(); }
@@ -363,6 +397,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
+            @CookInteraction.started += instance.OnCookInteraction;
+            @CookInteraction.performed += instance.OnCookInteraction;
+            @CookInteraction.canceled += instance.OnCookInteraction;
             @Camera.started += instance.OnCamera;
             @Camera.performed += instance.OnCamera;
             @Camera.canceled += instance.OnCamera;
@@ -379,6 +416,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
+            @CookInteraction.started -= instance.OnCookInteraction;
+            @CookInteraction.performed -= instance.OnCookInteraction;
+            @CookInteraction.canceled -= instance.OnCookInteraction;
             @Camera.started -= instance.OnCamera;
             @Camera.performed -= instance.OnCamera;
             @Camera.canceled -= instance.OnCamera;
@@ -450,6 +490,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
+        void OnCookInteraction(InputAction.CallbackContext context);
         void OnCamera(InputAction.CallbackContext context);
     }
     public interface IMenuActions

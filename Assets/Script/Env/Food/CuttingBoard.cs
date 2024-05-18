@@ -10,7 +10,10 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     private Transform _popUpPos;
     [SerializeField] private Transform _cameraOnInteraction;
     private Camera _mainCamera;
-    bool isCutting = false;
+    bool isCutting;
+    [SerializeField] private int _requiredCutting = 3;
+    private int _cuttingCounter = 0;
+    public bool IsCuttingEmpty = true;
 
     private void Awake()
     {
@@ -20,22 +23,43 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     private void OnEnable()
     {
         EventManager.OnCuttingInteraction += CuttingInteraction;
+        InputManager.actionMap.PlayerInput.Interaction.started += ctx => Interaction();
+        InputManager.actionMap.PlayerInput.CookInteraction.started += ctx => InputCut();
     }
     
     private void OnDisable()
     {
         EventManager.OnCuttingInteraction -= CuttingInteraction;
     }
+
+    private void Interaction()
+    {
+        if(isCutting)
+            Interact(false);
+    }
     
+    private void InputCut()
+    {
+        if (isCutting)
+        {
+            _cuttingCounter++;
+            if (_requiredCutting <= _cuttingCounter)
+            {
+                EventManager.OnCutted?.Invoke(_activeFood.tag, _activeFood.GetComponent<MeshRenderer>().material);
+                _activeFood.SetActive(false);
+                _activeFood = null;
+                Interact(false);
+                IsCuttingEmpty = true;
+            }
+        }
+    }
+    
+
     public bool Interact(bool isToAdd)
     {
-        isCutting = !isCutting;
+        isCutting = isToAdd;
         EventManager.OnCuttingInteraction?.Invoke(isCutting);
-        if (!isCutting)
-        {
-            _activeFood.SetActive(false);
-            _activeFood = null;
-        }
+        Debug.Log("camera cut");
         
         return true;
     }
@@ -58,15 +82,24 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         }
     }
 
-    public void CutInteraction(String tag)
+    public bool CutInteraction(GameObject gameObject)
     {
         foreach (GameObject obj in _food)
         {
-            if (obj.tag == tag)
+            if (obj.tag == gameObject.tag)
             {
+                if (gameObject.TryGetComponent(out IHeldFood heldFood) && !heldFood.IsCooked() && (obj.CompareTag("SteakPick") || obj.CompareTag("FishPick")))
+                {
+                    return false;
+                }
+                
                 obj.SetActive(true);
+                IsCuttingEmpty = false;
                 _activeFood = obj;
+                return true;
             }
         }
+        return false;
     }
+    
 }

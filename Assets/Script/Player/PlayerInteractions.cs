@@ -7,6 +7,7 @@ public class PlayerInteractions : MonoBehaviour
 {
     private Transform _cam;
     [SerializeField] private GameObject[] _interactables;
+    [SerializeField] private Material[] _baseMaterials;
     [SerializeField] private float _interactionDistance = 5f;
     private bool _isHandFull = false;
     private GameObject _heldObject;
@@ -20,11 +21,13 @@ public class PlayerInteractions : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnGrillPickUp += GrillPickUp;
+        EventManager.OnCutted += CuttedFoodPickUp;
     }
 
     private void OnDisable()
     {
         EventManager.OnGrillPickUp -= GrillPickUp;
+        EventManager.OnCutted -= CuttedFoodPickUp;
     }
 
     private void Update()
@@ -37,7 +40,7 @@ public class PlayerInteractions : MonoBehaviour
                 interactable.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("Interacting with " + hit.transform.name);
+                    Debug.Log("Interacting with " + hit.transform.tag);
                     if (!_isHandFull)
                     {
                         if (hit.transform.tag == "Grill")
@@ -52,6 +55,9 @@ public class PlayerInteractions : MonoBehaviour
                                 if (interactable.Interact(false))
                                 {
                                     obj.SetActive(true);
+                                    obj.TryGetComponent(out IHeldFood heldFood);
+                                    heldFood.IBasicMaterial();
+                                    heldFood.ICooked(0);
                                     _heldObject = obj;
                                     _isHandFull = true;
                                     return;
@@ -68,18 +74,69 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         if (_isHandFull)
                         {
-                            interactable.Interact(true);
-                            //hit.transform.GetComponent<ICutting>().CutInteraction(_heldObject.tag);
+                            if (hit.transform.TryGetComponent(out ICutting cutting))
+                            {
+                                if(cutting.CutInteraction(_heldObject))
+                                {
+                                    interactable.Interact(true);
+                                    _heldObject.SetActive(false);
+                                    _heldObject = null;
+                                    _isHandFull = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if(hit.transform.TryGetComponent(out CuttingBoard cuttingBoard))
+                            {
+                                if (!cuttingBoard.IsCuttingEmpty)
+                                {
+                                    interactable.Interact(true);
+                                }
+                            }
                         }
                         return;
                     }
-                    if (hit.transform.tag == _heldObject.tag)
+                    if (_heldObject != null)
                     {
-                        interactable.Interact(true);
-                        _heldObject.SetActive(false);
-                        _heldObject = null;
-                        _isHandFull = false;
-                        return;
+                        if (hit.transform.tag == _heldObject.tag)
+                        {
+                            interactable.Interact(true);
+                            _heldObject.SetActive(false);
+                            _heldObject = null;
+                            _isHandFull = false;
+                            return;
+                        }
+                    }
+                    if (hit.transform.TryGetComponent(out ICounterHolder counterHolder))
+                    {
+                        
+                        if (_isHandFull)
+                        {
+                            if(counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject))
+                            {
+                                _heldObject.SetActive(false);
+                                _heldObject = null;
+                                _isHandFull = false;
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            foreach (GameObject obj in _interactables)
+                            {
+                                if(counterHolder.ReleaseObject(obj.GetComponent<HeldFood>().MyId()))
+                                {
+                                    obj.SetActive(true);
+                                    obj.GetComponent<MeshRenderer>().material = counterHolder.GetMaterial();
+                                    counterHolder.DestroyObject();
+                                    _heldObject = obj;
+                                    _heldObject.SetActive(true);
+                                    _isHandFull = true;
+                                    return;
+                                }
+                            }
+                        }
                     }
 
                     Debug.Log("You can't hold more than one object at a time");
@@ -118,6 +175,8 @@ public class PlayerInteractions : MonoBehaviour
     private void GrillPickUp(int state, String tag, Material material)
     {
         GameObject toChange = InteractableCicle(tag, material);
+        toChange.TryGetComponent(out IHeldFood heldFood);
+        heldFood.ICooked(state);
         if (toChange == null)
         {
             Debug.Log(tag + " not found");
@@ -139,5 +198,12 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
         return null;
+    }
+    
+    private void CuttedFoodPickUp(String tag, Material material)
+    {
+        GameObject toChange = InteractableCicle(tag, material);
+        toChange.TryGetComponent(out IHeldFood heldFood);
+        heldFood.ICutted();
     }
 }
