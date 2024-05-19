@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &409596166548351221
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &420215802018643334
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &3659026186219772917
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &4312794197669291329
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +706,7 @@ MonoBehaviour:
   - {fileID: 360743486348855318}
   - {fileID: 6066866633544802138}
   - {fileID: 2462612427773880028}
+  _baseMaterials: []
   _interactionDistance: 5
 --- !u!136 &8964159703563694740
 CapsuleCollider:
@@ -710,7 +715,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4996887774738165555}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e7bb36dd8e947ae41bd9e89c0ef9b66e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -849,7 +854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &5587667063080970816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &6147597551216960542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &7240402452373295552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e35698e2d7eceb49aff952e62e01306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCutted: 0
+  _isCooked: 0
+  ID: 0
 --- !u!1 &8593912288598078879
 GameObject:
   m_ObjectHideFlags: 0
