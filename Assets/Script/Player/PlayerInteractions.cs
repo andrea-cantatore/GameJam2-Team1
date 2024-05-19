@@ -9,8 +9,10 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private GameObject[] _interactables;
     [SerializeField] private Material[] _baseMaterials;
     [SerializeField] private float _interactionDistance = 5f;
-    private bool _isHandFull = false;
+    private bool _isHandFull, _isDishHand;
     private GameObject _heldObject;
+    private PlayerDish _playerDish => GetComponent<PlayerDish>();
+    
 
 
     private void Awake()
@@ -32,6 +34,17 @@ public class PlayerInteractions : MonoBehaviour
 
     private void Update()
     {
+        if (_isHandFull)
+        {
+            if(_heldObject.tag == "Dish")
+            {
+                _isDishHand = true;
+            }
+            else
+            {
+                _isDishHand = false;
+            }
+        }
         RaycastHit hit;
         if (Physics.Raycast(_cam.position, _cam.forward, out hit, _interactionDistance))
         {
@@ -40,7 +53,6 @@ public class PlayerInteractions : MonoBehaviour
                 interactable.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("Interacting with " + hit.transform.tag);
                     if (!_isHandFull)
                     {
                         if (hit.transform.tag == "Grill")
@@ -50,6 +62,14 @@ public class PlayerInteractions : MonoBehaviour
                         }
                         foreach (GameObject obj in _interactables)
                         {
+                            if (obj.tag == tag && tag == "Dish")
+                            {
+                                Debug.Log("Picking up " + obj.name);
+                                obj.SetActive(true);
+                                _heldObject = obj;
+                                _isHandFull = true;
+                                return;
+                            }
                             if (obj.tag == hit.transform.tag)
                             {
                                 if (interactable.Interact(false))
@@ -113,7 +133,22 @@ public class PlayerInteractions : MonoBehaviour
                         
                         if (_isHandFull)
                         {
-                            if(counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject))
+                            if (counterHolder.HaveDishOn())
+                            {
+                                return;
+                            }
+                            if (_isDishHand)
+                            {
+                                if (counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject,
+                                        true))
+                                {
+                                    _heldObject.SetActive(false);
+                                    _heldObject = null;
+                                    _isHandFull = false;
+                                    return;
+                                }
+                            }
+                            if(counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject, false))
                             {
                                 _heldObject.SetActive(false);
                                 _heldObject = null;
@@ -125,6 +160,14 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             foreach (GameObject obj in _interactables)
                             {
+                                if (obj.tag == tag && tag == "Dish")
+                                {
+                                    Debug.Log("Picking up " + obj.name);
+                                    obj.SetActive(true);
+                                    _heldObject = obj;
+                                    _isHandFull = true;
+                                    return;
+                                }
                                 if(counterHolder.ReleaseObject(obj.GetComponent<HeldFood>().MyId()))
                                 {
                                     obj.SetActive(true);
@@ -187,6 +230,14 @@ public class PlayerInteractions : MonoBehaviour
     {
         foreach (GameObject obj in _interactables)
         {
+            if (obj.tag == tag && tag == "Dish")
+            {
+                Debug.Log("Picking up " + obj.name);
+                obj.SetActive(true);
+                _heldObject = obj;
+                _isHandFull = true;
+                return obj;
+            }
             if (obj.tag == tag)
             {
                 Debug.Log("Picking up " + obj.name);

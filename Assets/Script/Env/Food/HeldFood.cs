@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = System.Random;
 
 public class HeldFood : MonoBehaviour, IHeldFood, IHeld
 {
-    private bool _isCutted;
+    public bool IsSliced;
     public int _isCooked;
     Material _material;
     public int ID;
@@ -31,11 +32,11 @@ public class HeldFood : MonoBehaviour, IHeldFood, IHeld
     }
     public void ICutted()
     {
-        _isCutted = true;
+        IsSliced = true;
     }
     public bool IsCutted()
     {
-        return _isCutted;
+        return IsSliced;
     }
     public void IBasicMaterial()
     {
