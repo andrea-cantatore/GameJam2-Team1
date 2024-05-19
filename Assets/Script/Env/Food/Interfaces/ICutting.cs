@@ -1,7 +1,8 @@
 using System;
+using UnityEngine;
 
 public interface ICutting
 {
-    public void CutInteraction(String tag);
+    public bool CutInteraction(GameObject gameObject);
 }
 
