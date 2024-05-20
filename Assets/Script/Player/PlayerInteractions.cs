@@ -7,10 +7,11 @@ public class PlayerInteractions : MonoBehaviour
 {
     private Transform _cam;
     [SerializeField] private GameObject[] _interactables;
-    [SerializeField] private Material[] _baseMaterials;
+    [SerializeField] private GameObject[] _dishObjects;
     [SerializeField] private float _interactionDistance = 5f;
-    private bool _isHandFull = false;
+    private bool _isHandFull, _isDishHand;
     private GameObject _heldObject;
+    private PlayerDish _playerDish => GetComponent<PlayerDish>();
 
 
     private void Awake()
@@ -32,6 +33,8 @@ public class PlayerInteractions : MonoBehaviour
 
     private void Update()
     {
+        _isDishHand = _interactables[8].activeSelf;
+
         RaycastHit hit;
         if (Physics.Raycast(_cam.position, _cam.forward, out hit, _interactionDistance))
         {
@@ -40,7 +43,6 @@ public class PlayerInteractions : MonoBehaviour
                 interactable.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("Interacting with " + hit.transform.tag);
                     if (!_isHandFull)
                     {
                         if (hit.transform.tag == "Grill")
@@ -50,6 +52,13 @@ public class PlayerInteractions : MonoBehaviour
                         }
                         foreach (GameObject obj in _interactables)
                         {
+                            if (obj.tag == tag && tag == "Dish")
+                            {
+                                obj.SetActive(true);
+                                _heldObject = obj;
+                                _isHandFull = true;
+                                return;
+                            }
                             if (obj.tag == hit.transform.tag)
                             {
                                 if (interactable.Interact(false))
@@ -76,7 +85,7 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (hit.transform.TryGetComponent(out ICutting cutting))
                             {
-                                if(cutting.CutInteraction(_heldObject))
+                                if (cutting.CutInteraction(_heldObject))
                                 {
                                     interactable.Interact(true);
                                     _heldObject.SetActive(false);
@@ -87,7 +96,7 @@ public class PlayerInteractions : MonoBehaviour
                         }
                         else
                         {
-                            if(hit.transform.TryGetComponent(out CuttingBoard cuttingBoard))
+                            if (hit.transform.TryGetComponent(out CuttingBoard cuttingBoard))
                             {
                                 if (!cuttingBoard.IsCuttingEmpty)
                                 {
@@ -110,10 +119,22 @@ public class PlayerInteractions : MonoBehaviour
                     }
                     if (hit.transform.TryGetComponent(out ICounterHolder counterHolder))
                     {
-                        
                         if (_isHandFull)
                         {
-                            if(counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject))
+                            if (_isDishHand)
+                            {
+                                
+                                if (counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject,
+                                        true, _heldObject.GetComponent<HeldFood>().IsSliced))
+                                {
+                                    _heldObject.SetActive(false);
+                                    _heldObject = null;
+                                    _isHandFull = false;
+                                    return;
+                                }
+                            }
+                            if (counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject,
+                                    false, _heldObject.GetComponent<HeldFood>().IsSliced) && !_isDishHand)
                             {
                                 _heldObject.SetActive(false);
                                 _heldObject = null;
@@ -125,8 +146,23 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             foreach (GameObject obj in _interactables)
                             {
-                                if(counterHolder.ReleaseObject(obj.GetComponent<HeldFood>().MyId()))
+                                
+                                if (counterHolder.ReleaseObject(obj.GetComponent<HeldFood>().MyId()))
                                 {
+                                    if (obj.tag == "Dish")
+                                    {
+                                        bool[] foodOnDish = counterHolder.ReleaseDish();
+                                        obj.SetActive(true);
+                                        Debug.Log("foodOnDish: " + foodOnDish);
+                                        for (int i = 0; i < foodOnDish.Length; i++)
+                                        {
+                                            _dishObjects[i].SetActive(foodOnDish[i]);
+                                        }
+                                        _heldObject = obj;
+                                        _isHandFull = true;
+                                        counterHolder.DestroyDish();
+                                        return;
+                                    }
                                     obj.SetActive(true);
                                     obj.GetComponent<MeshRenderer>().material = counterHolder.GetMaterial();
                                     counterHolder.DestroyObject();
@@ -177,19 +213,21 @@ public class PlayerInteractions : MonoBehaviour
         GameObject toChange = InteractableCicle(tag, material);
         toChange.TryGetComponent(out IHeldFood heldFood);
         heldFood.ICooked(state);
-        if (toChange == null)
-        {
-            Debug.Log(tag + " not found");
-        }
     }
 
     private GameObject InteractableCicle(String tag, Material material)
     {
         foreach (GameObject obj in _interactables)
         {
+            if (obj.tag == tag && tag == "Dish")
+            {
+                obj.SetActive(true);
+                _heldObject = obj;
+                _isHandFull = true;
+                return obj;
+            }
             if (obj.tag == tag)
             {
-                Debug.Log("Picking up " + obj.name);
                 obj.GetComponent<MeshRenderer>().material = material;
                 obj.SetActive(true);
                 _heldObject = obj;
@@ -199,7 +237,7 @@ public class PlayerInteractions : MonoBehaviour
         }
         return null;
     }
-    
+
     private void CuttedFoodPickUp(String tag, Material material)
     {
         GameObject toChange = InteractableCicle(tag, material);

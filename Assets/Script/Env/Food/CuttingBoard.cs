@@ -50,6 +50,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
                 _activeFood = null;
                 Interact(false);
                 IsCuttingEmpty = true;
+                _cuttingCounter = 0;
             }
         }
     }
@@ -59,7 +60,6 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     {
         isCutting = isToAdd;
         EventManager.OnCuttingInteraction?.Invoke(isCutting);
-        Debug.Log("camera cut");
         
         return true;
     }
