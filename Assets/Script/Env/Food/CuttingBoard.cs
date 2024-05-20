@@ -50,6 +50,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
                 _activeFood = null;
                 Interact(false);
                 IsCuttingEmpty = true;
+                _cuttingCounter = 0;
             }
         }
     }
