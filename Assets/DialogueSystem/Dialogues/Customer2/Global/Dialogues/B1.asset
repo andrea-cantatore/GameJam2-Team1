@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: B1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: B1
+  <Text>k__BackingField: ' It''ll do, I suppose. Now, I''m also in need of a room.
+    Got anything available?'
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Absolutely, we have a cozy room ready for you, and I'll
+      throw in breakfast.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 503b9eabbf178a04abd83c6621813896, type: 2}
+  - <Text>k__BackingField: Would you like to order dinner as well? We have a hearty
+      stew tonight.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 21aaf1c22a8d6dc48bc4ce059793a2c1, type: 2}
+  - <Text>k__BackingField: Rooms are scarce, and the price has doubled. Can you pay?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: a97e7ef6a77e67847b88d82780d706f5, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: B2
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: B2
+  <Text>k__BackingField: Herbs are useful. Do you grow anything special?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Yes, we have some rare herbs for our special dishes.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 38fa0e3352aca2248b8886cf57f9e56f, type: 2}
+  - <Text>k__BackingField: Just the usual ones you find in any kitchen.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: ed6c4c3f2b3363e478d6e91b885d6078, type: 2}
+  - <Text>k__BackingField: No, nothing out of the ordinary.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5ebb981630c200c418a8163965faf22e, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 1

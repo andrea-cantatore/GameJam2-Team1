@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: TheDwarfGoldDigger
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: TheDwarfGoldDigger
+  <Text>k__BackingField: Greetings, innkeeper! The road's been long and my throat's
+    as dry as the desert. Got any good ale for a weary traveler?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Of course, friend! Our finest ale for a hard-working dwarf
+      like yourself.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 0a82074ed5261824e944e33f4d7582af, type: 2}
+  - <Text>k__BackingField: We have ale, but it's nothing special. Will it do?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 073ae3c971d185147a1d6c0b229852ec, type: 2}
+  - <Text>k__BackingField: Ale, sure, but it'll cost you extra. We don't give freebies.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9973ebc4e63a6a4459a825f4e666468f, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 1

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: C2
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: C2
+  <Text>k__BackingField: Basic vegetables, you say? I suppose that's sufficient for
+    the kitchen.
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Would you like to see the garden yourself?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: d169e7f91dbedd6439465a420ec0448b, type: 2}
+  - <Text>k__BackingField: Would you like to order dinner? We use fresh ingredients
+      from the garden.
+    <NextDialogue>k__BackingField: {fileID: 0}
+  - <Text>k__BackingField: Yes, it is. We keep it simple.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 21c2c6bd2d37d5449ba43261df17abb5, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

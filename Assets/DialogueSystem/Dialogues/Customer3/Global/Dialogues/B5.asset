@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: B5
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: B5
+  <Text>k__BackingField: I see. I might take a look around later. Do you have any
+    particular plants you're proud of?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Our tomatoes are the best in the region.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 577142ed9d9bee74784f4f3895337f67, type: 2}
+  - <Text>k__BackingField: Nothing in particular, but everything grows well.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e967b7388a4bfea479162ac1ceba8bbd, type: 2}
+  - <Text>k__BackingField: Not really. It's just a functional garden.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f0ed23ef2d6f128459f8382c472672d9, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: C3
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: C3
+  <Text>k__BackingField: I suppose I'll take it then. Do you have any other amenities?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: We have a beautiful garden and a cozy common room.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 1350de31427c639468e8211696a0ed53, type: 2}
+  - <Text>k__BackingField: We offer basic amenities, nothing extravagant.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 00b71c5c7fcc79e4eab9be04d3e08e33, type: 2}
+  - <Text>k__BackingField: Just the essentials. Don't expect much.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f204313f67eb19e41817f464b4195310, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

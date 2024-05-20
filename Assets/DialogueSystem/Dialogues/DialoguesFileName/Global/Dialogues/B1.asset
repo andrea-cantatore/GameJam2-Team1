@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: B1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: B1
+  <Text>k__BackingField: Your inn looks cozy. Do you source local ingredients?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Yes, we take pride in supporting local farmers.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: c8b58d171264cc749928311a7eee897e, type: 2}
+  - <Text>k__BackingField: Indeed, we prioritize local produce for our dishes.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: bd3f3694e8145d64482bd21ef16c026b, type: 2}
+  - <Text>k__BackingField: We use whatever we can get. Can't always be picky.
+    <NextDialogue>k__BackingField: {fileID: 0}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
