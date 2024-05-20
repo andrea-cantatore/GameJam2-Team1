@@ -15,536 +15,310 @@ MonoBehaviour:
   <FileName>k__BackingField: Customer3
   <Groups>k__BackingField: []
   <Nodes>k__BackingField:
-  - <ID>k__BackingField: 283b8e4e-dd3e-4956-8843-455ea7766e81
+  - <ID>k__BackingField: a92c0341-c66b-4ea7-9c0e-d83d22c276f3
+    <Name>k__BackingField: LordOfTheRing
+    <Text>k__BackingField: Greetings, innkeeper! After a long journey from Erebor,
+      I'm in need of some food and drink. Ever heard the tales of the One Ring?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Welcome, traveler! I have heard the tales. What can
+        I get you to eat and drink?
+      <NodeID>k__BackingField: 1105d1ce-88d0-4199-899a-c59b6d7bcde2
+    - <Text>k__BackingField: Ah, a fellow fan of the tales. Our stew and ale are
+        popular among the folk here. Interested?
+      <NodeID>k__BackingField: bf9bafe6-2f75-4c4c-b930-3b0bf26bacf1
+    - <Text>k__BackingField: Tales of the One Ring? Hmph. What do you want to eat?
+      <NodeID>k__BackingField: e3398a32-b2f6-4ac0-bf22-5c2363b041b7
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 543, y: 2502}
+  - <ID>k__BackingField: 1105d1ce-88d0-4199-899a-c59b6d7bcde2
+    <Name>k__BackingField: A1
+    <Text>k__BackingField: I've been all the way to the Shire and back. What's your
+      best meal here?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We have a roast that even Gimli would love.
+      <NodeID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
+    - <Text>k__BackingField: Our stew is as hearty as the ones made in Rivendell.
+        Would you like to order?
+      <NodeID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
+    - <Text>k__BackingField: Just some regular meals, nothing special.
+      <NodeID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1499, y: 2001}
+  - <ID>k__BackingField: bf9bafe6-2f75-4c4c-b930-3b0bf26bacf1
+    <Name>k__BackingField: B1
+    <Text>k__BackingField: The stew and ale, you say? I've heard Rivendell has fine
+      meals. How does yours compare?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Our stew would make even Elrond proud!
+      <NodeID>k__BackingField: dca6a5c6-b9bf-4bea-b2d8-e2c96ccc68a5
+    - <Text>k__BackingField: Why don't you try it and see? Would you like to order?
+      <NodeID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
+    - <Text>k__BackingField: It's just stew. Take it or leave it.
+      <NodeID>k__BackingField: a3d809cc-4ad0-47a8-a4cd-f2b66f718006
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1499, y: 2502}
+  - <ID>k__BackingField: e3398a32-b2f6-4ac0-bf22-5c2363b041b7
+    <Name>k__BackingField: C1
+    <Text>k__BackingField: Straight to the point, I see. What kind of meat do you
+      have?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We've got a fine roast that Gimli himself would enjoy.
+      <NodeID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
+    - <Text>k__BackingField: How about our famous stew instead? Would you like to
+        order?
+      <NodeID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
+    - <Text>k__BackingField: Just some regular meat. Want it or not?
+      <NodeID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1499, y: 3000}
+  - <ID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
+    <Name>k__BackingField: A2
+    <Text>k__BackingField: A roast fit for Gimli, eh? Sounds good. Serve it up with
+      ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! You'll love our roast and ale.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: I'll get that started. Anything else you'd like to know
+        about the tales?
+      <NodeID>k__BackingField: 65079f29-f8b3-4281-a5a7-5fbeb8b8f5bd
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2388, y: 1501}
+  - <ID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
+    <Name>k__BackingField: A3
+    <Text>k__BackingField: Regular meals, you say? Better be good.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: It'll be good, trust me. One regular meal and ale coming
+        up.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: I'll get that started for you. Any tales from your travels
+        you'd like to share?
+      <NodeID>k__BackingField: 9857faee-cd93-4d11-be60-2a3bc641222b
+    - <Text>k__BackingField: It's just food. Take it or leave it.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2388, y: 2001}
+  - <ID>k__BackingField: a3d809cc-4ad0-47a8-a4cd-f2b66f718006
     <Name>k__BackingField: C2
-    <Text>k__BackingField: Basic vegetables, you say? I suppose that's sufficient
-      for the kitchen.
+    <Text>k__BackingField: Just stew, huh? Better be hearty.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: Would you like to see the garden yourself?
-      <NodeID>k__BackingField: 22a60005-eac2-407d-9d3a-6cebf9e76159
-    - <Text>k__BackingField: Would you like to order dinner? We use fresh ingredients
-        from the garden.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Yes, it is. We keep it simple.
-      <NodeID>k__BackingField: b7fefe82-aba6-4d90-ab6f-301569e9c7c2
+    - <Text>k__BackingField: It is, trust me. One stew and ale coming up.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: I'll get that started for you. Any tales from your travels
+        you'd like to share?
+      <NodeID>k__BackingField: 4be45e8d-96e0-44b3-b09d-3cb1d8bab61c
+    - <Text>k__BackingField: It's just stew. Take it or leave it.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13775, y: -712}
-  - <ID>k__BackingField: 22a60005-eac2-407d-9d3a-6cebf9e76159
-    <Name>k__BackingField: A7
-    <Text>k__BackingField: I'd like that. Perhaps it will remind me of home. Can
-      you show me?
+    <Position>k__BackingField: {x: 2388, y: 3000}
+  - <ID>k__BackingField: dca6a5c6-b9bf-4bea-b2d8-e2c96ccc68a5
+    <Name>k__BackingField: D1
+    <Text>k__BackingField: A stew fit for Elrond, you say? Alright, I'll give it
+      a try.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: I'd be happy to. Follow me.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Sure, but let's settle your room first.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: "Maybe later. I\u2019m quite busy right now."
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: Excellent choice! One stew and ale coming up.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: I'll get that started for you. Anything else?
+      <NodeID>k__BackingField: 9c135480-f049-4593-9778-a3866aa2c71d
+    - <Text>k__BackingField: Don't complain if it's not what you expect.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14497, y: -1022}
-  - <ID>k__BackingField: b7fefe82-aba6-4d90-ab6f-301569e9c7c2
-    <Name>k__BackingField: C7
-    <Text>k__BackingField: Simple is good. I prefer it that way.
+    <Position>k__BackingField: {x: 2388, y: 3501}
+  - <ID>k__BackingField: 9857faee-cd93-4d11-be60-2a3bc641222b
+    <Name>k__BackingField: F2
+    <Text>k__BackingField: Tales from my travels? I've seen Moria, I've walked the
+      paths of the dead. You?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: I'm glad to hear that. Would you like to order dinner?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: We believe in quality over quantity.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Simple doesn't mean bad, after all.
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: I've only heard stories. Your meal will be right up.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: "I\u2019ve never been to such places, but your stories
+        must be fascinating. Your meal is on its way."
+      <NodeID>k__BackingField: 63630a31-86d1-4aa3-8228-710ac554babb
+    - <Text>k__BackingField: "Paths of the dead? Sounds like nonsense. Here\u2019s
+        your food."
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14497, y: -557}
-  - <ID>k__BackingField: d0bc818a-62ee-4574-914e-4662d4349e3d
-    <Name>k__BackingField: C3
-    <Text>k__BackingField: I suppose I'll take it then. Do you have any other amenities?
+    <Position>k__BackingField: {x: 3280, y: 2001}
+  - <ID>k__BackingField: 65079f29-f8b3-4281-a5a7-5fbeb8b8f5bd
+    <Name>k__BackingField: F1
+    <Text>k__BackingField: Nothing else for now. Just the roast and ale. Tell me,
+      have you ever seen a dragon?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: We have a beautiful garden and a cozy common room.
-      <NodeID>k__BackingField: 76aa8a4a-c650-4580-b3e2-559a64544e66
-    - <Text>k__BackingField: We offer basic amenities, nothing extravagant.
-      <NodeID>k__BackingField: 6383a29f-6abb-45db-abdb-dc08834afa22
-    - <Text>k__BackingField: Just the essentials. Don't expect much.
-      <NodeID>k__BackingField: 87fb815a-b1c0-4bac-9021-591f5e7919fe
+    - <Text>k__BackingField: No dragons, but I've heard many tales. Let me get your
+        meal.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: No dragons, but I've seen my fair share of trouble.
+        Let me get that roast for you.
+      <NodeID>k__BackingField: 327f1e56-91d1-47e3-b115-997cb48bc223
+    - <Text>k__BackingField: Dragons? You're dreaming. Here's your food.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 12717, y: 1766}
-  - <ID>k__BackingField: 76aa8a4a-c650-4580-b3e2-559a64544e66
-    <Name>k__BackingField: A9
-    <Text>k__BackingField: A garden sounds nice. I'll take a look tomorrow. What
-      else do you offer?
+    <Position>k__BackingField: {x: 3280, y: 1501}
+  - <ID>k__BackingField: a386d4df-5178-4bfa-bc94-ee97cd94dd5d
+    <Name>k__BackingField: F3
+    <Text>k__BackingField: Nothing else for now. Just the stew and ale. Have you
+      heard of the Balrog in Moria?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: We have a variety of dishes made from fresh ingredients.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something now?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Just the basics. We focus on comfort.
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: Yes, terrifying tales. Let me get your meal.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: I've heard the stories. Let me get that stew for you.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: Balrog? Just stories. Here's your food.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13562, y: 1338}
-  - <ID>k__BackingField: 6383a29f-6abb-45db-abdb-dc08834afa22
-    <Name>k__BackingField: B9
-    <Text>k__BackingField: Basic amenities are fine. I'll need a quiet place to relax.
+    <Position>k__BackingField: {x: 3280, y: 2502}
+  - <ID>k__BackingField: 4be45e8d-96e0-44b3-b09d-3cb1d8bab61c
+    <Name>k__BackingField: F4
+    <Text>k__BackingField: Tales from my travels? I've seen Mirkwood, the land of
+      giant spiders. You?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: Our garden is perfect for that.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: We have a cozy common room you might like.
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: I've heard of Mirkwood. Your meal will be right up.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: Mirkwood sounds terrifying. Your meal is on its way.
+      <NodeID>k__BackingField: 63630a31-86d1-4aa3-8228-710ac554babb
+    - <Text>k__BackingField: "Giant spiders? Sounds like nonsense. Here\u2019s your
+        food."
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13575, y: 1741}
-  - <ID>k__BackingField: 87fb815a-b1c0-4bac-9021-591f5e7919fe
-    <Name>k__BackingField: C9
-    <Text>k__BackingField: Essentials are all I need. A place to rest is what matters
-      most.
+    <Position>k__BackingField: {x: 3280, y: 3000}
+  - <ID>k__BackingField: 9c135480-f049-4593-9778-a3866aa2c71d
+    <Name>k__BackingField: F5
+    <Text>k__BackingField: Nothing else for now. Just the stew and ale. Do you know
+      the tale of the Ents in Fangorn?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: Our garden is a peaceful retreat.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Just don't expect too much.
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: Yes, the walking trees. Fascinating! Your meal will
+        be right up.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: "I\u2019ve heard the stories. Let me get that stew for
+        you."
+      <NodeID>k__BackingField: 4c502c9c-0605-4db7-9d26-d3bcf539eacd
+    - <Text>k__BackingField: "Walking trees? Sounds like nonsense. Here\u2019s your
+        food."
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13546, y: 2186}
-  - <ID>k__BackingField: 5f1188fb-858b-4b6c-9c64-a3179a191659
-    <Name>k__BackingField: A10
-    <Text>k__BackingField: I do enjoy plants. I'll take the room.
+    <Position>k__BackingField: {x: 3280, y: 3501}
+  - <ID>k__BackingField: 327f1e56-91d1-47e3-b115-997cb48bc223
+    <Name>k__BackingField: G1
+    <Text>k__BackingField: No dragons, you say? Well, I've seen Smaug's desolation.
+      It's something you don't forget.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: "Excellent choice. I\u2019ll have it prepared for you."
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Great. Let me know if you need anything else.
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: That must have been terrifying. Your meal will be right
+        up.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: I can't imagine. Let me get your meal.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: Smaug? Just another tale. Here's your food.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13439, y: 2812}
-  - <ID>k__BackingField: f9e4701e-8d38-4e04-b50a-d5009d861e23
-    <Name>k__BackingField: A4
-    <Text>k__BackingField: Overlooking the garden, you say? That could be tolerable.
+    <Position>k__BackingField: {x: 4251, y: 1501}
+  - <ID>k__BackingField: 63630a31-86d1-4aa3-8228-710ac554babb
+    <Name>k__BackingField: G2
+    <Text>k__BackingField: Paths of the dead and Mirkwood are no jokes. Ever met
+      an elf?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, it's very peaceful. Perfect for someone who enjoys
-        solitude.
-      <NodeID>k__BackingField: 5f1188fb-858b-4b6c-9c64-a3179a191659
-    - <Text>k__BackingField: It's our best room. I'm sure you'll like it.
-      <NodeID>k__BackingField: 760fc109-dbc3-47e0-9e64-fbf4c885b6ec
-    - <Text>k__BackingField: If you like plants, it's the room for you.
-      <NodeID>k__BackingField: 38df2bbe-5dee-4a80-982e-a594cbf160eb
+    - <Text>k__BackingField: I've met a few travelers, but no elves. Your meal is
+        coming up.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: "I\u2019ve heard tales of elves, but never met one.
+        Let me get your food."
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: Elves? Just myths. Here's your food.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 12707, y: 3182}
-  - <ID>k__BackingField: 760fc109-dbc3-47e0-9e64-fbf4c885b6ec
-    <Name>k__BackingField: B10
-    <Text>k__BackingField: Best room, you say? I'll take it then.
+    <Position>k__BackingField: {x: 4251, y: 2502}
+  - <ID>k__BackingField: 4c502c9c-0605-4db7-9d26-d3bcf539eacd
+    <Name>k__BackingField: G3
+    <Text>k__BackingField: Ents and walking trees, incredible to witness. Do you
+      believe in such things?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: "Excellent choice. I\u2019ll have it prepared for you."
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Great. Let me know if you need anything else.
-      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: I do believe. Your meal is on its way.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: Hard to say, but the tales are fascinating. Let me get
+        your stew.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: Belief is one thing, reality another. Here's your food.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13481, y: 3240}
-  - <ID>k__BackingField: 38df2bbe-5dee-4a80-982e-a594cbf160eb
-    <Name>k__BackingField: C10
-    <Text>k__BackingField: I do like plants. I'll take the room.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: "Excellent choice. I\u2019ll have it prepared for you."
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Great. Let me know if you need anything else.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13439, y: 3594}
-  - <ID>k__BackingField: 6bca5a7a-971e-42cc-853e-2699c4c7e25a
-    <Name>k__BackingField: C5
-    <Text>k__BackingField: "Too busy, you say? That\u2019s a shame. Gardening is
-      quite fulfilling."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: I agree, but running the inn takes up most of my time.
-      <NodeID>k__BackingField: 2337eff8-0704-41e5-ac6d-00f8b3a96644
-    - <Text>k__BackingField: It is, but I have good staff to take care of it.
-      <NodeID>k__BackingField: d8a24073-f8dd-4246-b9ef-e50432dd645b
-    - <Text>k__BackingField: Yes, well, the inn won't run itself.
-      <NodeID>k__BackingField: 549e6c2c-3bc2-4a1f-a45a-ed03b5e61eb7
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13420, y: -3484}
-  - <ID>k__BackingField: cf0cad80-394f-4714-9ff1-04d53a3d3c9e
-    <Name>k__BackingField: A5
-    <Text>k__BackingField: "A sanctuary, you say? That\u2019s something I can appreciate.
-      Do you grow any vegetables?"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, we grow tomatoes, potatoes, and a few others.
-      <NodeID>k__BackingField: d8cba609-aedb-486a-9516-8d90de5c10c7
-    - <Text>k__BackingField: A few, mostly for the kitchen's use.
-      <NodeID>k__BackingField: 3219c2aa-512a-480b-9f6c-31f5fed84801
-    - <Text>k__BackingField: Not many, just enough for the inn.
-      <NodeID>k__BackingField: 4d4d8d37-9065-466b-acf8-09a5dada4965
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13441, y: -5323}
-  - <ID>k__BackingField: d8cba609-aedb-486a-9516-8d90de5c10c7
-    <Name>k__BackingField: A11
-    <Text>k__BackingField: Tomatoes and potatoes are good choices. Do you grow them
-      yourself?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, I enjoy gardening in my free time.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Mostly, but the staff helps a lot.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: No, the staff handles most of the gardening.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14326, y: -5583}
-  - <ID>k__BackingField: 3219c2aa-512a-480b-9f6c-31f5fed84801
-    <Name>k__BackingField: B11
-    <Text>k__BackingField: A few is better than none. Do you tend to them often?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Whenever I can. It's quite relaxing.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: I try, but the staff does most of the work.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Not really. The staff takes care of it.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14326, y: -5285}
-  - <ID>k__BackingField: 4d4d8d37-9065-466b-acf8-09a5dada4965
-    <Name>k__BackingField: C11
-    <Text>k__BackingField: Enough for the inn is still good. Do you cook with them?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, every meal uses fresh ingredients.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: We try to incorporate them whenever possible.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Only occasionally, mostly for special dishes.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14326, y: -4982}
-  - <ID>k__BackingField: 666c8b5f-65cd-4eb1-923c-d33f985073c7
-    <Name>k__BackingField: B5
-    <Text>k__BackingField: I see. I might take a look around later. Do you have any
-      particular plants you're proud of?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Our tomatoes are the best in the region.
-      <NodeID>k__BackingField: 0aa42eff-ea49-4bd7-8bdd-f9a346e92c51
-    - <Text>k__BackingField: Nothing in particular, but everything grows well.
-      <NodeID>k__BackingField: c170c653-95ca-4342-bae3-1a9de971d5fc
-    - <Text>k__BackingField: Not really. It's just a functional garden.
-      <NodeID>k__BackingField: 708f25ee-2048-4f5a-93f4-aec33a239c69
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13420, y: -4347}
-  - <ID>k__BackingField: 0aa42eff-ea49-4bd7-8bdd-f9a346e92c51
-    <Name>k__BackingField: A12
-    <Text>k__BackingField: Best tomatoes in the region, you say? I'd like to try
-      them.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: I'd be happy to serve you a dish featuring them.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: "You\u2019ll have to try our salad then."
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14177, y: -4523}
-  - <ID>k__BackingField: c170c653-95ca-4342-bae3-1a9de971d5fc
-    <Name>k__BackingField: B12
-    <Text>k__BackingField: It's good that everything grows well. Do you have a favorite
-      plant?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: I particularly like our rosemary. It smells wonderful.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: I don't really have a favorite. I appreciate them all.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Not really. I focus more on the overall garden.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14177, y: -4234}
-  - <ID>k__BackingField: 708f25ee-2048-4f5a-93f4-aec33a239c69
-    <Name>k__BackingField: C12
-    <Text>k__BackingField: A functional garden is still valuable. Do you use it often?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, we use it for many of our dishes.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Whenever possible. Fresh is always better.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Not as much as I'd like, but we do use it.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14141, y: -3952}
-  - <ID>k__BackingField: 2337eff8-0704-41e5-ac6d-00f8b3a96644
-    <Name>k__BackingField: A13
-    <Text>k__BackingField: Running an inn must be busy. Do you ever get time for
-      yourself?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Rarely, but I cherish it when I do."
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: It's difficult, but I manage sometimes.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Hardly ever. The inn keeps me occupied.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14177, y: -3615}
-  - <ID>k__BackingField: d8a24073-f8dd-4246-b9ef-e50432dd645b
-    <Name>k__BackingField: B13
-    <Text>k__BackingField: Good staff is important. Do they tend to the garden often?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, they do a great job keeping it in shape.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: They handle most of the work, really.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Mostly. I supervise when I can.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14177, y: -3329}
-  - <ID>k__BackingField: 549e6c2c-3bc2-4a1f-a45a-ed03b5e61eb7
-    <Name>k__BackingField: C13
+    <Position>k__BackingField: {x: 4169, y: 3501}
+  - <ID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    <Name>k__BackingField: Neutral
     <Text>k__BackingField: Dialogue text.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: New Choice
+    - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 14177, y: -3067}
-  - <ID>k__BackingField: 2acebb87-bd88-4e1c-83d1-008d046427d4
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5499, y: 2528}
+  - <ID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
+    <Name>k__BackingField: Angry
+    <Text>k__BackingField: Dialogue text.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5499, y: 2957}
+  - <ID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
     <Name>k__BackingField: B2
-    <Text>k__BackingField: Herbs are useful. Do you grow anything special?
+    <Text>k__BackingField: No need for fancy talk. Just get me the stew and ale.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, we have some rare herbs for our special dishes.
-      <NodeID>k__BackingField: 3dd384d5-0143-4122-9294-d6d0aedab70f
-    - <Text>k__BackingField: Just the usual ones you find in any kitchen.
-      <NodeID>k__BackingField: 8a7608f0-bcc3-409d-b650-f39553f707c8
-    - <Text>k__BackingField: No, nothing out of the ordinary.
-      <NodeID>k__BackingField: c63db02e-4d50-4093-8c52-187b9ab20113
+    - <Text>k__BackingField: Right away! One stew and ale coming up.
+      <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    - <Text>k__BackingField: I'll get that started for you. Anything else you'd like
+        to talk about?
+      <NodeID>k__BackingField: a386d4df-5178-4bfa-bc94-ee97cd94dd5d
+    - <Text>k__BackingField: Fine, don't complain if it's not what you expect.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 12778, y: -2005}
-  - <ID>k__BackingField: 3dd384d5-0143-4122-9294-d6d0aedab70f
-    <Name>k__BackingField: A6
-    <Text>k__BackingField: "Rare herbs, you say? I\u2019d like to know more about
-      them."
+    <Position>k__BackingField: {x: 2388, y: 2502}
+  - <ID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    <Name>k__BackingField: Happy
+    <Text>k__BackingField: Dialogue text.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: We have some medicinal herbs that are hard to find elsewhere.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Our chef uses them for special dishes. Adds a unique
-        flavor.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: They're mostly for show. We don't use them much.
+    - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13529, y: -2425}
-  - <ID>k__BackingField: 8a7608f0-bcc3-409d-b650-f39553f707c8
-    <Name>k__BackingField: B6
-    <Text>k__BackingField: I see. Sometimes the usual ones are the best. Do you cook
-      with them often?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, every meal here is made with fresh herbs.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: We use them regularly, but not in every dish.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Only when necessary. We prefer simple flavors.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13529, y: -2016}
-  - <ID>k__BackingField: c63db02e-4d50-4093-8c52-187b9ab20113
-    <Name>k__BackingField: C6
-    <Text>k__BackingField: I suppose that's good enough. How about vegetables? Do
-      you grow any?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, we have a variety of vegetables in our garden.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Just a few, mostly for our own use.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Only the basics. Nothing special.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13529, y: -1680}
-  - <ID>k__BackingField: 44120277-af83-44b1-8b19-f333e3cc0ebb
-    <Name>k__BackingField: theSolitaryDwarfGardener
-    <Text>k__BackingField: Good evening, innkeeper. I've been traveling all day and
-      need a place to rest. Preferably somewhere quiet.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Certainly, we have a peaceful room overlooking the garden.
-      <NodeID>k__BackingField: 11a7fa6e-ed7c-4668-9807-fcb72285f72f
-    - <Text>k__BackingField: We have rooms available, but it can get noisy here.
-      <NodeID>k__BackingField: c289fabb-9be9-492a-ba60-981add86de3c
-    - <Text>k__BackingField: Quiet? In an inn? You'll have to manage with what we've
-        got.
-      <NodeID>k__BackingField: 0e0f5717-a701-4922-ba85-d4a60bbbc4e9
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 6109, y: -1004}
-  - <ID>k__BackingField: 11a7fa6e-ed7c-4668-9807-fcb72285f72f
-    <Name>k__BackingField: A1
-    <Text>k__BackingField: Your inn seems quaint. Do you use fresh ingredients in
-      your dishes?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, we take pride in using fresh ingredients from our
-        garden.
-      <NodeID>k__BackingField: 4c2db416-9445-4ec0-8097-62aea0ff2074
-    - <Text>k__BackingField: Indeed, we ensure the quality of our ingredients.
-      <NodeID>k__BackingField: 6bb8deb2-b356-42be-ba9f-7fcae1088ecf
-    - <Text>k__BackingField: We use whatever's available. Can't promise much.
-      <NodeID>k__BackingField: 283b8e4e-dd3e-4956-8843-455ea7766e81
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 6999, y: -1498}
-  - <ID>k__BackingField: 4c2db416-9445-4ec0-8097-62aea0ff2074
-    <Name>k__BackingField: A2
-    <Text>k__BackingField: Sounds lovely. I might take a look. Do you spend a lot
-      of time in the garden yourself?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Yes, I do. It's my little sanctuary.
-      <NodeID>k__BackingField: cf0cad80-394f-4714-9ff1-04d53a3d3c9e
-    - <Text>k__BackingField: I tend to it occasionally. The staff does most of the
-        work.
-      <NodeID>k__BackingField: 666c8b5f-65cd-4eb1-923c-d33f985073c7
-    - <Text>k__BackingField: Not really. I'm too busy with the inn.
-      <NodeID>k__BackingField: 6bca5a7a-971e-42cc-853e-2699c4c7e25a
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 7870, y: -1498}
-  - <ID>k__BackingField: c289fabb-9be9-492a-ba60-981add86de3c
-    <Name>k__BackingField: B1
-    <Text>k__BackingField: Noisy, you say? I can't stand too much noise. Perhaps
-      I'll find another place.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: I can find you a room in the quieter part of the inn.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something while you decide?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: "Suit yourself. It\u2019s the only room we've got."
-      <NodeID>k__BackingField: d0bc818a-62ee-4574-914e-4662d4349e3d
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 6999, y: -1004}
-  - <ID>k__BackingField: 0e0f5717-a701-4922-ba85-d4a60bbbc4e9
-    <Name>k__BackingField: C1
-    <Text>k__BackingField: Hmph. I suppose I'll have to make do. What kind of rooms
-      do you have?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: We have a cozy room overlooking our garden.
-      <NodeID>k__BackingField: f9e4701e-8d38-4e04-b50a-d5009d861e23
-    - <Text>k__BackingField: We have basic rooms with all the necessities.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Rooms are rooms. Take it or leave it.
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 6999, y: -505}
-  - <ID>k__BackingField: 6bb8deb2-b356-42be-ba9f-7fcae1088ecf
-    <Name>k__BackingField: A3
-    <Text>k__BackingField: I'd appreciate that. Can you ensure it's as quiet as possible?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: "Of course, I\u2019ll make sure you're not disturbed."
-      <NodeID>k__BackingField: 5648ab22-7b0b-432a-85e5-f884058f7874
-    - <Text>k__BackingField: I'll do my best, but I can't promise complete silence.
-      <NodeID>k__BackingField: b7a9bc3c-445d-4584-a2fc-61b3d0c4b628
-    - <Text>k__BackingField: You might still hear some noise, but it's the best we
-        can do.
-      <NodeID>k__BackingField: 14349975-bbe0-45e7-9b6f-e4aa210cda1b
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 7870, y: -994}
-  - <ID>k__BackingField: 5648ab22-7b0b-432a-85e5-f884058f7874
-    <Name>k__BackingField: A8
-    <Text>k__BackingField: Thank you. I need some peace and quiet to relax. Anything
-      else you recommend?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Our garden is perfect for a quiet stroll.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: "Just keep to yourself, and you\u2019ll find peace."
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13783, y: -247}
-  - <ID>k__BackingField: b7a9bc3c-445d-4584-a2fc-61b3d0c4b628
-    <Name>k__BackingField: B8
-    <Text>k__BackingField: I understand. I'll try to manage. Anything else I should
-      know?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Our garden is a quiet spot if you need to relax.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: "Just follow the rules, and you\u2019ll be fine."
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13684, y: 25}
-  - <ID>k__BackingField: 14349975-bbe0-45e7-9b6f-e4aa210cda1b
-    <Name>k__BackingField: C8
-    <Text>k__BackingField: "Hmph. I'll try to manage. Just hope it\u2019s not too
-      noisy."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Our garden is a quiet spot if you need to relax.
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: Would you like to order something to eat or drink?
-      <NodeID>k__BackingField: 
-    - <Text>k__BackingField: "I can\u2019t promise anything, but I'll try."
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 13535, y: 298}
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5499, y: 2111}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
-  - C2
-  - A7
-  - C7
-  - C3
-  - A9
-  - B9
-  - C9
-  - A10
-  - A4
-  - B10
-  - C10
-  - C5
-  - A5
-  - A11
-  - B11
-  - C11
-  - B5
-  - A12
-  - B12
-  - C12
-  - A13
-  - B13
-  - C13
-  - B2
-  - A6
-  - B6
-  - C6
-  - theSolitaryDwarfGardener
+  - LordOfTheRing
   - A1
-  - A2
   - B1
   - C1
+  - A2
   - A3
-  - A8
-  - B8
-  - C8
+  - C2
+  - D1
+  - F2
+  - F1
+  - F3
+  - F4
+  - F5
+  - G1
+  - G2
+  - G3
+  - Neutral
+  - Angry
+  - B2
+  - Happy
   <OldGroupedNodeNames>k__BackingField:
     list: []

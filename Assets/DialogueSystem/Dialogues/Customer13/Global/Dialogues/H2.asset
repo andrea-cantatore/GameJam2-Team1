@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: H2
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: H2
+  <Text>k__BackingField: "Luck and the will to live. Many weren\u2019t as fortunate."
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: To those less fortunate. Your ale and bread are coming
+      up.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: fa691f6bfaf338e458156f52f064ccc2, type: 2}
+  - <Text>k__BackingField: "Survivor\u2019s guilt is heavy. Can I get you a meal
+      as well?"
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5c5ea2a60b7137b44b745c76c8adfb1c, type: 2}
+  - <Text>k__BackingField: "Luck indeed. Here\u2019s your ale."
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: a33dba31bc02d684c9c1141a348f17a5, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
