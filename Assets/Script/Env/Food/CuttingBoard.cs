@@ -59,7 +59,6 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     {
         isCutting = isToAdd;
         EventManager.OnCuttingInteraction?.Invoke(isCutting);
-        Debug.Log("camera cut");
         
         return true;
     }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
@@ -17,15 +18,12 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
         _popUpPos = transform.GetChild(0);
     }
 
-    public bool TakeObject(int id, GameObject obj, bool isDish)
+    public bool TakeObject(int id, GameObject obj, bool isDish, bool isSliced)
     {
         if (_isHoldingDish)
         {
-            Debug.Log("Dish is holding");
             return _playerDish.GetDish(obj, obj.GetComponent<HeldFood>().IsSliced);
         }
-        Debug.Log(_isHoldingDish);
-        Debug.Log("Dish is not holding");
         if(_isFull)
         {
             return false;
@@ -34,13 +32,13 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
         _holdingID = id;
         _isFull = true;
         _holdingObject = Instantiate(obj, _holdingPosition.position, Quaternion.identity);
-        Debug.Log("Object Taken " + _holdingObject.name + _holdingID + _holdingPosition.position + "_______isDish " + isDish);
+        
         if(isDish)
         {
             _isHoldingDish = true;
             _playerDish = _holdingObject.GetComponent<PlayerDish>();
-            Debug.Log(_playerDish.name);
         }
+        
         return true;
     }
     public bool ReleaseObject(int id)
@@ -61,11 +59,19 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
     {
         Destroy(_holdingObject);
         _holdingObject = null;
+        _isHoldingDish = false;
         _isFull = false;
     }
-    public bool HaveDishOn()
+    public bool[] ReleaseDish()
     {
-        return _isHoldingDish;
+        return _playerDish.ReleaseDish();
+    }
+    public void DestroyDish()
+    {
+        Destroy(_holdingObject);
+        _holdingObject = null;
+        _isHoldingDish = false;
+        _isFull = false;
     }
     public bool Interact(bool isToAdd)
     {
