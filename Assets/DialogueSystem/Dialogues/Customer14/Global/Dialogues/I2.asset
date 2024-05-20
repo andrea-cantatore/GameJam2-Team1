@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: I2
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: I2
+  <Text>k__BackingField: The balance is delicate, like a dance. Do you dance, innkeeper?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Only with words. What kind of dance do you mean?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 46ca0b55d07f32740bec576e1d6deffa, type: 2}
+  - <Text>k__BackingField: Not really. Would you like to order some food?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5bfdfc2da822ec54a9333b28976533bd, type: 2}
+  - <Text>k__BackingField: "I don\u2019t dance. Let\u2019s focus on getting you a
+      meal."
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 6d6d8a466509cb242b0d019ce40d4137, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

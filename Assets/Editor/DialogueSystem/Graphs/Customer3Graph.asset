@@ -257,24 +257,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 4169, y: 3501}
-  - <ID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
-    <Name>k__BackingField: Neutral
-    <Text>k__BackingField: Dialogue text.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5499, y: 2528}
-  - <ID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
-    <Name>k__BackingField: Angry
-    <Text>k__BackingField: Dialogue text.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5499, y: 2957}
   - <ID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
     <Name>k__BackingField: B2
     <Text>k__BackingField: No need for fancy talk. Just get me the stew and ale.
@@ -291,13 +273,31 @@ MonoBehaviour:
     <Position>k__BackingField: {x: 2388, y: 2502}
   - <ID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
     <Name>k__BackingField: Happy
-    <Text>k__BackingField: Dialogue text.
+    <Text>k__BackingField: The customer enjoys the meal and praises the inn.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 5499, y: 2111}
+  - <ID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
+    <Name>k__BackingField: Neutral
+    <Text>k__BackingField: The customer is satisfied but doesn't show much emotion.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5499, y: 2528}
+  - <ID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
+    <Name>k__BackingField: Angry
+    <Text>k__BackingField: The customer grumbles and shows displeasure.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5499, y: 2957}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - LordOfTheRing
@@ -316,9 +316,9 @@ MonoBehaviour:
   - G1
   - G2
   - G3
-  - Neutral
-  - Angry
   - B2
   - Happy
+  - Neutral
+  - Angry
   <OldGroupedNodeNames>k__BackingField:
     list: []

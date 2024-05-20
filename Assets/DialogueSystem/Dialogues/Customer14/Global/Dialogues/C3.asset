@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: C3
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: C3
+  <Text>k__BackingField: Eat? You think food can fill the void in the soul?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Maybe not, but it can help. What do you usually eat?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 36f1058035ae49d4c98989429d080302, type: 2}
+  - <Text>k__BackingField: Perhaps. What can I get you to eat?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5bfdfc2da822ec54a9333b28976533bd, type: 2}
+  - <Text>k__BackingField: "Food is practical. Let\u2019s stick to that."
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: b891c1a6e53dc584dad54d4ee2957708, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

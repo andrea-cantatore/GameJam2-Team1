@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: I1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: I1
+  <Text>k__BackingField: The key is within us all. Do you search within?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: I try to. What have you found within yourself?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 49e4da75a953f5a4b80f958ee03821b7, type: 2}
+  - <Text>k__BackingField: Sometimes. Would you like to order something to eat?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5bfdfc2da822ec54a9333b28976533bd, type: 2}
+  - <Text>k__BackingField: "Not often. Let\u2019s get you some food."
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 6d6d8a466509cb242b0d019ce40d4137, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
