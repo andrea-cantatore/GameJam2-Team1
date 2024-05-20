@@ -1,34 +1,50 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class CounterHolder : MonoBehaviour, IInteract,ICounterHolder
+public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
 {
-    private bool _isFull;
+    private bool _isFull, _isHoldingDish;
     private int _holdingID;
     private GameObject _holdingObject;
     [SerializeField] private Transform _holdingPosition, _popUpPos;
+    private PlayerDish _playerDish;
+    
 
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
     }
 
-    public bool TakeObject(int id, GameObject obj)
+    public bool TakeObject(int id, GameObject obj, bool isDish, bool isSliced)
     {
+        if (_isHoldingDish)
+        {
+            return _playerDish.GetDish(obj, obj.GetComponent<HeldFood>().IsSliced);
+        }
         if(_isFull)
         {
             return false;
         }
+        
         _holdingID = id;
         _isFull = true;
         _holdingObject = Instantiate(obj, _holdingPosition.position, Quaternion.identity);
-        Debug.Log("Object Taken " + _holdingObject.name + _holdingID + _holdingPosition.position);
+        
+        if(isDish)
+        {
+            _isHoldingDish = true;
+            _playerDish = _holdingObject.GetComponent<PlayerDish>();
+        }
+        
         return true;
     }
     public bool ReleaseObject(int id)
     {
+        if(!_isFull)
+            return false;
         if(id == _holdingID)
         {
             return true;
@@ -43,6 +59,18 @@ public class CounterHolder : MonoBehaviour, IInteract,ICounterHolder
     {
         Destroy(_holdingObject);
         _holdingObject = null;
+        _isHoldingDish = false;
+        _isFull = false;
+    }
+    public bool[] ReleaseDish()
+    {
+        return _playerDish.ReleaseDish();
+    }
+    public void DestroyDish()
+    {
+        Destroy(_holdingObject);
+        _holdingObject = null;
+        _isHoldingDish = false;
         _isFull = false;
     }
     public bool Interact(bool isToAdd)
