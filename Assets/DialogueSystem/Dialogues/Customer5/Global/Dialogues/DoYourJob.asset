@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: DoYourJob
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: DoYourJob
+  <Text>k__BackingField: I'm not obliged to greet you, you just have to focus on
+    doing your job!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: I got it, I'll prepare you a dish so good it'll wipe that
+      ugly smirk off your face.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: a72acf4629457354c91bccd1a4a7fb0a, type: 2}
+  - <Text>k__BackingField: I'll make you your dish, but then I kindly ask you to
+      leave.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9a7eea0e0509b5646981ad6a1989c2f6, type: 2}
+  - <Text>k__BackingField: I don't allow anyone to treat me like this, so you better
+      watch your language, otherwise I won't prepare you anything!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: b71cc963e0882cb48ac4fde755a4bf9a, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

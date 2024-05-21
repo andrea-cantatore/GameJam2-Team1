@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: DontHide
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: DontHide
+  <Text>k__BackingField: Don't hide behind a counter. If you want to fight, I'll
+    be waiting for you outside the inn after closing.
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Violence is not the right answer, I won't play your game.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: af57117913cd6c94c8fce8009ffbe7eb, type: 2}
+  - <Text>k__BackingField: I've better to do, sorry.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: de573f8b78840774ea6db5f03ca5e968, type: 2}
+  - <Text>k__BackingField: I hope the roast chokes you before the next sunrise.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 567e314f5e3a32a4b9442cdc56455b1b, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
