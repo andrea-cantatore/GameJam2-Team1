@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Beggars
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Beggars
+  <Text>k__BackingField: Who cares about beggars, I want a well-done meat, I won't
+    accept anything else!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: You scare me
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: c0856d683c8f6c24c84a69bb03f5aa5d, type: 2}
+  - <Text>k__BackingField: I sense some frustration in you. I don't want to pry,
+      but if you ever want to talk about it, I'm here!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5003bd0831d795847b3811695dcf47aa, type: 2}
+  - <Text>k__BackingField: You're heartless!
+    <NextDialogue>k__BackingField: {fileID: 0}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

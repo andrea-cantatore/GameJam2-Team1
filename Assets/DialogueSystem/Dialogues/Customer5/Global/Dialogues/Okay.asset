@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Okay
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Okay
+  <Text>k__BackingField: Okay...Okay. I'm sorry, can you prepare my dish now?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Now let's reason.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 1f682dcdbb3367b448c0149d283c5400, type: 2}
+  - <Text>k__BackingField: Only for this time!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: c7d339b66dfe2f047aca7314c19a5db0, type: 2}
+  - <Text>k__BackingField: No.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5598bc87260d24d4b900337a5a77be69, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

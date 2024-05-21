@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: CarneArrostoConPatate
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: CarneArrostoConPatate
+  <Text>k__BackingField: Roast meat with potatoes, right away!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Your meat is on the way, sir.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 90b68b23b899ac74e85c174e66016994, type: 2}
+  - <Text>k__BackingField: Ehm...Sure
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5ede89f61285b4542a4fcb642e908021, type: 2}
+  - <Text>k__BackingField: Good evening would be appreciated.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5641526f7881f694aafbc18e4b4082b8, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 1
