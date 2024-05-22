@@ -9,6 +9,7 @@ public class PlayerDish : MonoBehaviour
     [SerializeField] private bool[] activeFoods;
     private bool _isMeetOn;
     private bool _isNotPotatoOn;
+    private bool _isFishOn;
     private string[] _foodTags = {"SteakPick", "PotatoPick", "VegetablePick", "SteakSliced", "ChickenPick",
         "ChickenSliced", "FishPick", "TomatoPick", "FishPick", "FishSliced"};
 
@@ -22,6 +23,10 @@ public class PlayerDish : MonoBehaviour
         {
             return false;
         }
+        if(_isFishOn && (food.tag == _foodTags[2] || food.tag == _foodTags[7]))
+        {
+            return false;
+        }
         if (food.tag == _foodTags[1] || food.tag == _foodTags[2] || food.tag == _foodTags[7])
         {
             foreach (GameObject obj in _foods)
@@ -29,7 +34,7 @@ public class PlayerDish : MonoBehaviour
                 if(obj.tag == food.tag)
                 {
                     obj.SetActive(true);
-                    if(obj.tag == _foodTags[1] || obj.tag == _foodTags[7])
+                    if(obj.tag == _foodTags[2] || obj.tag == _foodTags[7])
                     {
                         _isNotPotatoOn = true;
                     }
@@ -45,6 +50,10 @@ public class PlayerDish : MonoBehaviour
         if(food.tag == _foodTags[8] && _isNotPotatoOn)
         {
             return false;
+        }
+        if(food.tag == _foodTags[8])
+        {
+            _isFishOn = true;
         }
 
         if (!isSliced)
