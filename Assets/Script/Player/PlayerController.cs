@@ -6,7 +6,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [SerializeField] private AudioData _audioData;
+    private AudioClip _walkSound;
     [SerializeField] private float _moveVelocity;
     [SerializeField] private float _jumpVelocity;
     private Rigidbody _rb;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
     }
+    
     private void OnEnable()
     {
         EventManager.OnCuttingInteraction += CanMove;
