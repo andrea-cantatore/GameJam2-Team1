@@ -15,7 +15,7 @@ public class Customer : MonoBehaviour, IInteract
 
     public bool Interact(bool isToAdd)
     {
-        
+        return true;
     }
 
     public void InteractionPopUp()
