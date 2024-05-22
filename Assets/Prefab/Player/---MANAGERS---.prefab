@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7846073307193483276}
   - component: {fileID: 7737141150452773248}
+  - component: {fileID: 5661733740870339851}
   m_Layer: 0
   m_Name: ---MANAGERS---
   m_TagString: Untagged
@@ -46,3 +47,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPannel: {fileID: 0}
   InteractionText: {fileID: 0}
+--- !u!114 &5661733740870339851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7226440125821229643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e392aaceeff10e4d85b20d40671fccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialoguePanel: {fileID: 0}
+  _singleChoicePanel: {fileID: 0}
+  _multipleChoicePanel: {fileID: 0}
+  _choices:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _choicesPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _choice1Text: {fileID: 0}
+  _choice2Text: {fileID: 0}
+  _choice3Text: {fileID: 0}
+  _dialogueText: {fileID: 0}
+  _customerName: {fileID: 0}
