@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DS.ScriptableObjects;
 using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
@@ -9,29 +10,28 @@ public class PlayerCam : MonoBehaviour
     
     [SerializeField] private Transform _playerOrientation, _camPos;
 
-    private bool _isCameraLocked;
+    private bool _isMovementLocked;
     
     private float _xRotation;
     private float _yRotation;
-
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    
 
     private void OnEnable()
     {
         EventManager.OnCuttingInteraction += OnLockedCamera;
+        EventManager.OnStartingDialogue += StartingDialogue;
+        EventManager.OnDialogueEnd += () => _isMovementLocked = false;
     }
     private void OnDisable()
     {
         EventManager.OnCuttingInteraction -= OnLockedCamera;
+        EventManager.OnStartingDialogue -= StartingDialogue;
+        EventManager.OnDialogueEnd -= () => _isMovementLocked = false;
     }
 
     private void LateUpdate()
     {
-        if (_isCameraLocked)
+        if (_isMovementLocked)
         {
             return;
         }
@@ -47,9 +47,14 @@ public class PlayerCam : MonoBehaviour
         _playerOrientation.rotation = Quaternion.Euler(0, _yRotation, 0);
     }
     
+    private void StartingDialogue(DSDialogueContainerSO containerSo, String dialogue)
+    {
+        _isMovementLocked = !_isMovementLocked;
+    }
+    
     private void OnLockedCamera(bool isLocked)
     {
-        _isCameraLocked = isLocked;
+        _isMovementLocked = isLocked;
         if (!isLocked)
         {
             Camera.main.transform.position = _camPos.position;

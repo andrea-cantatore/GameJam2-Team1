@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using DS.ScriptableObjects;
 using UnityEngine;
 
-public class Customer : MonoBehaviour, IInteract
+public class Customer : MonoBehaviour, IInteract, ICustomer
 {
     
     private Transform _popUpPos;
+    [SerializeField] private DSDialogueContainerSO _dialogueContainer;
 
     private void Awake()
     {
@@ -15,6 +17,7 @@ public class Customer : MonoBehaviour, IInteract
 
     public bool Interact(bool isToAdd)
     {
+        EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name);
         return true;
     }
 

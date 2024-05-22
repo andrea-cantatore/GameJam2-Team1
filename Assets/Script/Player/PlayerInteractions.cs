@@ -43,6 +43,11 @@ public class PlayerInteractions : MonoBehaviour
                 interactable.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    if(hit.transform.TryGetComponent(out ICustomer customer))
+                    {
+                        interactable.Interact(false);
+                        return;
+                    }
                     if (!_isHandFull)
                     {
                         if (hit.transform.tag == "Grill")

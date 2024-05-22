@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DS.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveVelocity;
     [SerializeField] private float _jumpVelocity;
     private Rigidbody _rb;
-    private bool _canMove = true;
+    private bool _isMovementUnlocked = true;
 
     private void Awake()
     {
@@ -21,15 +22,19 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnCuttingInteraction += CanMove;
+        EventManager.OnStartingDialogue += StartingDialogue;
+        EventManager.OnDialogueEnd += () => _isMovementUnlocked = false;
     }
     private void OnDisable()
     {
         EventManager.OnCuttingInteraction -= CanMove;
+        EventManager.OnStartingDialogue += StartingDialogue;
+        EventManager.OnDialogueEnd += () => _isMovementUnlocked = false;
     }
 
     private void Update()
     {
-        if(_canMove)
+        if(_isMovementUnlocked)
             Move();
     }
     
@@ -41,7 +46,11 @@ public class PlayerController : MonoBehaviour
     }
     private void CanMove(bool cantMove)
     {
-        _canMove = !cantMove;
+        _isMovementUnlocked = !cantMove;
+    }
+    private void StartingDialogue(DSDialogueContainerSO containerSo, String dialogue)
+    {
+        _isMovementUnlocked = !_isMovementUnlocked;
     }
     
 }
