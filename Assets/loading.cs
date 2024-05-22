@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class LoaderCallback : MonoBehaviour
 {
-    private bool isFirstUpdate = true;
-    private float timer;
+    private bool _isFirstUpdate = true;
+    private float _timer;
 
-    [SerializeField]
-    private float loadingScreenDuration = 3.0f;
+    [SerializeField] private float _loadingScreenDuration = 3.0f;
 
     private void Update()
     {
-        if (isFirstUpdate)
+        if (_isFirstUpdate)
         {
-            isFirstUpdate = false;
-            timer = loadingScreenDuration;
+            _isFirstUpdate = false;
+            _timer = _loadingScreenDuration;
         }
 
-        if (timer > 0)
+        if (_timer > 0)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
+            _timer -= Time.deltaTime;
+            if (_timer <= 0)
             {
                 SceneManager.LoadScene(2);
             }
