@@ -8,7 +8,9 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     
     private Transform _popUpPos;
     [SerializeField] private DSDialogueContainerSO _dialogueContainer;
-
+    [SerializeField] GameObject[] _expectedMeal;
+    [SerializeField] private int _payment;
+    
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);

@@ -93,11 +93,6 @@ public class DialogueManager : MonoBehaviour
     
     public void NextDialogue(int i)
     {
-        Debug.Log("Next Dialogue "+ i );
-        
-        Debug.Log("_currentDialogueSO: " + _currentDialogueSO.name);
-        Debug.Log("Choices: " + string.Join(", ", _currentDialogueSO.Choices));
-        _currentDialogueSO = _currentDialogueSO.Choices[i].NextDialogue;
         if (_isSingleChoice)
         {
             _currentDialogueSO = _currentDialogueSO.Choices[0].NextDialogue;
