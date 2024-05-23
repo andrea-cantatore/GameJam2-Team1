@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: A3
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: A3
+  <Text>k__BackingField: Beef roast, huh? Alright, I'll give it a try.
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Excellent choice! One beef roast and ale coming up.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f0f645ac5ad0f284fbc184788d6e7460, type: 2}
+  - <Text>k__BackingField: I'll get that started for you. Anything else?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e3b9a58116d28d44eaf12cee760b8a67, type: 2}
+  - <Text>k__BackingField: Don't complain if it's not what you expect.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 8de8eff2ef07cba4dbb3f7f0a8e3932f, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

@@ -2,25 +2,38 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FoodInteractable : MonoBehaviour, IInteract
 {
     private Transform _popUpPos;
 
+    [SerializeField] private int _stackSize = 1;
+
     private void Awake()
-    { 
+    {
         _popUpPos = transform.GetChild(0);
     }
 
-    public void Interact()
+    public bool Interact(bool isToAdd)
     {
-        Debug.Log("Interacted with food");
+        if (isToAdd)
+        {
+            _stackSize++;
+            return true;
+        }
+        if (!isToAdd && _stackSize > 0)
+        {
+            _stackSize--;
+            return true;
+        }
+        return false;
     }
 
     public void InteractionPopUp()
     {
         InteractionManager.Instance.InteractionPannel.transform.position = _popUpPos.position;
-        InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text = "press E to Interact " + gameObject.name;
+        InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text =
+            "press E to Interact " + gameObject.name;
     }
 }
-

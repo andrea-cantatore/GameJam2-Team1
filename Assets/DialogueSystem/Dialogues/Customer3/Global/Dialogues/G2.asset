@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: G2
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: G2
+  <Text>k__BackingField: Paths of the dead and Mirkwood are no jokes. Ever met an
+    elf?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: I've met a few travelers, but no elves. Your meal is coming
+      up.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e18a6c4767002f745b5326e6ceb85b8f, type: 2}
+  - <Text>k__BackingField: "I\u2019ve heard tales of elves, but never met one. Let
+      me get your food."
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e18a6c4767002f745b5326e6ceb85b8f, type: 2}
+  - <Text>k__BackingField: Elves? Just myths. Here's your food.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: f9fd090aa2e71ea4c950f27227dfd64b, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

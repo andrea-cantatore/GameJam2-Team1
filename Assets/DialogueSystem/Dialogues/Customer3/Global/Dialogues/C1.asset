@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: C1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: C1
+  <Text>k__BackingField: Straight to the point, I see. What kind of meat do you have?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: We've got a fine roast that Gimli himself would enjoy.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9db79fd05010e0340b492b2e0d7cd7ba, type: 2}
+  - <Text>k__BackingField: How about our famous stew instead? Would you like to order?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 4374ca4af0265f640becd88dec2bd15c, type: 2}
+  - <Text>k__BackingField: Just some regular meat. Want it or not?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: cec7cae678e11f347b7f38887915fc1e, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

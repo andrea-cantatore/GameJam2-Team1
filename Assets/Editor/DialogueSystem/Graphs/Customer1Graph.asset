@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Customer1Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Customer1
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 16407c2f-93ff-4889-bb78-a0f3d51f741e
+    <Name>k__BackingField: Start
+    <Text>k__BackingField: Greetings, innkeeper! I've traveled far and need a hearty
+      meal and a drink. What do you recommend?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Welcome, veteran! We have the finest roast and ale in
+        town. How does that sound?
+      <NodeID>k__BackingField: e8ac2d0e-f7aa-4fd0-a2a4-5804cec68ed8
+    - <Text>k__BackingField: Ah, greetings! Our stew and ale are popular choices.
+        Interested?
+      <NodeID>k__BackingField: 0aae1bf9-2df1-4fde-b8e2-02a11afb6dd8
+    - <Text>k__BackingField: Hmph. We've got some meat and beer. Take it or leave
+        it.
+      <NodeID>k__BackingField: 442a0905-9372-4515-b6b1-fe30c37bea6e
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1251, y: 2003}
+  - <ID>k__BackingField: e8ac2d0e-f7aa-4fd0-a2a4-5804cec68ed8
+    <Name>k__BackingField: A1
+    <Text>k__BackingField: A roast and ale, eh? Sounds good. What kind of roast do
+      you have?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We have a succulent lamb roast, cooked to perfection.
+      <NodeID>k__BackingField: bcea8428-6ac2-4fa5-aab9-80758a87bfcf
+    - <Text>k__BackingField: Would you prefer our tender beef roast, slow-cooked
+        all day?
+      <NodeID>k__BackingField: 0116f7ea-25c6-43f9-bb18-c968cc197696
+    - <Text>k__BackingField: Just regular roast, nothing special.
+      <NodeID>k__BackingField: f9e8ca5d-f9e8-4e18-9278-54eec4a3090e
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2164, y: 1501}
+  - <ID>k__BackingField: 0aae1bf9-2df1-4fde-b8e2-02a11afb6dd8
+    <Name>k__BackingField: B1
+    <Text>k__BackingField: Stew and ale, you say? I could use something hearty.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Our beef stew is thick and hearty, perfect for a warrior
+        like yourself.
+      <NodeID>k__BackingField: d30175af-c36d-4ba0-95f7-3510769fbac8
+    - <Text>k__BackingField: Shall I get that started for you right away?
+      <NodeID>k__BackingField: da7655b6-3198-4ac4-b73e-855d349fb81d
+    - <Text>k__BackingField: It's just stew. Don't expect much.
+      <NodeID>k__BackingField: 668f9013-bc16-4d68-8b47-67f1f6bb9199
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2164, y: 2003}
+  - <ID>k__BackingField: 442a0905-9372-4515-b6b1-fe30c37bea6e
+    <Name>k__BackingField: C1
+    <Text>k__BackingField: Take it or leave it, huh? Well, what kind of meat do you
+      have?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We've got a fine lamb roast that'll fill you up.
+      <NodeID>k__BackingField: bcea8428-6ac2-4fa5-aab9-80758a87bfcf
+    - <Text>k__BackingField: Interested in our beef stew instead?
+      <NodeID>k__BackingField: d30175af-c36d-4ba0-95f7-3510769fbac8
+    - <Text>k__BackingField: Just some regular meat. Want it or not?
+      <NodeID>k__BackingField: f9e8ca5d-f9e8-4e18-9278-54eec4a3090e
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2164, y: 2500}
+  - <ID>k__BackingField: bcea8428-6ac2-4fa5-aab9-80758a87bfcf
+    <Name>k__BackingField: A2
+    <Text>k__BackingField: Lamb roast, eh? Sounds good. Serve it up with ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! You'll love our lamb roast and ale.
+      <NodeID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    - <Text>k__BackingField: I'll get that started. Anything else you'd like?
+      <NodeID>k__BackingField: 123fdddf-c267-4e9f-b3b7-8239b3a842b3
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3001, y: 502}
+  - <ID>k__BackingField: f9e8ca5d-f9e8-4e18-9278-54eec4a3090e
+    <Name>k__BackingField: A4
+    <Text>k__BackingField: Just regular roast, you say? Better be good.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: It'll be good, trust me. One regular roast and ale coming
+        up.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: I'll get that started for you. Anything else?
+      <NodeID>k__BackingField: 67df253f-31eb-4a3f-b422-55deabb32ff2
+    - <Text>k__BackingField: It's just food. Take it or leave it.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3001, y: 1501}
+  - <ID>k__BackingField: 123fdddf-c267-4e9f-b3b7-8239b3a842b3
+    <Name>k__BackingField: F1
+    <Text>k__BackingField: Nothing else for now. Just the lamb roast and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! Enjoy your meal.
+      <NodeID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    - <Text>k__BackingField: Very well, I'll get that started for you.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3879, y: 502}
+  - <ID>k__BackingField: d23a7bf1-2876-4113-ad51-103544d1f25f
+    <Name>k__BackingField: F2
+    <Text>k__BackingField: Nothing else for now. Just the beef roast and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! Enjoy your meal.
+      <NodeID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    - <Text>k__BackingField: Very well, I'll get that started for you.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3879, y: 999}
+  - <ID>k__BackingField: 67df253f-31eb-4a3f-b422-55deabb32ff2
+    <Name>k__BackingField: F3
+    <Text>k__BackingField: Nothing else for now. Just the regular roast and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! Enjoy your meal.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Very well, I'll get that started for you.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3879, y: 1501}
+  - <ID>k__BackingField: 1eeb7f12-4432-43be-a431-fa31a06aa64b
+    <Name>k__BackingField: F4
+    <Text>k__BackingField: Nothing else for now. Just the beef stew and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! Enjoy your meal.
+      <NodeID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    - <Text>k__BackingField: Very well, I'll get that started for you.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3879, y: 2003}
+  - <ID>k__BackingField: aab9ee69-e487-4735-8f53-ab4cad01ad23
+    <Name>k__BackingField: F5
+    <Text>k__BackingField: Nothing else for now. Just the stew and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! Enjoy your meal.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Very well, I'll get that started for you.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3879, y: 2500}
+  - <ID>k__BackingField: d22d3cdc-051e-4e9b-b892-9b450b17e9c1
+    <Name>k__BackingField: F6
+    <Text>k__BackingField: Nothing else for now. Just the stew and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! Enjoy your meal.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Very well, I'll get that started for you.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3879, y: 2997}
+  - <ID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    <Name>k__BackingField: Happy
+    <Text>k__BackingField: The customer enjoys the meal and praises the inn.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4773, y: 1501}
+  - <ID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    <Name>k__BackingField: Neutral
+    <Text>k__BackingField: The customer is satisfied but doesn't show much emotion.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4773, y: 2003}
+  - <ID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <Name>k__BackingField: Angry
+    <Text>k__BackingField: The customer grumbles and shows displeasure.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4773, y: 2500}
+  - <ID>k__BackingField: 0116f7ea-25c6-43f9-bb18-c968cc197696
+    <Name>k__BackingField: A3
+    <Text>k__BackingField: Beef roast, huh? Alright, I'll give it a try.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Excellent choice! One beef roast and ale coming up.
+      <NodeID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    - <Text>k__BackingField: I'll get that started for you. Anything else?
+      <NodeID>k__BackingField: d23a7bf1-2876-4113-ad51-103544d1f25f
+    - <Text>k__BackingField: Don't complain if it's not what you expect.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3001, y: 999}
+  - <ID>k__BackingField: d30175af-c36d-4ba0-95f7-3510769fbac8
+    <Name>k__BackingField: D1
+    <Text>k__BackingField: Beef stew, eh? Sounds hearty. Serve it up with ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! You'll love our beef stew and ale.
+      <NodeID>k__BackingField: 436354be-7b24-4e39-ac87-87a552fdcba3
+    - <Text>k__BackingField: I'll get that started. Anything else you'd like?
+      <NodeID>k__BackingField: 1eeb7f12-4432-43be-a431-fa31a06aa64b
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3001, y: 2003}
+  - <ID>k__BackingField: 668f9013-bc16-4d68-8b47-67f1f6bb9199
+    <Name>k__BackingField: C2
+    <Text>k__BackingField: Just stew, huh? Better be hearty.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: It is, trust me. One beef stew and ale coming up.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: I'll get that started for you. Anything else?
+      <NodeID>k__BackingField: aab9ee69-e487-4735-8f53-ab4cad01ad23
+    - <Text>k__BackingField: It's just stew. Take it or leave it.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3001, y: 2500}
+  - <ID>k__BackingField: da7655b6-3198-4ac4-b73e-855d349fb81d
+    <Name>k__BackingField: E1
+    <Text>k__BackingField: No need for fancy talk. Just get me the stew and ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Right away! One beef stew and ale coming up.
+      <NodeID>k__BackingField: 4ded9aba-2a70-46aa-b8e7-b72cc9cbc2da
+    - <Text>k__BackingField: I'll get that started for you. Anything else?
+      <NodeID>k__BackingField: d22d3cdc-051e-4e9b-b892-9b450b17e9c1
+    - <Text>k__BackingField: Fine, don't complain if it's not what you expect.
+      <NodeID>k__BackingField: 38ae4178-ef11-46c3-a242-7a585624b01c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3001, y: 2997}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Start
+  - A1
+  - B1
+  - C1
+  - A2
+  - A4
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - Happy
+  - Neutral
+  - Angry
+  - A3
+  - D1
+  - C2
+  - E1
+  <OldGroupedNodeNames>k__BackingField:
+    list: []

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: C1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: C1
+  <Text>k__BackingField: Just a rock? You lack vision, innkeeper. The moon is a gateway
+    to understanding!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Maybe you're right. What do you think the moon wants to
+      tell us?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: c6b8a3a4f89642049a87dec12c74bfc1, type: 2}
+  - <Text>k__BackingField: Let's set that aside for now. How about some food?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 5bfdfc2da822ec54a9333b28976533bd, type: 2}
+  - <Text>k__BackingField: Enough about the moon. What can I get you to eat?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 6d6d8a466509cb242b0d019ce40d4137, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

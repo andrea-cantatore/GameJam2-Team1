@@ -1,0 +1,493 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Customer2Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Customer2
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 2c95047e-6397-427b-b5af-7834d30d3786
+    <Name>k__BackingField: TheDwarfGoldDigger
+    <Text>k__BackingField: Greetings, innkeeper! The road's been long and my throat's
+      as dry as the desert. Got any good ale for a weary traveler?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Of course, friend! Our finest ale for a hard-working
+        dwarf like yourself.
+      <NodeID>k__BackingField: 51c0c6df-e88c-4998-9670-c2ced310418d
+    - <Text>k__BackingField: We have ale, but it's nothing special. Will it do?
+      <NodeID>k__BackingField: cab01169-a619-4447-98e6-34407b3ea506
+    - <Text>k__BackingField: Ale, sure, but it'll cost you extra. We don't give freebies.
+      <NodeID>k__BackingField: ed181319-1bba-4f01-992c-69ef0aa1ee32
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 10857, y: -261}
+  - <ID>k__BackingField: cab01169-a619-4447-98e6-34407b3ea506
+    <Name>k__BackingField: B1
+    <Text>k__BackingField: ' It''ll do, I suppose. Now, I''m also in need of a room.
+      Got anything available?'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Absolutely, we have a cozy room ready for you, and I'll
+        throw in breakfast.
+      <NodeID>k__BackingField: 520474cc-32cb-4aad-a19f-df22916b5b60
+    - <Text>k__BackingField: Would you like to order dinner as well? We have a hearty
+        stew tonight.
+      <NodeID>k__BackingField: 9d740bb5-b628-4843-b422-7b04a54b5070
+    - <Text>k__BackingField: Rooms are scarce, and the price has doubled. Can you
+        pay?
+      <NodeID>k__BackingField: afcdd612-aa6f-4413-aad3-e4498035da93
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 11751, y: -261}
+  - <ID>k__BackingField: ed181319-1bba-4f01-992c-69ef0aa1ee32
+    <Name>k__BackingField: C1
+    <Text>k__BackingField: Extra, you say? Fine, just give me the ale. And I need
+      a room too.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We have a room available, and it includes breakfast.
+      <NodeID>k__BackingField: 520474cc-32cb-4aad-a19f-df22916b5b60
+    - <Text>k__BackingField: Would you like to order dinner as well? We have a hearty
+        stew tonight.
+      <NodeID>k__BackingField: 9d740bb5-b628-4843-b422-7b04a54b5070
+    - <Text>k__BackingField: Rooms are expensive, but if you can pay, it's yours.
+      <NodeID>k__BackingField: afcdd612-aa6f-4413-aad3-e4498035da93
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 11751, y: 250}
+  - <ID>k__BackingField: 520474cc-32cb-4aad-a19f-df22916b5b60
+    <Name>k__BackingField: A2
+    <Text>k__BackingField: That's generous of you! Say, have you heard any news of
+      gold mines around these parts?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I've heard whispers of a rich vein not far from here.
+        Might be worth checking out.
+      <NodeID>k__BackingField: 00c37557-8de9-4c34-b934-d0511bb00036
+    - <Text>k__BackingField: Would you like to order dinner while we chat? Our stew
+        is quite popular.
+      <NodeID>k__BackingField: 9d740bb5-b628-4843-b422-7b04a54b5070
+    - <Text>k__BackingField: Gold? You must be joking. This place is barren of riches.
+      <NodeID>k__BackingField: 0ba44482-3471-43ef-be6b-587bc71e9c48
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 12625, y: -750}
+  - <ID>k__BackingField: afcdd612-aa6f-4413-aad3-e4498035da93
+    <Name>k__BackingField: C2
+    <Text>k__BackingField: I'll pay if it's worth it. Now, any word on gold mines
+      in the area?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I've heard whispers of a rich vein not far from here.
+        Might be worth checking out.
+      <NodeID>k__BackingField: 00c37557-8de9-4c34-b934-d0511bb00036
+    - <Text>k__BackingField: Would you like to order dinner while we chat? Our stew
+        is quite popular.
+      <NodeID>k__BackingField: 9d740bb5-b628-4843-b422-7b04a54b5070
+    - <Text>k__BackingField: Gold? You must be joking. This place is barren of riches.
+      <NodeID>k__BackingField: 0ba44482-3471-43ef-be6b-587bc71e9c48
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 12625, y: 250}
+  - <ID>k__BackingField: 00c37557-8de9-4c34-b934-d0511bb00036
+    <Name>k__BackingField: A3
+    <Text>k__BackingField: That's exactly what I needed to hear! Now, what's the
+      dinner special tonight?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Tonight, we have a hearty stew with fresh bread, perfect
+        after a day's work.
+      <NodeID>k__BackingField: 39175629-bbb2-49b9-8fd6-ae9982e75e97
+    - <Text>k__BackingField: 'The usual fare: meat and potatoes. It fills you up.'
+      <NodeID>k__BackingField: 0d4d74de-2344-4da7-813d-970ace063ffc
+    - <Text>k__BackingField: Whatever's left in the pot. We don't cater to picky
+        eaters.
+      <NodeID>k__BackingField: 9a253dbb-f048-4c19-9626-98a67d8a5b91
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 13530, y: -750}
+  - <ID>k__BackingField: 0ba44482-3471-43ef-be6b-587bc71e9c48
+    <Name>k__BackingField: C3
+    <Text>k__BackingField: Bah, you're no help. Anyway, what's the dinner special
+      tonight?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Tonight, we have a hearty stew with fresh bread, perfect
+        after a day's work.
+      <NodeID>k__BackingField: 39175629-bbb2-49b9-8fd6-ae9982e75e97
+    - <Text>k__BackingField: 'The usual fare: meat and potatoes. It fills you up.'
+      <NodeID>k__BackingField: 0d4d74de-2344-4da7-813d-970ace063ffc
+    - <Text>k__BackingField: Whatever's left in the pot. We don't cater to picky
+        eaters.
+      <NodeID>k__BackingField: 9a253dbb-f048-4c19-9626-98a67d8a5b91
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 13530, y: 250}
+  - <ID>k__BackingField: 39175629-bbb2-49b9-8fd6-ae9982e75e97
+    <Name>k__BackingField: A4
+    <Text>k__BackingField: That sounds perfect! Say, what kind of folk come through
+      this inn?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: All sorts, but mostly hardworking folks like yourself.
+        We have quite a community here.
+      <NodeID>k__BackingField: 142686ad-bce9-486e-ab76-5094d4caa8ad
+    - <Text>k__BackingField: A mix of travelers. Nothing too unusual.
+      <NodeID>k__BackingField: 64435ece-0357-4bbe-ae44-a892a0037dc7
+    - <Text>k__BackingField: Too many nosy people. Can't stand most of them myself.
+      <NodeID>k__BackingField: 54d0aa9c-a0bd-4e2e-b660-cb8fc3088276
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 14413, y: -750}
+  - <ID>k__BackingField: 0d4d74de-2344-4da7-813d-970ace063ffc
+    <Name>k__BackingField: B4
+    <Text>k__BackingField: That'll do. Say, what kind of folk come through this inn?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: All sorts, but mostly hardworking folks like yourself.
+        We have quite a community here.
+      <NodeID>k__BackingField: 142686ad-bce9-486e-ab76-5094d4caa8ad
+    - <Text>k__BackingField: A mix of travelers. Nothing too unusual.
+      <NodeID>k__BackingField: 64435ece-0357-4bbe-ae44-a892a0037dc7
+    - <Text>k__BackingField: Too many nosy people. Can't stand most of them myself.
+      <NodeID>k__BackingField: 54d0aa9c-a0bd-4e2e-b660-cb8fc3088276
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 14413, y: -261}
+  - <ID>k__BackingField: 9a253dbb-f048-4c19-9626-98a67d8a5b91
+    <Name>k__BackingField: C4
+    <Text>k__BackingField: You don't sound too welcoming. What kind of folk come
+      through this inn?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: All sorts, but mostly hardworking folks like yourself.
+        We have quite a community here.
+      <NodeID>k__BackingField: 142686ad-bce9-486e-ab76-5094d4caa8ad
+    - <Text>k__BackingField: A mix of travelers. Nothing too unusual.
+      <NodeID>k__BackingField: 64435ece-0357-4bbe-ae44-a892a0037dc7
+    - <Text>k__BackingField: Too many nosy people. Can't stand most of them myself.
+      <NodeID>k__BackingField: 54d0aa9c-a0bd-4e2e-b660-cb8fc3088276
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 14413, y: 250}
+  - <ID>k__BackingField: 142686ad-bce9-486e-ab76-5094d4caa8ad
+    <Name>k__BackingField: A5
+    <Text>k__BackingField: Sounds lively! Any tips for a newcomer on where to start
+      looking for work?Sounds lively! Any tips for a newcomer on where to start looking
+      for work?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: The blacksmith always needs strong hands, and the mines
+        are a good place too.
+      <NodeID>k__BackingField: 325e57b7-cbbd-48ef-a721-98bf635defe6
+    - <Text>k__BackingField: Would you like to order a drink while we chat more?
+      <NodeID>k__BackingField: 3352da27-6543-49e3-acb0-5def49f62b9e
+    - <Text>k__BackingField: Good luck finding anything decent. This town's struggling.
+      <NodeID>k__BackingField: 480fd194-5bb8-4d39-84dd-b625989d33e3
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 15344, y: -750}
+  - <ID>k__BackingField: 64435ece-0357-4bbe-ae44-a892a0037dc7
+    <Name>k__BackingField: B5
+    <Text>k__BackingField: Interesting. Any tips for a newcomer on where to start
+      looking for work?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: The blacksmith always needs strong hands, and the mines
+        are a good place too.
+      <NodeID>k__BackingField: 325e57b7-cbbd-48ef-a721-98bf635defe6
+    - <Text>k__BackingField: Would you like to order a drink while we chat more?
+      <NodeID>k__BackingField: 3352da27-6543-49e3-acb0-5def49f62b9e
+    - <Text>k__BackingField: Good luck finding anything decent. This town's struggling.
+      <NodeID>k__BackingField: 480fd194-5bb8-4d39-84dd-b625989d33e3
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 15344, y: -261}
+  - <ID>k__BackingField: 54d0aa9c-a0bd-4e2e-b660-cb8fc3088276
+    <Name>k__BackingField: C5
+    <Text>k__BackingField: Hmph. Any tips for a newcomer on where to start looking
+      for work?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: The blacksmith always needs strong hands, and the mines
+        are a good place too.
+      <NodeID>k__BackingField: 325e57b7-cbbd-48ef-a721-98bf635defe6
+    - <Text>k__BackingField: Would you like to order a drink while we chat more?
+      <NodeID>k__BackingField: 3352da27-6543-49e3-acb0-5def49f62b9e
+    - <Text>k__BackingField: Good luck finding anything decent. This town's struggling.
+      <NodeID>k__BackingField: 480fd194-5bb8-4d39-84dd-b625989d33e3
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 15344, y: 250}
+  - <ID>k__BackingField: 325e57b7-cbbd-48ef-a721-98bf635defe6
+    <Name>k__BackingField: A6
+    <Text>k__BackingField: Appreciate the advice. One last thing, do you have a safe
+      place for me to store my tools and gold?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We have a secure chest you can use. I assure you, your
+        belongings will be safe.
+      <NodeID>k__BackingField: f8d7433e-2f1b-4820-8242-82c19c33839c
+    - <Text>k__BackingField: We have a basic storage area, but use it at your own
+        risk.
+      <NodeID>k__BackingField: cd75556a-1115-464f-be12-d87356324189
+    - <Text>k__BackingField: Store them at your own peril. We've had thieves around
+        lately.
+      <NodeID>k__BackingField: 87f59d08-124c-47b7-8772-ff2042ccb376
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 16245, y: -750}
+  - <ID>k__BackingField: 480fd194-5bb8-4d39-84dd-b625989d33e3
+    <Name>k__BackingField: C6
+    <Text>k__BackingField: Doesn't sound promising, but I'll manage. One last thing,
+      do you have a safe place for me to store my tools and gold?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We have a secure chest you can use. I assure you, your
+        belongings will be safe.
+      <NodeID>k__BackingField: f8d7433e-2f1b-4820-8242-82c19c33839c
+    - <Text>k__BackingField: We have a basic storage area, but use it at your own
+        risk.
+      <NodeID>k__BackingField: cd75556a-1115-464f-be12-d87356324189
+    - <Text>k__BackingField: Store them at your own peril. We've had thieves around
+        lately.
+      <NodeID>k__BackingField: 87f59d08-124c-47b7-8772-ff2042ccb376
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 16245, y: 250}
+  - <ID>k__BackingField: f8d7433e-2f1b-4820-8242-82c19c33839c
+    <Name>k__BackingField: A7
+    <Text>k__BackingField: That's good to hear. What's the word on entertainment
+      here? Any good musicians or storytellers?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: That's good to hear. What's the word on entertainment
+        here? Any good musicians or storytellers?
+      <NodeID>k__BackingField: 8800d57a-d1de-44c3-be36-fbc67bcc3ed1
+    - <Text>k__BackingField: Occasionally, we get a performer. Nothing regular, though.
+      <NodeID>k__BackingField: 214ec48c-bdfb-4978-bdb2-464975630d96
+    - <Text>k__BackingField: Entertainment? You're better off finding your own fun.
+      <NodeID>k__BackingField: a1afc5b5-1f9c-48c1-87f3-a35c103d6f1c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 17136, y: -750}
+  - <ID>k__BackingField: cd75556a-1115-464f-be12-d87356324189
+    <Name>k__BackingField: B7
+    <Text>k__BackingField: ' I''ll be careful. What''s the word on entertainment
+      here? Any good musicians or storytellers?'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: That's good to hear. What's the word on entertainment
+        here? Any good musicians or storytellers?
+      <NodeID>k__BackingField: 8800d57a-d1de-44c3-be36-fbc67bcc3ed1
+    - <Text>k__BackingField: Occasionally, we get a performer. Nothing regular, though.
+      <NodeID>k__BackingField: 214ec48c-bdfb-4978-bdb2-464975630d96
+    - <Text>k__BackingField: Entertainment? You're better off finding your own fun.
+      <NodeID>k__BackingField: a1afc5b5-1f9c-48c1-87f3-a35c103d6f1c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 17136, y: -261}
+  - <ID>k__BackingField: 87f59d08-124c-47b7-8772-ff2042ccb376
+    <Name>k__BackingField: C7
+    <Text>k__BackingField: Doesn't sound very secure. What's the word on entertainment
+      here? Any good musicians or storytellers?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: That's good to hear. What's the word on entertainment
+        here? Any good musicians or storytellers?
+      <NodeID>k__BackingField: 8800d57a-d1de-44c3-be36-fbc67bcc3ed1
+    - <Text>k__BackingField: Occasionally, we get a performer. Nothing regular, though.
+      <NodeID>k__BackingField: 214ec48c-bdfb-4978-bdb2-464975630d96
+    - <Text>k__BackingField: Entertainment? You're better off finding your own fun.
+      <NodeID>k__BackingField: a1afc5b5-1f9c-48c1-87f3-a35c103d6f1c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 17136, y: 250}
+  - <ID>k__BackingField: 214ec48c-bdfb-4978-bdb2-464975630d96
+    <Name>k__BackingField: B8
+    <Text>k__BackingField: I'll keep an ear out. Thanks for all the help, innkeeper.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: My pleasure. Enjoy your stay and let me know if you
+        need anything else.
+      <NodeID>k__BackingField: 09478725-68e1-4fe9-8359-05eebd548501
+    - <Text>k__BackingField: You're welcome. Have a good night.
+      <NodeID>k__BackingField: d949ef97-ea3f-4c01-922e-3b3cf3642ea3
+    - <Text>k__BackingField: Yeah, yeah. Just don't cause any trouble.
+      <NodeID>k__BackingField: 1e2fe6f2-f478-4a01-bff4-0aac7e0a8aa2
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 18125, y: -261}
+  - <ID>k__BackingField: a1afc5b5-1f9c-48c1-87f3-a35c103d6f1c
+    <Name>k__BackingField: C8
+    <Text>k__BackingField: Hmph, not much of a host, are you? Thanks for all the
+      help, I guess.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: My pleasure. Enjoy your stay and let me know if you
+        need anything else.
+      <NodeID>k__BackingField: 09478725-68e1-4fe9-8359-05eebd548501
+    - <Text>k__BackingField: You're welcome. Have a good night.
+      <NodeID>k__BackingField: d949ef97-ea3f-4c01-922e-3b3cf3642ea3
+    - <Text>k__BackingField: Yeah, yeah. Just don't cause any trouble.
+      <NodeID>k__BackingField: 1e2fe6f2-f478-4a01-bff4-0aac7e0a8aa2
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 18125, y: 250}
+  - <ID>k__BackingField: 1e2fe6f2-f478-4a01-bff4-0aac7e0a8aa2
+    <Name>k__BackingField: C9
+    <Text>k__BackingField: You were a terrible host, I will definitely not recommend
+      this place to my fellow miners.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Thank you! Safe travels and good luck with your mining!
+      <NodeID>k__BackingField: 606106b4-c37e-4fce-8f81-6e1c85371b17
+    - <Text>k__BackingField: I appreciate that. Take care.
+      <NodeID>k__BackingField: 68616739-bb3f-4e87-b735-1572a4802c50
+    - <Text>k__BackingField: Do as you please. Just remember to settle your bill
+        before you leave.
+      <NodeID>k__BackingField: 4834a393-05cc-4fcf-88c2-22ac76f4ab33
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 19019, y: 250}
+  - <ID>k__BackingField: 606106b4-c37e-4fce-8f81-6e1c85371b17
+    <Name>k__BackingField: A10
+    <Text>k__BackingField: You've got yourself a loyal customer. Cheers!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 19906, y: -750}
+  - <ID>k__BackingField: 68616739-bb3f-4e87-b735-1572a4802c50
+    <Name>k__BackingField: B10
+    <Text>k__BackingField: I'll be on my way then. Goodbye.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 19906, y: -261}
+  - <ID>k__BackingField: 4834a393-05cc-4fcf-88c2-22ac76f4ab33
+    <Name>k__BackingField: C10
+    <Text>k__BackingField: Don't count on seeing me again. Hmph!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 19906, y: 250}
+  - <ID>k__BackingField: 51c0c6df-e88c-4998-9670-c2ced310418d
+    <Name>k__BackingField: A1
+    <Text>k__BackingField: Ah, now that's the kind of hospitality I like! What else
+      do you have to offer?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We have a cozy room ready for you, and I'll throw in
+        breakfast.
+      <NodeID>k__BackingField: 520474cc-32cb-4aad-a19f-df22916b5b60
+    - <Text>k__BackingField: Would you like to order dinner as well? We have a hearty
+        stew tonight.
+      <NodeID>k__BackingField: 9d740bb5-b628-4843-b422-7b04a54b5070
+    - <Text>k__BackingField: Rooms are available, but they're not cheap.
+      <NodeID>k__BackingField: afcdd612-aa6f-4413-aad3-e4498035da93
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 11751, y: -750}
+  - <ID>k__BackingField: 8800d57a-d1de-44c3-be36-fbc67bcc3ed1
+    <Name>k__BackingField: A8
+    <Text>k__BackingField: A bard, eh? That sounds like a good way to end the night.
+      Thanks for all the help, innkeeper.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: My pleasure. Enjoy your stay and let me know if you
+        need anything else.
+      <NodeID>k__BackingField: 09478725-68e1-4fe9-8359-05eebd548501
+    - <Text>k__BackingField: You're welcome. Have a good night.
+      <NodeID>k__BackingField: d949ef97-ea3f-4c01-922e-3b3cf3642ea3
+    - <Text>k__BackingField: Yeah, yeah. Just don't cause any trouble.
+      <NodeID>k__BackingField: 1e2fe6f2-f478-4a01-bff4-0aac7e0a8aa2
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 18125, y: -750}
+  - <ID>k__BackingField: 09478725-68e1-4fe9-8359-05eebd548501
+    <Name>k__BackingField: A9
+    <Text>k__BackingField: You've been quite the host. I'll be sure to recommend
+      this place to my fellow miners.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Thank you! Safe travels and good luck with your mining!
+      <NodeID>k__BackingField: 606106b4-c37e-4fce-8f81-6e1c85371b17
+    - <Text>k__BackingField: I appreciate that. Take care.
+      <NodeID>k__BackingField: 68616739-bb3f-4e87-b735-1572a4802c50
+    - <Text>k__BackingField: Do as you please. Just remember to settle your bill
+        before you leave.
+      <NodeID>k__BackingField: 4834a393-05cc-4fcf-88c2-22ac76f4ab33
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 19019, y: -750}
+  - <ID>k__BackingField: d949ef97-ea3f-4c01-922e-3b3cf3642ea3
+    <Name>k__BackingField: B9
+    <Text>k__BackingField: Thank you for your hospitality, I will return with my
+      fellow miners
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Thank you! Safe travels and good luck with your mining!
+      <NodeID>k__BackingField: 606106b4-c37e-4fce-8f81-6e1c85371b17
+    - <Text>k__BackingField: I appreciate that. Take care.
+      <NodeID>k__BackingField: 68616739-bb3f-4e87-b735-1572a4802c50
+    - <Text>k__BackingField: Do as you please. Just remember to settle your bill
+        before you leave.
+      <NodeID>k__BackingField: 4834a393-05cc-4fcf-88c2-22ac76f4ab33
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 19019, y: -261}
+  - <ID>k__BackingField: 3352da27-6543-49e3-acb0-5def49f62b9e
+    <Name>k__BackingField: D2
+    <Text>k__BackingField: Sure, I'll have another ale. Now, any word on entertainment
+      here? Any good musicians or storytellers?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Yes, we have a bard performing tonight. You'll love
+        the tales and tunes.
+      <NodeID>k__BackingField: 8800d57a-d1de-44c3-be36-fbc67bcc3ed1
+    - <Text>k__BackingField: Occasionally, we get a performer. Nothing regular, though.
+      <NodeID>k__BackingField: 214ec48c-bdfb-4978-bdb2-464975630d96
+    - <Text>k__BackingField: Entertainment? You're better off finding your own fun.
+      <NodeID>k__BackingField: a1afc5b5-1f9c-48c1-87f3-a35c103d6f1c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 17236, y: 762}
+  - <ID>k__BackingField: 9d740bb5-b628-4843-b422-7b04a54b5070
+    <Name>k__BackingField: D1
+    <Text>k__BackingField: That sounds great. I'll take the stew. What's the word
+      on entertainment here? Any good musicians or storytellers?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Yes, we have a bard performing tonight. You'll love
+        the tales and tunes.
+      <NodeID>k__BackingField: 8800d57a-d1de-44c3-be36-fbc67bcc3ed1
+    - <Text>k__BackingField: Occasionally, we get a performer. Nothing regular, though.
+      <NodeID>k__BackingField: 214ec48c-bdfb-4978-bdb2-464975630d96
+    - <Text>k__BackingField: Entertainment? You're better off finding your own fun.
+      <NodeID>k__BackingField: a1afc5b5-1f9c-48c1-87f3-a35c103d6f1c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 17236, y: 1159}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - TheDwarfGoldDigger
+  - B1
+  - C1
+  - A2
+  - C2
+  - A3
+  - C3
+  - A4
+  - B4
+  - C4
+  - A5
+  - B5
+  - C5
+  - A6
+  - C6
+  - A7
+  - B7
+  - C7
+  - B8
+  - C8
+  - C9
+  - A10
+  - B10
+  - C10
+  - A1
+  - A8
+  - A9
+  - B9
+  - D2
+  - D1
+  <OldGroupedNodeNames>k__BackingField:
+    list: []

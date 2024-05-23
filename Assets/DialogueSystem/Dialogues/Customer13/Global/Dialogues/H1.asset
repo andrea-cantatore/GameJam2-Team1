@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: H1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: H1
+  <Text>k__BackingField: A simple meal for a simple dwarf. It's the company that
+    matters.
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Indeed. Your meal and ale are on the way.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 0f58949ed98793247ada8f1b7be01eb3, type: 2}
+  - <Text>k__BackingField: I'll get that for you. Care to share more tales?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: d73c45961e0bf434b8a984f1d8b0ff6d, type: 2}
+  - <Text>k__BackingField: Coming right up. Tell me more about Ekrund.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: fa691f6bfaf338e458156f52f064ccc2, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

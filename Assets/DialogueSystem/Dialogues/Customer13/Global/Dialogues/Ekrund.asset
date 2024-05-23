@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Ekrund
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Ekrund
+  <Text>k__BackingField: Hail, innkeeper. It's been a long journey from the ruins
+    of Ekrund. I could use a strong drink and a hearty meal.
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Welcome, survivor. Your tales must be harrowing. What
+      can I get you to eat?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 6c7bc06cb8742324b943f57929839705, type: 2}
+  - <Text>k__BackingField: "Ekrund, you say? A battle for the ages. What\u2019s your
+      poison?"
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 208f2489298a88e40b337817528f6fa5, type: 2}
+  - <Text>k__BackingField: Long journey, you say? What brings you here from such
+      a place?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 89866c7a06144474992170f8eafc96bb, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 1

@@ -1,0 +1,576 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Customer14Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Customer14
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 73369627-c663-4d67-a623-20eac049e0f5
+    <Name>k__BackingField: TheMadMan
+    <Text>k__BackingField: The moon whispers secrets to those who listen, innkeeper.
+      Have you ever heard the moon speak?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "I\u2019ve often wondered what secrets the moon holds.
+        Tell me more."
+      <NodeID>k__BackingField: 7de232ea-c7a8-4e05-a246-b1b11b8a0ca3
+    - <Text>k__BackingField: I can't say I have. Would you like something to eat?
+      <NodeID>k__BackingField: 9d6458e5-71ab-42e8-8175-64d57a3c6034
+    - <Text>k__BackingField: The moon? It's just a rock in the sky. Let's focus on
+        your meal.
+      <NodeID>k__BackingField: 0e9f0f21-876d-483a-954a-117e871ef822
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 111, y: 748}
+  - <ID>k__BackingField: 7de232ea-c7a8-4e05-a246-b1b11b8a0ca3
+    <Name>k__BackingField: A1
+    <Text>k__BackingField: Ah, you have the ears of a sage! The moon tells tales
+      of ancient times and forgotten realms.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Ancient times, you say? What kind of tales?
+      <NodeID>k__BackingField: 02fb8787-3c51-441c-9d7d-631541000dd9
+    - <Text>k__BackingField: "That\u2019s fascinating. Would you like to order some
+        food while we talk?"
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "That\u2019s interesting. But let\u2019s talk about
+        something else."
+      <NodeID>k__BackingField: 24aaeef2-2a8a-4264-a9f1-7ea9aada6ff4
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 999, y: 249}
+  - <ID>k__BackingField: 9d6458e5-71ab-42e8-8175-64d57a3c6034
+    <Name>k__BackingField: B1
+    <Text>k__BackingField: Food? Ah, yes. The sustenance of the body is as important
+      as the whispers of the soul.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "You\u2019re right. Both are vital. What kind of whispers
+        do you hear?"
+      <NodeID>k__BackingField: e3a89dd1-9010-4293-b38b-7d272d4bd0ed
+    - <Text>k__BackingField: So, what would you like to eat today?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Food is more practical. Let\u2019s focus on that."
+      <NodeID>k__BackingField: 24aaeef2-2a8a-4264-a9f1-7ea9aada6ff4
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 999, y: 748}
+  - <ID>k__BackingField: 0e9f0f21-876d-483a-954a-117e871ef822
+    <Name>k__BackingField: C1
+    <Text>k__BackingField: Just a rock? You lack vision, innkeeper. The moon is a
+      gateway to understanding!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Maybe you're right. What do you think the moon wants
+        to tell us?
+      <NodeID>k__BackingField: 3d61e7df-350e-46e6-bf27-5ed90d33fdb4
+    - <Text>k__BackingField: Let's set that aside for now. How about some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Enough about the moon. What can I get you to eat?
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 999, y: 1248}
+  - <ID>k__BackingField: 02fb8787-3c51-441c-9d7d-631541000dd9
+    <Name>k__BackingField: A2
+    <Text>k__BackingField: Tales of dragons and hidden treasures! Have you seen a
+      dragon, innkeeper?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Dragons? Not in person, but I'd love to hear your stories
+        about them.
+      <NodeID>k__BackingField: be780bb1-a51c-4133-9327-060babbcd6bb
+    - <Text>k__BackingField: "I\u2019ve heard tales, but never seen one. Would you
+        like to order?"
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Dragons are just myths. Let's talk about something real.
+      <NodeID>k__BackingField: be780bb1-a51c-4133-9327-060babbcd6bb
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1877, y: -501}
+  - <ID>k__BackingField: 24aaeef2-2a8a-4264-a9f1-7ea9aada6ff4
+    <Name>k__BackingField: C2
+    <Text>k__BackingField: Something else? Ah, but what is else if not another shade
+      of reality?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "You\u2019re quite the philosopher. What other shades
+        of reality do you see?"
+      <NodeID>k__BackingField: f6dda2d7-4deb-4786-8208-dd8d3ba61032
+    - <Text>k__BackingField: Interesting perspective. Would you like to order some
+        food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Let\u2019s focus on getting you something to eat."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1877, y: 498}
+  - <ID>k__BackingField: e3a89dd1-9010-4293-b38b-7d272d4bd0ed
+    <Name>k__BackingField: D1
+    <Text>k__BackingField: Whispers of forgotten lore and ancient wisdom. Do you
+      seek wisdom, innkeeper?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Always. What wisdom have you gathered?
+      <NodeID>k__BackingField: d596af1b-4fc4-4c6a-bcea-062ad520f405
+    - <Text>k__BackingField: "I\u2019m more focused on my inn. What can I get you
+        to eat?"
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Wisdom is overrated. How about we get you some food?
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1877, y: 1499}
+  - <ID>k__BackingField: 3d61e7df-350e-46e6-bf27-5ed90d33fdb4
+    <Name>k__BackingField: D2
+    <Text>k__BackingField: The moon speaks of balance and chaos, order and entropy.
+      Do you understand?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I think I do. Balance is important in all things.
+      <NodeID>k__BackingField: 00130db0-442d-4ed6-979e-6712769358e3
+    - <Text>k__BackingField: Interesting. Would you like to order some food while
+        we discuss this?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Not really. How about we focus on your meal?
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1877, y: 1997}
+  - <ID>k__BackingField: be780bb1-a51c-4133-9327-060babbcd6bb
+    <Name>k__BackingField: E1
+    <Text>k__BackingField: "Dragons are real, as real as you and I. I\u2019ve seen
+      their shadows on the mountains."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Fascinating! Tell me more about these dragons.
+      <NodeID>k__BackingField: 159ac8a6-4370-43be-95ba-a957ed9a3a1a
+    - <Text>k__BackingField: "I\u2019d love to hear more. How about some food while
+        you tell your tale?"
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Dragons are myths. Let's talk about something real.
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2766, y: -501}
+  - <ID>k__BackingField: 937b109e-8e90-4b8b-b295-4e5b437d840a
+    <Name>k__BackingField: E2
+    <Text>k__BackingField: A request to the universe for understanding, for meaning.
+      Do you seek meaning?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Every day. What meaning have you found in your travels?
+      <NodeID>k__BackingField: e4cdc94c-8747-4b88-b024-c49e902f2800
+    - <Text>k__BackingField: Sometimes. But right now, let's get you some food.
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Not really. Let\u2019s focus on practical matters."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2766, y: -2}
+  - <ID>k__BackingField: e7313511-3df2-4c1c-b7b3-d099d466397a
+    <Name>k__BackingField: E3
+    <Text>k__BackingField: Usually eat? The stars, the moonlight, the dreams of a
+      madman.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Your diet is unique. What about something from our menu?
+      <NodeID>k__BackingField: ae545008-1ed4-48fd-932f-f172e3c736e8
+    - <Text>k__BackingField: How about something more earthly? What can I get you?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Stars and dreams don\u2019t fill the stomach. What
+        can I get you to eat?"
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2766, y: 998}
+  - <ID>k__BackingField: d596af1b-4fc4-4c6a-bcea-062ad520f405
+    <Name>k__BackingField: G1
+    <Text>k__BackingField: Wisdom is the key to unlocking the universe. Do you seek
+      the key?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Every day. What have you discovered?
+      <NodeID>k__BackingField: 80ee7fb7-3296-4c51-bda6-d1d1721f2010
+    - <Text>k__BackingField: Sometimes. Would you like to order something to eat?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Not really. How about we get you some food?
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2999, y: 1499}
+  - <ID>k__BackingField: 00130db0-442d-4ed6-979e-6712769358e3
+    <Name>k__BackingField: G2
+    <Text>k__BackingField: Balance in all things, yes. The moon and the sun, the
+      earth and the sky.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: You speak true. What else have you observed?
+      <NodeID>k__BackingField: 54196c07-a3f2-4206-ba1e-111e3dd31f40
+    - <Text>k__BackingField: Interesting. Would you like some food while we discuss
+        this?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Let\u2019s talk about something else. How about your
+        meal?"
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2999, y: 1997}
+  - <ID>k__BackingField: 159ac8a6-4370-43be-95ba-a957ed9a3a1a
+    <Name>k__BackingField: H1
+    <Text>k__BackingField: Dragons are the guardians of wisdom and the keepers of
+      secrets.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "Guardians of wisdom? I\u2019d love to hear more about
+        that."
+      <NodeID>k__BackingField: 845de772-0d17-40af-8694-4c2069e8a606
+    - <Text>k__BackingField: Tell me more. Would you like something to eat while
+        you do?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Dragons are myths. Let\u2019s focus on real things
+        like your meal."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3900, y: -501}
+  - <ID>k__BackingField: e4cdc94c-8747-4b88-b024-c49e902f2800
+    <Name>k__BackingField: H2
+    <Text>k__BackingField: Meaning is in the journey, not the destination.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Wise words. What has your journey been like?
+      <NodeID>k__BackingField: 52ae60e1-c0f7-4350-bda4-260526ab8634
+    - <Text>k__BackingField: I see. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Journeys are tiring. Let\u2019s focus on getting you
+        a meal."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3900, y: -2}
+  - <ID>k__BackingField: d1855eab-d329-49d8-8cc7-c0a8863ae753
+    <Name>k__BackingField: H3
+    <Text>k__BackingField: They say the world is more than we see. Do you believe
+      them?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I do. What else have they told you?
+      <NodeID>k__BackingField: 622f2264-93bc-4524-8b03-1a6ad081e0a6
+    - <Text>k__BackingField: "I\u2019m curious. Would you like some food while you
+        share?"
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: Not really. How about we focus on your meal?
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 3900, y: 498}
+  - <ID>k__BackingField: 54196c07-a3f2-4206-ba1e-111e3dd31f40
+    <Name>k__BackingField: I2
+    <Text>k__BackingField: The balance is delicate, like a dance. Do you dance, innkeeper?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Only with words. What kind of dance do you mean?
+      <NodeID>k__BackingField: 99f6dc22-203d-4dd6-8aaf-e47e1819e8ab
+    - <Text>k__BackingField: Not really. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "I don\u2019t dance. Let\u2019s focus on getting you
+        a meal."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4038, y: 1997}
+  - <ID>k__BackingField: f6dda2d7-4deb-4786-8208-dd8d3ba61032
+    <Name>k__BackingField: F1
+    <Text>k__BackingField: Other shades, like the spirits in the trees and the whispers
+      in the wind. Do you hear them?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Sometimes, when the night is quiet. What do they say?
+      <NodeID>k__BackingField: d1855eab-d329-49d8-8cc7-c0a8863ae753
+    - <Text>k__BackingField: Sounds intriguing. Would you like some food while we
+        talk?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "No, I don\u2019t. Let\u2019s focus on your meal."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2896, y: 498}
+  - <ID>k__BackingField: 845de772-0d17-40af-8694-4c2069e8a606
+    <Name>k__BackingField: J1
+    <Text>k__BackingField: "Wisdom and secrets, hidden in the fire of the dragon\u2019s
+      breath."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Tell me more about these secrets.
+      <NodeID>k__BackingField: a310ac8d-e13c-4cfb-b491-130c894a1dcc
+    - <Text>k__BackingField: Interesting. Would you like some food while you share?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Dragons are myths. Let\u2019s focus on real things
+        like your meal."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4901, y: -501}
+  - <ID>k__BackingField: 52ae60e1-c0f7-4350-bda4-260526ab8634
+    <Name>k__BackingField: J2
+    <Text>k__BackingField: The journey is filled with lessons. What have you learned,
+      innkeeper?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "I\u2019ve learned to listen. What about you?"
+      <NodeID>k__BackingField: 4d9ef7aa-c792-4d11-b1d6-13550a58fa96
+    - <Text>k__BackingField: Many things. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Journeys are tiring. Let\u2019s focus on getting you
+        a meal."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4901, y: -2}
+  - <ID>k__BackingField: 622f2264-93bc-4524-8b03-1a6ad081e0a6
+    <Name>k__BackingField: J3
+    <Text>k__BackingField: They say the world is a tapestry, woven with threads of
+      fate.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "That\u2019s beautiful. What threads do you see?"
+      <NodeID>k__BackingField: 8cb0718c-1b1d-4c48-b391-3323ae7b7968
+    - <Text>k__BackingField: Interesting. Would you like some food while you share?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Tapestries are for looking at. Let\u2019s get you some
+        food."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4901, y: 498}
+  - <ID>k__BackingField: 99f6dc22-203d-4dd6-8aaf-e47e1819e8ab
+    <Name>k__BackingField: K2
+    <Text>k__BackingField: A dance of life, a dance of the soul. Do you dance with
+      your soul?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I try to. What does your soul dance to?
+      <NodeID>k__BackingField: 33bb5ddc-0ff3-486b-8f6e-a5c1e13e38f9
+    - <Text>k__BackingField: Sometimes. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Not really. Let\u2019s get you some food."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5050, y: 1997}
+  - <ID>k__BackingField: a310ac8d-e13c-4cfb-b491-130c894a1dcc
+    <Name>k__BackingField: L1
+    <Text>k__BackingField: Secrets of the ancients, hidden in the fire and smoke.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Ancients, you say? What secrets have you uncovered?
+      <NodeID>k__BackingField: ae545008-1ed4-48fd-932f-f172e3c736e8
+    - <Text>k__BackingField: Sounds intriguing. Would you like some food while you
+        share?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Secrets are just stories. Let\u2019s focus on your
+        meal."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5908, y: -501}
+  - <ID>k__BackingField: 4d9ef7aa-c792-4d11-b1d6-13550a58fa96
+    <Name>k__BackingField: L2
+    <Text>k__BackingField: Listening is a rare skill. What have you heard in your
+      listening?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "I\u2019ve heard many stories. What\u2019s yours?"
+      <NodeID>k__BackingField: ff5e8230-d081-4bcb-b9db-baabcb3091fe
+    - <Text>k__BackingField: Many things. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Listening is tiring. Let\u2019s focus on getting you
+        a meal."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5908, y: -2}
+  - <ID>k__BackingField: 8cb0718c-1b1d-4c48-b391-3323ae7b7968
+    <Name>k__BackingField: L3
+    <Text>k__BackingField: Threads of fate, intertwined with the lives of many.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: What threads do you see in my life?
+      <NodeID>k__BackingField: ff5e8230-d081-4bcb-b9db-baabcb3091fe
+    - <Text>k__BackingField: Interesting. Would you like some food while you share?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Threads are just threads. Let\u2019s focus on your
+        meal."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5908, y: 498}
+  - <ID>k__BackingField: e76034cd-4290-472e-888e-af78aa81b400
+    <Name>k__BackingField: M1
+    <Text>k__BackingField: Dreams of a world beyond, where the impossible is possible.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: "I\u2019d love to hear more about this world."
+      <NodeID>k__BackingField: d165d93a-dde6-4f62-8381-baaf6a72d67b
+    - <Text>k__BackingField: Fascinating. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Dreams are just dreams. Let\u2019s focus on your meal."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 6048, y: 1499}
+  - <ID>k__BackingField: 33bb5ddc-0ff3-486b-8f6e-a5c1e13e38f9
+    <Name>k__BackingField: M2
+    <Text>k__BackingField: The soul dances to the music of the universe. Do you hear
+      it?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Sometimes I do. What does it sound like?
+      <NodeID>k__BackingField: d165d93a-dde6-4f62-8381-baaf6a72d67b
+    - <Text>k__BackingField: Interesting. Would you like some food while you share?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Music is for listening. Let\u2019s focus on your meal."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 6048, y: 1997}
+  - <ID>k__BackingField: fe81f57a-3f55-4e9a-867c-fa3368297b68
+    <Name>k__BackingField: Neutral2
+    <Text>k__BackingField: The customer orders food and leaves without much fuss.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 248}
+  - <ID>k__BackingField: ae545008-1ed4-48fd-932f-f172e3c736e8
+    <Name>k__BackingField: Happy1
+    <Text>k__BackingField: The customer leaves with a smile, feeling understood.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 748}
+  - <ID>k__BackingField: 0fa17cf3-af75-4792-b8e9-18b40af26e7a
+    <Name>k__BackingField: Neutral1
+    <Text>k__BackingField: The customer orders food and is satisfied with the service.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: -2}
+  - <ID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <Name>k__BackingField: Angry
+    <Text>k__BackingField: The customer gets upset and leaves in a huff.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 498}
+  - <ID>k__BackingField: ff5e8230-d081-4bcb-b9db-baabcb3091fe
+    <Name>k__BackingField: Happy2
+    <Text>k__BackingField: The customer feels listened to and appreciated, leaving
+      content.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 998}
+  - <ID>k__BackingField: d165d93a-dde6-4f62-8381-baaf6a72d67b
+    <Name>k__BackingField: Happy3
+    <Text>k__BackingField: 'The customer shares their dreams and philosophies, leaving
+      happy.
+
+      
+
+'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 1250}
+  - <ID>k__BackingField: 80ee7fb7-3296-4c51-bda6-d1d1721f2010
+    <Name>k__BackingField: I1
+    <Text>k__BackingField: The key is within us all. Do you search within?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I try to. What have you found within yourself?
+      <NodeID>k__BackingField: 68fa48f5-842f-477e-8580-6cab92f89a79
+    - <Text>k__BackingField: Sometimes. Would you like to order something to eat?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Not often. Let\u2019s get you some food."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4038, y: 1499}
+  - <ID>k__BackingField: 68fa48f5-842f-477e-8580-6cab92f89a79
+    <Name>k__BackingField: K1
+    <Text>k__BackingField: Within, I found a labyrinth of thoughts and dreams.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Tell me more about this labyrinth.
+      <NodeID>k__BackingField: e76034cd-4290-472e-888e-af78aa81b400
+    - <Text>k__BackingField: Sounds fascinating. Would you like to order some food?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Labyrinths are confusing. Let\u2019s focus on your
+        meal."
+      <NodeID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5050, y: 1510}
+  - <ID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    <Name>k__BackingField: B2
+    <Text>k__BackingField: Order, yes. But what is an order if not a request to the
+      universe?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: A profound thought. What would you request from the
+        universe?
+      <NodeID>k__BackingField: 937b109e-8e90-4b8b-b295-4e5b437d840a
+    - <Text>k__BackingField: True. So, what can I get you to eat?
+      <NodeID>k__BackingField: 0fa17cf3-af75-4792-b8e9-18b40af26e7a
+    - <Text>k__BackingField: "Let\u2019s keep it simple. What do you want to eat?"
+      <NodeID>k__BackingField: fe81f57a-3f55-4e9a-867c-fa3368297b68
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1877, y: -2}
+  - <ID>k__BackingField: 38f95d8a-cd91-4a5e-9f45-b93da3f8d76d
+    <Name>k__BackingField: C3
+    <Text>k__BackingField: Eat? You think food can fill the void in the soul?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Maybe not, but it can help. What do you usually eat?
+      <NodeID>k__BackingField: e7313511-3df2-4c1c-b7b3-d099d466397a
+    - <Text>k__BackingField: Perhaps. What can I get you to eat?
+      <NodeID>k__BackingField: 8d3c119c-42a8-4344-a418-4375f0440095
+    - <Text>k__BackingField: "Food is practical. Let\u2019s stick to that."
+      <NodeID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1877, y: 998}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - TheMadMan
+  - A1
+  - B1
+  - C1
+  - A2
+  - C2
+  - D1
+  - D2
+  - E1
+  - E2
+  - E3
+  - G1
+  - G2
+  - H1
+  - H2
+  - H3
+  - I2
+  - F1
+  - J1
+  - J2
+  - J3
+  - K2
+  - L1
+  - L2
+  - L3
+  - M1
+  - M2
+  - Neutral2
+  - Happy1
+  - Neutral1
+  - Angry
+  - Happy2
+  - Happy3
+  - I1
+  - K1
+  - B2
+  - C3
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
