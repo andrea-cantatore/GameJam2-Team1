@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Customer6Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Customer6
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 1631c106-bd17-4fad-9b4d-39d532f8f57c
+    <Name>k__BackingField: Hi
+    <Text>k__BackingField: Hi, can you hear it too?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Hear what?
+      <NodeID>k__BackingField: 2f141024-1a56-46ed-a767-f568f830ccdb
+    - <Text>k__BackingField: What do you mean, you don't like bard music?
+      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: Yes, the customers are making a lot of noise today,
+        how can I assist you?
+      <NodeID>k__BackingField: d442400a-cb78-48c2-b360-5ae5922b128d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 347.2, y: 313.6}
+  - <ID>k__BackingField: 2f141024-1a56-46ed-a767-f568f830ccdb
+    <Name>k__BackingField: Entity
+    <Text>k__BackingField: Dialogue text.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: I feel like there's someone controlling us, deciding
+        what we do and say!
+      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: New Choice
+      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: New Choice
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1260.8, y: -64}
+  - <ID>k__BackingField: d442400a-cb78-48c2-b360-5ae5922b128d
+    <Name>k__BackingField: DialogueName
+    <Text>k__BackingField: Dialogue text.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1405.6, y: 596}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Hi
+  - Entity
+  - DialogueName
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
