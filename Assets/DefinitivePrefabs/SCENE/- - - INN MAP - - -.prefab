@@ -22249,6 +22249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mugs1
       objectReference: {fileID: 0}
+    - target: {fileID: 1695228155371357898, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
+      propertyPath: m_TagString
+      value: Mug
+      objectReference: {fileID: 0}
     - target: {fileID: 3519048186646529812, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -27816,6 +27820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowls
       objectReference: {fileID: 0}
+    - target: {fileID: 1695228155371357898, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
+      propertyPath: m_TagString
+      value: Bowl
+      objectReference: {fileID: 0}
     - target: {fileID: 3519048186646529812, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -28023,10 +28031,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReceipesBook
       objectReference: {fileID: 0}
+    - target: {fileID: 3059395891564677033, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: m_TagString
+      value: RecipeBook
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _pageAnimator
+      value: 
+      objectReference: {fileID: 1004935680000168930}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _objects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
       propertyPath: cameraOnInteraction
       value: 
       objectReference: {fileID: 6520774242461297832}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _cameraOnInteraction
+      value: 
+      objectReference: {fileID: 6520774242461297832}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 6481819352895432548}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _objects.Array.data[1]
+      value: 
+      objectReference: {fileID: 3504307913407294416}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _objects.Array.data[2]
+      value: 
+      objectReference: {fileID: 4240123211406908184}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _objects.Array.data[3]
+      value: 
+      objectReference: {fileID: 8924272578458587779}
+    - target: {fileID: 6949163838575955811, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+      propertyPath: _objects.Array.data[4]
+      value: 
+      objectReference: {fileID: 3037697293353636643}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -28038,9 +28082,39 @@ PrefabInstance:
       addedObject: {fileID: 6520774242461297832}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+--- !u!95 &1004935680000168930 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5516777888985181975, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+  m_PrefabInstance: {fileID: 4719130225927421173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3037697293353636643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7734270969215463382, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+  m_PrefabInstance: {fileID: 4719130225927421173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3504307913407294416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8204567401380779813, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+  m_PrefabInstance: {fileID: 4719130225927421173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4240123211406908184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8911012291885557741, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+  m_PrefabInstance: {fileID: 4719130225927421173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5671712204869508414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1137246715347788235, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+  m_PrefabInstance: {fileID: 4719130225927421173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6481819352895432548 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1768150710599539601, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
+  m_PrefabInstance: {fileID: 4719130225927421173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8924272578458587779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4225736887421038198, guid: 56d80b88896b8594b87cda15f4869e22, type: 3}
   m_PrefabInstance: {fileID: 4719130225927421173}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4746766648265655093
@@ -31492,6 +31566,10 @@ PrefabInstance:
     - target: {fileID: 1695228155371357898, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
       propertyPath: m_Name
       value: Mugs1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695228155371357898, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
+      propertyPath: m_TagString
+      value: Mug
       objectReference: {fileID: 0}
     - target: {fileID: 3519048186646529812, guid: 2644fd6fb36b7d04282bbda54e1989d0, type: 3}
       propertyPath: m_LocalScale.x
