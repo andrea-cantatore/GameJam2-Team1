@@ -20,7 +20,9 @@ public class DialogueManager : MonoBehaviour
     private DSDialogueContainerSO _currentDialogue;
     private DSDialogueSO _currentDialogueSO;
     private DSDialogueSO _nextDialogueSO1, _nextDialogueSO2, _nextDialogueSO3;
-
+    private bool _isSingleChoice, _isMultipleChoice;
+    
+    
     private void OnEnable()
     {
         EventManager.OnStartingDialogue += OnStartingDialogue;
@@ -51,12 +53,16 @@ public class DialogueManager : MonoBehaviour
     {
         if (_currentDialogueSO.DialogueType == DSDialogueType.SingleChoice)
         {
+            _isSingleChoice = true;
+            _isMultipleChoice = false;
             _multipleChoicePanel.SetActive(false);
             _singleChoicePanel.SetActive(true);
             _dialogueText.text = _currentDialogueSO.Text;
         }
         else if(_currentDialogueSO.DialogueType == DSDialogueType.MultipleChoice)
         {
+            _isMultipleChoice = true;
+            _isSingleChoice = false;
             _singleChoicePanel.SetActive(false);
             _multipleChoicePanel.SetActive(true);
             _dialogueText.text = _currentDialogueSO.Text;
@@ -68,6 +74,9 @@ public class DialogueManager : MonoBehaviour
             _nextDialogueSO3 = _currentDialogueSO.Choices[2].NextDialogue;
             RandomChoicesPos();
         }
+        
+        Debug.Log("_currentDialogueSO: " + _currentDialogueSO.name);
+        Debug.Log("Choices: " + string.Join(", ", _currentDialogueSO.Choices));
         
     }
 
@@ -84,7 +93,12 @@ public class DialogueManager : MonoBehaviour
     
     public void NextDialogue(int i)
     {
-        if (_currentDialogueSO.DialogueType == DSDialogueType.SingleChoice)
+        Debug.Log("Next Dialogue "+ i );
+        
+        Debug.Log("_currentDialogueSO: " + _currentDialogueSO.name);
+        Debug.Log("Choices: " + string.Join(", ", _currentDialogueSO.Choices));
+        _currentDialogueSO = _currentDialogueSO.Choices[i].NextDialogue;
+        if (_isSingleChoice)
         {
             _currentDialogueSO = _currentDialogueSO.Choices[0].NextDialogue;
             if (_currentDialogueSO == null)
@@ -95,8 +109,9 @@ public class DialogueManager : MonoBehaviour
             }
             UpdateDialogue();
         }
-        else if(_currentDialogueSO.DialogueType == DSDialogueType.MultipleChoice)
+        else if(_isMultipleChoice)
         {
+            Debug.Log("is multiple "+ i );
             if (i == 0)
             {
                 _currentDialogueSO = _nextDialogueSO1;

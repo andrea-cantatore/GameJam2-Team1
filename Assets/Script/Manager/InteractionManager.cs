@@ -13,17 +13,17 @@ public class InteractionManager : MonoBehaviour
     
     void Awake()
     {
-
+    
         #region Singleton
-
+    
         if (Instance != null)
         {
-            Destroy(transform.root.gameObject);
+            Destroy(transform.gameObject);
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(transform.root.gameObject);
-
+        // DontDestroyOnLoad(transform.gameObject);
+    
         #endregion
     }
 }
