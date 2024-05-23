@@ -48,6 +48,10 @@ public class PlayerInteractions : MonoBehaviour
                         interactable.Interact(false);
                         return;
                     }
+                    if (hit.transform.tag == "RecipeBook")
+                    {
+                        interactable.Interact(true);
+                    }
                     if (!_isHandFull)
                     {
                         if (hit.transform.tag == "Grill")

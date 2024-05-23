@@ -1,53 +1,43 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class ObjectSwitcher : MonoBehaviour
+public class ObjectSwitcher : MonoBehaviour, IInteract
 {
-    public Transform[] objects;
-    public Animator pageAnimator;
-    public float switchDelay = 1.0f;
-    public Transform cameraOnInteraction;
-    public Transform originalCameraPos;
+    [SerializeField] private Transform[] _objects;
+    [SerializeField] private Animator _pageAnimator;
+    [SerializeField] private float _switchDelay = 1.0f;
+    [SerializeField] private Transform _cameraOnInteraction;
+    [SerializeField] private Transform _originalCameraPos;
 
-    private int currentIndex = 0;
-    private bool canSwitch = true;
-    private bool isInteracting = false;
-    private Camera mainCamera;
-    private Transform popUpPos;
+    private int _currentIndex = 0;
+    private bool _canSwitch = true;
+    private bool _isInteracting = false;
+    private Camera _mainCamera;
+    private Transform _popUpPos;
 
     void Awake()
     {
-        mainCamera = Camera.main;
-        popUpPos = transform.GetChild(0);
+        _mainCamera = Camera.main;
+        _popUpPos = transform.GetChild(0);
     }
 
     void Start()
     {
-        for (int i = 0; i < objects.Length; i++)
+        for (int i = 0; i < _objects.Length; i++)
         {
-            if (i == currentIndex)
-                objects[i].gameObject.SetActive(true);
+            if (i == _currentIndex)
+                _objects[i].gameObject.SetActive(true);
             else
-                objects[i].gameObject.SetActive(false);
+                _objects[i].gameObject.SetActive(false);
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (isInteracting)
-            {
-                Interact(false);
-            }
-            else
-            {
-                Interact(true);
-            }
-        }
 
-        if (isInteracting && canSwitch)
+        if (_isInteracting && _canSwitch)
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
@@ -62,15 +52,15 @@ public class ObjectSwitcher : MonoBehaviour
 
     void SwitchToNextObject()
     {
-        if (currentIndex < objects.Length - 1)
+        if (_currentIndex < _objects.Length - 1)
         {
-            objects[currentIndex].gameObject.SetActive(false);
-            currentIndex++;
-            objects[currentIndex].gameObject.SetActive(true);
+            _objects[_currentIndex].gameObject.SetActive(false);
+            _currentIndex++;
+            _objects[_currentIndex].gameObject.SetActive(true);
 
-            if (pageAnimator != null)
+            if (_pageAnimator != null)
             {
-                pageAnimator.SetTrigger("toRight");
+                _pageAnimator.SetTrigger("toRight");
             }
 
             StartCoroutine(SwitchCooldown());
@@ -79,15 +69,15 @@ public class ObjectSwitcher : MonoBehaviour
 
     void SwitchToPreviousObject()
     {
-        if (currentIndex > 0)
+        if (_currentIndex > 0)
         {
-            objects[currentIndex].gameObject.SetActive(false);
-            currentIndex--;
-            objects[currentIndex].gameObject.SetActive(true);
+            _objects[_currentIndex].gameObject.SetActive(false);
+            _currentIndex--;
+            _objects[_currentIndex].gameObject.SetActive(true);
 
-            if (pageAnimator != null)
+            if (_pageAnimator != null)
             {
-                pageAnimator.SetTrigger("toLeft");
+                _pageAnimator.SetTrigger("toLeft");
             }
 
             StartCoroutine(SwitchCooldown());
@@ -96,37 +86,36 @@ public class ObjectSwitcher : MonoBehaviour
 
     IEnumerator SwitchCooldown()
     {
-        canSwitch = false;
-        yield return new WaitForSeconds(switchDelay);
-        canSwitch = true;
+        _canSwitch = false;
+        yield return new WaitForSeconds(_switchDelay);
+        _canSwitch = true;
     }
 
-    void Interact(bool isToAdd)
+    public bool Interact(bool isToAdd)
     {
-        isInteracting = isToAdd;
-        EventManager.OnCuttingInteraction?.Invoke(isInteracting);
+        _isInteracting = isToAdd;
 
-        if (isInteracting)
+        if (_isInteracting)
         {
-            mainCamera.transform.position = cameraOnInteraction.position;
-            mainCamera.transform.rotation = cameraOnInteraction.rotation;
+            _mainCamera.transform.position = _cameraOnInteraction.position;
+            _mainCamera.transform.rotation = _cameraOnInteraction.rotation;
         }
         else
         {
-            mainCamera.transform.position = originalCameraPos.position;
-            mainCamera.transform.rotation = originalCameraPos.rotation;
+            _mainCamera.transform.position = _originalCameraPos.position;
+            _mainCamera.transform.rotation = _originalCameraPos.rotation;
         }
+        return true;
     }
 
     public void InteractionPopUp()
     {
-        if (isInteracting)
+        if (_isInteracting)
             return;
 
-        Transform interactionPannel = popUpPos.GetChild(0);
-        interactionPannel.position = popUpPos.position;
-        TMPro.TextMeshProUGUI interactionText = interactionPannel.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-        interactionText.text = "Press E to Interact " + gameObject.name;
+        InteractionManager.Instance.InteractionPannel.transform.position = _popUpPos.position;
+        InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text =
+            "press E to Interact " + gameObject.name;
     }
 
     private void OnEnable()
@@ -141,6 +130,6 @@ public class ObjectSwitcher : MonoBehaviour
 
     private void CuttingInteraction(bool isCutting)
     {
-        isInteracting = isCutting;
+        _isInteracting = isCutting;
     }
 }
