@@ -29,6 +29,7 @@ public class CustomerManger : MonoBehaviour
             {
                 int randomIndex = Random.Range(0, _customers.Length);
                 int randomEndPos = Random.Range(0, _customerEndPos.Length);
+                Debug.Log(randomIndex+randomEndPos);
                 if (!_isEndPosFull[randomEndPos] && _customers[randomIndex].activeSelf == false)
                 {
                     _customers[randomIndex].SetActive(true);
