@@ -265,11 +265,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 325815801852331132, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Name
+      value: FoodHolder
+      objectReference: {fileID: 0}
     - target: {fileID: 347446330244519328, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 506958661797117196, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145060756508162127, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Name
+      value: FoodHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285493929908762963, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
@@ -284,6 +296,10 @@ PrefabInstance:
     - target: {fileID: 5114189385554448792, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248940013315945345, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Name
+      value: FoodHolder
       objectReference: {fileID: 0}
     - target: {fileID: 6864518726400258445, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Layer
@@ -332,6 +348,18 @@ PrefabInstance:
     - target: {fileID: 7601330430816752691, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Name
       value: ---INN MAP---
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892658629623547120, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Name
+      value: FoodHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100175934271485219, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Name
+      value: FoodHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094741326867089728, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -714,6 +742,10 @@ PrefabInstance:
     - target: {fileID: 8923521266811832670, guid: a33e20c70bf61f448b84cddb81bf52d3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923521266811832670, guid: a33e20c70bf61f448b84cddb81bf52d3, type: 3}
+      propertyPath: m_TagString
+      value: Bowl
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1273,6 +1305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 560596756640436141, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.478
+      objectReference: {fileID: 0}
     - target: {fileID: 995469649240183884, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: m_Name
       value: ---GAMEPLAY---
@@ -1344,11 +1380,11 @@ PrefabInstance:
     - target: {fileID: 2948763702943348803, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _interactables.Array.data[9]
       value: 
-      objectReference: {fileID: 223554583}
+      objectReference: {fileID: 19019855}
     - target: {fileID: 2948763702943348803, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _interactables.Array.data[10]
       value: 
-      objectReference: {fileID: 19019855}
+      objectReference: {fileID: 223554583}
     - target: {fileID: 3962528226826801802, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.07099986
