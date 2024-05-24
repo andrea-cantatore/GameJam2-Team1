@@ -14,6 +14,9 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     [SerializeField] private int _requiredCutting = 3;
     private int _cuttingCounter = 0;
     public bool IsCuttingEmpty = true;
+    [SerializeField] private Animator _animator; // ByEma
+    [SerializeField] private float _cutDelay = 1f; // ByEma
+    private bool _canCut = true; // ByEma
 
     private void Awake()
     {
@@ -32,7 +35,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         EventManager.OnCuttingInteraction -= CuttingInteraction;
     }
 
-    private void Interaction()
+    /*private void Interaction()
     {
         if(isCutting)
             Interact(false);
@@ -53,8 +56,43 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
                 _cuttingCounter = 0;
             }
         }
+    }*/
+
+    // ByEmaStart
+    private void Interaction()
+    {
+        if (isCutting)
+            Interact(false);
     }
-    
+
+    private void InputCut()
+    {
+        if (isCutting && _canCut)
+        {
+            StartCoroutine(CutCoroutine());
+        }
+    }
+
+    private IEnumerator CutCoroutine()
+    {
+        _canCut = false;
+        _animator.SetTrigger("isCutting");
+        
+        _cuttingCounter++;
+        if (_requiredCutting <= _cuttingCounter)
+        {
+            EventManager.OnCutted?.Invoke(_activeFood.tag, _activeFood.GetComponent<MeshRenderer>().material);
+            _activeFood.SetActive(false);
+            _activeFood = null;
+            Interact(false);
+            IsCuttingEmpty = true;
+            _cuttingCounter = 0;
+        }
+
+        yield return new WaitForSeconds(_cutDelay);
+        _canCut = true;
+    }
+    // ByEmaEnd
 
     public bool Interact(bool isToAdd)
     {
