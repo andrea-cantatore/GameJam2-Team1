@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.32435295, g: 0.3614691, b: 0.415192, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3771,6 +3771,18 @@ PrefabInstance:
     - target: {fileID: 2517935437984721857, guid: faed4c9861d870e4d9aa84b1b68d540b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922037615356630783, guid: faed4c9861d870e4d9aa84b1b68d540b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922037615356630783, guid: faed4c9861d870e4d9aa84b1b68d540b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922037615356630783, guid: faed4c9861d870e4d9aa84b1b68d540b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5647936236243737984, guid: faed4c9861d870e4d9aa84b1b68d540b, type: 3}
       propertyPath: m_Name
@@ -7550,7 +7562,7 @@ MonoBehaviour:
   _customerEndPos:
   - {fileID: 502579360}
   _isEndPosFull: 00
-  _spawnRate: 10
+  _spawnRate: 2
 --- !u!1 &1190891735
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,7 +40,11 @@ public class PlayerInteractions : MonoBehaviour
     private void Update()
     {
         _isDishHand = _interactables[8].activeSelf;
-
+        if(HeldObject == null)
+        {
+            _isHandFull = false;
+            _isDishHand = false;
+        }
         RaycastHit hit;
         if (Physics.Raycast(_cam.position, _cam.forward, out hit, _interactionDistance))
         {
@@ -295,7 +299,7 @@ public class PlayerInteractions : MonoBehaviour
 
         for (int i = 0; i < childCount; i++)
         {
-            activeChildren[i] = transform.GetChild(i).gameObject.activeSelf;
+            activeChildren[i] = _dish.transform.GetChild(i).gameObject.activeSelf;
         }
 
         return activeChildren;

@@ -7,7 +7,7 @@ using System.Linq;
 
 public class Customer : MonoBehaviour, IInteract, ICustomer
 {
-    
+
     private Transform _popUpPos;
     [SerializeField] private DSDialogueContainerSO _dialogueContainer;
     [SerializeField] GameObject[] _expectedMeal;
@@ -20,7 +20,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     private bool _canMove;
     private bool _isOnLastPos;
     private bool _alreadySpoken;
-    
+
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
@@ -33,15 +33,19 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         _alreadySpoken = false;
         _isOnLastPos = false;
         _pathIndex = 0;
+        foreach (GameObject obj in _expectedMeal)
+        {
+            obj.SetActive(true);
+        }
     }
 
     private void Update()
     {
-        if(_canMove && _expectedMealCounter > 0)
+        if (_canMove && _expectedMealCounter > 0)
         {
             MoveToTarget();
         }
-        if (_expectedMealCounter == 0)
+        if (_expectedMealCounter <= 0)
         {
             MoveBack();
         }
@@ -49,6 +53,11 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
 
     public bool Interact(bool isToAdd)
     {
+        if (_expectedMealCounter <= 0)
+        {
+            MoveBack();
+            return false;
+        }
         if (!_alreadySpoken)
         {
             EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name);
@@ -60,21 +69,16 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             {
                 if (_playerInteractions.HeldObject.tag == obj.tag)
                 {
-                    if (obj.TryGetComponent(out IDish dish))
+                    if (obj.TryGetComponent(out IDish dish) && obj.activeSelf)
                     {
                         if (_playerInteractions.GetDish().SequenceEqual(dish.ActiveFood()))
                         {
+                            obj.SetActive(false);
                             _expectedMealCounter--;
                         }
                     }
-                    
                 }
-                
             }
-        }
-        if (_expectedMealCounter == 0)
-        {
-            MoveBack();
         }
         return true;
     }
@@ -98,24 +102,27 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     {
         _canMove = true;
     }
-    
+
     private void MoveToTarget()
     {
         if (_pathIndex < _pathPos.Length)
         {
-            transform.position = Vector3.MoveTowards(transform.position, _pathPos[_pathIndex].position, 5 * Time.deltaTime);
+            transform.position =
+                Vector3.MoveTowards(transform.position, _pathPos[_pathIndex].position, 5 * Time.deltaTime);
+            transform.LookAt(_pathPos[_pathIndex].position);
             if (Vector3.Distance(transform.position, _pathPos[_pathIndex].position) < 0.1f)
             {
                 _pathIndex++;
             }
         }
-        else if(!_isOnLastPos)
+        else if (!_isOnLastPos)
         {
             transform.position = Vector3.MoveTowards(transform.position, _targetPos.position, 5 * Time.deltaTime);
+            //transform.LookAt(_pathPos[_pathIndex].position);
             if (Vector3.Distance(transform.position, _targetPos.position) < 0.1f)
             {
                 _isOnLastPos = true;
-                
+                transform.LookAt(_targetPos.position + new Vector3(0, 0, -1));
             }
         }
         else
@@ -123,18 +130,26 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             _canMove = false;
         }
     }
-    
+
     private void MoveBack()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _pathPos[_pathIndex].position, 5 * Time.deltaTime);
-        if (Vector3.Distance(transform.position, _pathPos[_pathIndex].position) < 0.1f)
+        if (_pathIndex < _pathPos.Length)
         {
-            _pathIndex--;
+            transform.position =
+                Vector3.MoveTowards(transform.position, _pathPos[_pathIndex].position, 5 * Time.deltaTime);
+            transform.LookAt(_pathPos[_pathIndex].position);
+            if (Vector3.Distance(transform.position, _pathPos[_pathIndex].position) < 0.1f)
+            {
+                _pathIndex--;
+            }
+            if (_pathIndex == 0)
+            {
+                gameObject.SetActive(false);
+            }
         }
-        if(_pathIndex == 0)
+        else
         {
-            gameObject.SetActive(false);
+            _pathIndex = _pathPos.Length - 1;
         }
     }
 }
-
