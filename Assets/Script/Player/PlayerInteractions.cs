@@ -73,11 +73,21 @@ public class PlayerInteractions : MonoBehaviour
                                 _isHandFull = true;
                                 return;
                             }
+                            if (obj.tag == hit.transform.tag && obj.tag == "Mug")
+                            {
+                                obj.SetActive(true);
+                                _heldObject = obj;
+                                _isHandFull = true;
+                                foreach (GameObject obj2 in _beerFoam)
+                                {
+                                    obj.SetActive(false);
+                                }
+                                return;
+                            }
                             if (obj.tag == hit.transform.tag)
                             {
                                 if (interactable.Interact(false))
                                 {
-                                    Debug.Log("hello");
                                     obj.SetActive(true);
                                     obj.TryGetComponent(out IHeldFood heldFood);
                                     heldFood.IBasicMaterial();
