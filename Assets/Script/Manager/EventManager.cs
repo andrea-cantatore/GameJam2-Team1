@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
     public static Action<int> OnFullBeer;
     
     public static Action OnDialogueEnd;
-    public static Action<DSDialogueContainerSO, String> OnStartingDialogue;
+    public static Action<DSDialogueContainerSO, String, Customer> OnStartingDialogue;
 
 }
 

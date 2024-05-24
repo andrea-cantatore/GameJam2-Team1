@@ -51,7 +51,7 @@ public class PlayerCam : MonoBehaviour
         _playerOrientation.rotation = Quaternion.Euler(0, _yRotation, 0);
     }
     
-    private void StartingDialogue(DSDialogueContainerSO containerSo, String dialogue)
+    private void StartingDialogue(DSDialogueContainerSO containerSo, String dialogue, Customer customer)
     {
         _isMovementLocked = !_isMovementLocked;
     }
