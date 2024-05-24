@@ -44,7 +44,7 @@ public class SettingsManager : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        _audioMixer.SetFloat("Volume", Mathf.Log(volume) * 20f);
+        _audioMixer.SetFloat("MasterVolume", volume);
     }
 
     public void SetQuality(int index)
