@@ -16,6 +16,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     [SerializeField] private PlayerInteractions _playerInteractions;
     [SerializeField] private float _permanenceTime, _permanenceTimeChanger;
     [SerializeField] private int _baseTip;
+    private GameObject[] _coins;
     private float _permanenceTimer;
     private int _expectedMealCounter;
     private Transform _targetPos;
@@ -92,6 +93,16 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         if (_expectedMealCounter <= 0)
         {
             int tip = _baseTip + Mathf.RoundToInt(_permanenceTime);
+            _coins[0].SetActive(true);
+            _coins[1].SetActive(true);
+            if(_coins[0].TryGetComponent(out ICoin coin))
+            {
+                coin.AddCoins(_payment);
+            }
+            if(_coins[1].TryGetComponent(out ICoin coin1))
+            {
+                coin1.AddCoins(tip);
+            }
         }
         return true;
     }
@@ -108,6 +119,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         if (pos.TryGetComponent(out CustomerTargetPos customerTargetPos))
         {
             _pathPos = customerTargetPos.GetOtherPos();
+            _coins = customerTargetPos.Coins();
             StartAction();
         }
     }
