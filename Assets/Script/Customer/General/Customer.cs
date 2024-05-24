@@ -11,6 +11,8 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     [SerializeField] private DSDialogueContainerSO _dialogueContainer;
     [SerializeField] GameObject[] _expectedMeal;
     [SerializeField] private int _payment;
+    [SerializeField] private PlayerInteractions _playerInteractions;
+    private int _expectedMealCounter;
     private Transform _targetPos;
     private Transform[] _pathPos;
     private int _pathIndex;
@@ -21,6 +23,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
+        _expectedMealCounter = _expectedMeal.Length;
     }
 
     private void OnEnable()
@@ -33,18 +36,39 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
 
     private void Update()
     {
-        if(_canMove)
+        if(_canMove && _expectedMealCounter > 0)
         {
             MoveToTarget();
+        }
+        if (_expectedMealCounter == 0)
+        {
+            MoveBack();
         }
     }
 
     public bool Interact(bool isToAdd)
     {
-        if(_alreadySpoken)
-            return false;
-        EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name);
-        _alreadySpoken = true;
+        if (!_alreadySpoken)
+        {
+            EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name);
+            _alreadySpoken = true;
+        }
+        else
+        {
+            foreach (GameObject obj in _expectedMeal)
+            {
+                if (_playerInteractions.HeldObject == obj)
+                {
+                    _expectedMealCounter--;
+                }
+            }
+            if(_expectedMealCounter == 0)
+            {
+                EventManager.OnFullBeer?.Invoke(_payment);
+                gameObject.SetActive(false);
+            }
+        }
+            
         return true;
     }
 
@@ -84,11 +108,25 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             if (Vector3.Distance(transform.position, _targetPos.position) < 0.1f)
             {
                 _isOnLastPos = true;
+                
             }
         }
         else
         {
             _canMove = false;
+        }
+    }
+    
+    private void MoveBack()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, _pathPos[_pathIndex].position, 5 * Time.deltaTime);
+        if (Vector3.Distance(transform.position, _pathPos[_pathIndex].position) < 0.1f)
+        {
+            _pathIndex--;
+        }
+        if(_pathIndex == 0)
+        {
+            gameObject.SetActive(false);
         }
     }
 }

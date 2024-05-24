@@ -10,7 +10,7 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private GameObject[] _dishObjects;
     [SerializeField] private float _interactionDistance = 5f;
     private bool _isHandFull, _isDishHand, _isBeerHand;
-    private GameObject _heldObject;
+    public GameObject HeldObject;
     private PlayerDish _playerDish => GetComponent<PlayerDish>();
 
     [SerializeField] private GameObject[] _beerFoam;
@@ -69,14 +69,14 @@ public class PlayerInteractions : MonoBehaviour
                             if (obj.tag == tag && tag == "Dish")
                             {
                                 obj.SetActive(true);
-                                _heldObject = obj;
+                                HeldObject = obj;
                                 _isHandFull = true;
                                 return;
                             }
                             if (obj.tag == hit.transform.tag && obj.tag == "Mug")
                             {
                                 obj.SetActive(true);
-                                _heldObject = obj;
+                                HeldObject = obj;
                                 _isHandFull = true;
                                 foreach (GameObject obj2 in _beerFoam)
                                 {
@@ -92,7 +92,7 @@ public class PlayerInteractions : MonoBehaviour
                                     obj.TryGetComponent(out IHeldFood heldFood);
                                     heldFood.IBasicMaterial();
                                     heldFood.ICooked(0);
-                                    _heldObject = obj;
+                                    HeldObject = obj;
                                     _isHandFull = true;
                                     return;
                                 }
@@ -101,10 +101,10 @@ public class PlayerInteractions : MonoBehaviour
                     }
                     if (hit.transform.tag == "BeerPick")
                     {
-                        if (_heldObject != null && _heldObject.tag == "Mug")
+                        if (HeldObject != null && HeldObject.tag == "Mug")
                         {
-                            _heldObject.SetActive(false);
-                            _heldObject = null;
+                            HeldObject.SetActive(false);
+                            HeldObject = null;
                             interactable.Interact(true);
                         }
                     }
@@ -119,11 +119,11 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (hit.transform.TryGetComponent(out ICutting cutting))
                             {
-                                if (cutting.CutInteraction(_heldObject))
+                                if (cutting.CutInteraction(HeldObject))
                                 {
                                     interactable.Interact(true);
-                                    _heldObject.SetActive(false);
-                                    _heldObject = null;
+                                    HeldObject.SetActive(false);
+                                    HeldObject = null;
                                     _isHandFull = false;
                                 }
                             }
@@ -140,13 +140,13 @@ public class PlayerInteractions : MonoBehaviour
                         }
                         return;
                     }
-                    if (_heldObject != null)
+                    if (HeldObject != null)
                     {
-                        if (hit.transform.tag == _heldObject.tag)
+                        if (hit.transform.tag == HeldObject.tag)
                         {
                             interactable.Interact(true);
-                            _heldObject.SetActive(false);
-                            _heldObject = null;
+                            HeldObject.SetActive(false);
+                            HeldObject = null;
                             _isHandFull = false;
                             return;
                         }
@@ -157,20 +157,20 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (_isDishHand)
                             {
-                                if (counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject,
-                                        true, _heldObject.GetComponent<HeldFood>().IsSliced))
+                                if (counterHolder.TakeObject(HeldObject.GetComponent<HeldFood>().MyId(), HeldObject,
+                                        true, HeldObject.GetComponent<HeldFood>().IsSliced))
                                 {
-                                    _heldObject.SetActive(false);
-                                    _heldObject = null;
+                                    HeldObject.SetActive(false);
+                                    HeldObject = null;
                                     _isHandFull = false;
                                     return;
                                 }
                             }
-                            if (counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject,
-                                    false, _heldObject.GetComponent<HeldFood>().IsSliced) && !_isDishHand)
+                            if (counterHolder.TakeObject(HeldObject.GetComponent<HeldFood>().MyId(), HeldObject,
+                                    false, HeldObject.GetComponent<HeldFood>().IsSliced) && !_isDishHand)
                             {
-                                _heldObject.SetActive(false);
-                                _heldObject = null;
+                                HeldObject.SetActive(false);
+                                HeldObject = null;
                                 _isHandFull = false;
                                 return;
                             }
@@ -190,7 +190,7 @@ public class PlayerInteractions : MonoBehaviour
                                         {
                                             _dishObjects[i].SetActive(foodOnDish[i]);
                                         }
-                                        _heldObject = obj;
+                                        HeldObject = obj;
                                         _isHandFull = true;
                                         counterHolder.DestroyDish();
                                         return;
@@ -198,8 +198,8 @@ public class PlayerInteractions : MonoBehaviour
                                     obj.SetActive(true);
                                     obj.GetComponent<MeshRenderer>().material = counterHolder.GetMaterial();
                                     counterHolder.DestroyObject();
-                                    _heldObject = obj;
-                                    _heldObject.SetActive(true);
+                                    HeldObject = obj;
+                                    HeldObject.SetActive(true);
                                     _isHandFull = true;
                                     return;
                                 }
@@ -215,11 +215,11 @@ public class PlayerInteractions : MonoBehaviour
                 stash.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (_heldObject != null)
+                    if (HeldObject != null)
                     {
                         _isHandFull = false;
-                        _heldObject.SetActive(false);
-                        _heldObject = null;
+                        HeldObject.SetActive(false);
+                        HeldObject = null;
                     }
                 }
             }
@@ -231,10 +231,10 @@ public class PlayerInteractions : MonoBehaviour
         if (_isHandFull)
         {
             obj.TryGetComponent(out IGrill grill);
-            if (grill.GrillInteraction(_heldObject.tag, _heldObject.GetComponent<MeshRenderer>().material))
+            if (grill.GrillInteraction(HeldObject.tag, HeldObject.GetComponent<MeshRenderer>().material))
             {
-                _heldObject.SetActive(false);
-                _heldObject = null;
+                HeldObject.SetActive(false);
+                HeldObject = null;
                 _isHandFull = false;
             }
         }
@@ -254,7 +254,7 @@ public class PlayerInteractions : MonoBehaviour
             if (obj.tag == tag && tag == "Dish")
             {
                 obj.SetActive(true);
-                _heldObject = obj;
+                HeldObject = obj;
                 _isHandFull = true;
                 return obj;
             }
@@ -262,7 +262,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 obj.GetComponent<MeshRenderer>().material = material;
                 obj.SetActive(true);
-                _heldObject = obj;
+                HeldObject = obj;
                 _isHandFull = true;
                 return obj;
             }
@@ -281,7 +281,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         _beerFoam[beerType].SetActive(true);
         _beer.SetActive(true);
-        _heldObject = _beer;
+        HeldObject = _beer;
         _isBeerHand = true;
     }
 }
