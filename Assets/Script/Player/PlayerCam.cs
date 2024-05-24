@@ -18,6 +18,7 @@ public class PlayerCam : MonoBehaviour
 
     private void OnEnable()
     {
+        EventManager.OnBeerInteraction += OnLockedCamera;
         EventManager.OnBookInteraction += OnLockedCamera;
         EventManager.OnCuttingInteraction += OnLockedCamera;
         EventManager.OnStartingDialogue += StartingDialogue;
@@ -25,6 +26,7 @@ public class PlayerCam : MonoBehaviour
     }
     private void OnDisable()
     {
+        EventManager.OnBeerInteraction -= OnLockedCamera;
         EventManager.OnBookInteraction -= OnLockedCamera;
         EventManager.OnCuttingInteraction -= OnLockedCamera;
         EventManager.OnStartingDialogue -= StartingDialogue;

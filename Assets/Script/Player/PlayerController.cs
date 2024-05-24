@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     
     private void OnEnable()
     {
+        EventManager.OnBeerInteraction += CanMove;
         EventManager.OnCuttingInteraction += CanMove;
         EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnDisable()
     {
+        EventManager.OnBeerInteraction -= CanMove;
         EventManager.OnCuttingInteraction -= CanMove;
         EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;

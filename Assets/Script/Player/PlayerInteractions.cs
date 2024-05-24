@@ -9,9 +9,12 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private GameObject[] _interactables;
     [SerializeField] private GameObject[] _dishObjects;
     [SerializeField] private float _interactionDistance = 5f;
-    private bool _isHandFull, _isDishHand;
+    private bool _isHandFull, _isDishHand, _isBeerHand;
     private GameObject _heldObject;
     private PlayerDish _playerDish => GetComponent<PlayerDish>();
+
+    [SerializeField] private GameObject[] _beerFoam;
+    [SerializeField] private GameObject _beer;
 
 
     private void Awake()
@@ -21,12 +24,14 @@ public class PlayerInteractions : MonoBehaviour
 
     private void OnEnable()
     {
+        EventManager.OnFullBeer += FullBeer;
         EventManager.OnGrillPickUp += GrillPickUp;
         EventManager.OnCutted += CuttedFoodPickUp;
     }
 
     private void OnDisable()
     {
+        EventManager.OnFullBeer -= FullBeer;
         EventManager.OnGrillPickUp -= GrillPickUp;
         EventManager.OnCutted -= CuttedFoodPickUp;
     }
@@ -43,7 +48,7 @@ public class PlayerInteractions : MonoBehaviour
                 interactable.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if(hit.transform.TryGetComponent(out ICustomer customer))
+                    if (hit.transform.TryGetComponent(out ICustomer customer))
                     {
                         interactable.Interact(false);
                         return;
@@ -82,6 +87,15 @@ public class PlayerInteractions : MonoBehaviour
                                     return;
                                 }
                             }
+                        }
+                    }
+                    if (hit.transform.tag == "BeerPick")
+                    {
+                        if (_heldObject != null && _heldObject.tag == "Mug")
+                        {
+                            _heldObject.SetActive(false);
+                            _heldObject = null;
+                            interactable.Interact(true);
                         }
                     }
                     if (hit.transform.tag == "Grill")
@@ -133,7 +147,6 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (_isDishHand)
                             {
-                                
                                 if (counterHolder.TakeObject(_heldObject.GetComponent<HeldFood>().MyId(), _heldObject,
                                         true, _heldObject.GetComponent<HeldFood>().IsSliced))
                                 {
@@ -156,7 +169,6 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             foreach (GameObject obj in _interactables)
                             {
-                                
                                 if (counterHolder.ReleaseObject(obj.GetComponent<HeldFood>().MyId()))
                                 {
                                     if (obj.tag == "Dish")
@@ -253,5 +265,13 @@ public class PlayerInteractions : MonoBehaviour
         GameObject toChange = InteractableCicle(tag, material);
         toChange.TryGetComponent(out IHeldFood heldFood);
         heldFood.ICutted();
+    }
+
+    private void FullBeer(int beerType)
+    {
+        _beerFoam[beerType].SetActive(true);
+        _beer.SetActive(true);
+        _heldObject = _beer;
+        _isBeerHand = true;
     }
 }
