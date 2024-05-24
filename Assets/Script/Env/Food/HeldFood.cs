@@ -40,6 +40,10 @@ public class HeldFood : MonoBehaviour, IHeldFood, IHeld
     }
     public void IBasicMaterial()
     {
+        if (gameObject.tag == "Mug")
+        {
+            return;
+        }
         GetComponent<Renderer>().material = _material;
     }
     public int MyId()

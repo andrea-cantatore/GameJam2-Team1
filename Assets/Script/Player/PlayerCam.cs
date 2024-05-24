@@ -18,12 +18,14 @@ public class PlayerCam : MonoBehaviour
 
     private void OnEnable()
     {
+        EventManager.OnBookInteraction += OnLockedCamera;
         EventManager.OnCuttingInteraction += OnLockedCamera;
         EventManager.OnStartingDialogue += StartingDialogue;
         EventManager.OnDialogueEnd += () => _isMovementLocked = false;
     }
     private void OnDisable()
     {
+        EventManager.OnBookInteraction -= OnLockedCamera;
         EventManager.OnCuttingInteraction -= OnLockedCamera;
         EventManager.OnStartingDialogue -= StartingDialogue;
         EventManager.OnDialogueEnd -= () => _isMovementLocked = false;

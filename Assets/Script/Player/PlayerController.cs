@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnCuttingInteraction += CanMove;
+        EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
         EventManager.OnDialogueEnd += () => _isMovementUnlocked = false;
     }
     private void OnDisable()
     {
         EventManager.OnCuttingInteraction -= CanMove;
+        EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
         EventManager.OnDialogueEnd += () => _isMovementUnlocked = false;
     }
