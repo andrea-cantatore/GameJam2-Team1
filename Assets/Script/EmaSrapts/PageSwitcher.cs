@@ -33,6 +33,16 @@ public class ObjectSwitcher : MonoBehaviour, IInteract
                 _objects[i].gameObject.SetActive(false);
         }
     }
+    
+    private void OnEnable()
+    {
+        EventManager.OnBookInteraction += BookInteraction;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnBookInteraction -= BookInteraction;
+    }
 
     void Update()
     {
@@ -93,7 +103,7 @@ public class ObjectSwitcher : MonoBehaviour, IInteract
 
     public bool Interact(bool isToAdd)
     {
-        _isInteracting = isToAdd;
+        EventManager.OnBookInteraction?.Invoke(isToAdd);
 
         if (_isInteracting)
         {
@@ -118,17 +128,8 @@ public class ObjectSwitcher : MonoBehaviour, IInteract
             "press E to Interact " + gameObject.name;
     }
 
-    private void OnEnable()
-    {
-        EventManager.OnCuttingInteraction += CuttingInteraction;
-    }
 
-    private void OnDisable()
-    {
-        EventManager.OnCuttingInteraction -= CuttingInteraction;
-    }
-
-    private void CuttingInteraction(bool isCutting)
+    private void BookInteraction(bool isCutting)
     {
         _isInteracting = isCutting;
     }

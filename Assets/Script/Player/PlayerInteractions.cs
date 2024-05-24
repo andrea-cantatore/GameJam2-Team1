@@ -72,6 +72,7 @@ public class PlayerInteractions : MonoBehaviour
                             {
                                 if (interactable.Interact(false))
                                 {
+                                    Debug.Log("hello");
                                     obj.SetActive(true);
                                     obj.TryGetComponent(out IHeldFood heldFood);
                                     heldFood.IBasicMaterial();
