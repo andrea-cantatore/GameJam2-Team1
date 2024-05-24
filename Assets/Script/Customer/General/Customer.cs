@@ -92,7 +92,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         }
         if (_expectedMealCounter <= 0)
         {
-            int tip = _baseTip * Mathf.RoundToInt(_permanenceTime / 60);
+            int tip = _baseTip * Mathf.RoundToInt(_permanenceTime - _permanenceTimer / 60);
             _coins[0].SetActive(true);
             _coins[1].SetActive(true);
             if (_coins[0].TryGetComponent(out ICoin coin))
