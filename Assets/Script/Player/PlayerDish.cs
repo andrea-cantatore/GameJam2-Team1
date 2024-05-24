@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDish : MonoBehaviour
+public class PlayerDish : MonoBehaviour, IDish
 {
     [SerializeField] private GameObject[] _foods;
     [SerializeField] private bool[] activeFoods;
+    
     private bool _isMeetOn;
     private bool _isNotPotatoOn;
     private bool _isFishOn;
@@ -101,5 +102,17 @@ public class PlayerDish : MonoBehaviour
         }
         return activeFoods;
     }
-    
+
+    public bool[] ActiveFood()
+    {
+        int childCount = transform.childCount;
+        bool[] activeChildren = new bool[childCount];
+
+        for (int i = 0; i < childCount; i++)
+        {
+            activeChildren[i] = transform.GetChild(i).gameObject.activeSelf;
+        }
+
+        return activeChildren;
+    }
 }

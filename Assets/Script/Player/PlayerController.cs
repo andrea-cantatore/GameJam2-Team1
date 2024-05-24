@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         EventManager.OnCuttingInteraction += CanMove;
         EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
-        EventManager.OnDialogueEnd += () => _isMovementUnlocked = false;
+        EventManager.OnDialogueEnd += () => _isMovementUnlocked = true;
     }
     private void OnDisable()
     {
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         EventManager.OnCuttingInteraction -= CanMove;
         EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
-        EventManager.OnDialogueEnd += () => _isMovementUnlocked = false;
+        EventManager.OnDialogueEnd += () => _isMovementUnlocked = true;
     }
 
     private void Update()

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DS.ScriptableObjects;
 using UnityEngine;
+using System.Linq;
 
 public class Customer : MonoBehaviour, IInteract, ICustomer
 {
@@ -57,18 +58,24 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         {
             foreach (GameObject obj in _expectedMeal)
             {
-                if (_playerInteractions.HeldObject == obj)
+                if (_playerInteractions.HeldObject.tag == obj.tag)
                 {
-                    _expectedMealCounter--;
+                    if (obj.TryGetComponent(out IDish dish))
+                    {
+                        if (_playerInteractions.GetDish().SequenceEqual(dish.ActiveFood()))
+                        {
+                            _expectedMealCounter--;
+                        }
+                    }
+                    
                 }
-            }
-            if(_expectedMealCounter == 0)
-            {
-                EventManager.OnFullBeer?.Invoke(_payment);
-                gameObject.SetActive(false);
+                
             }
         }
-            
+        if (_expectedMealCounter == 0)
+        {
+            MoveBack();
+        }
         return true;
     }
 

@@ -12,6 +12,7 @@ public class PlayerInteractions : MonoBehaviour
     private bool _isHandFull, _isDishHand, _isBeerHand;
     public GameObject HeldObject;
     private PlayerDish _playerDish => GetComponent<PlayerDish>();
+    private GameObject _dish => _interactables[8];
 
     [SerializeField] private GameObject[] _beerFoam;
     [SerializeField] private GameObject _beer;
@@ -283,5 +284,20 @@ public class PlayerInteractions : MonoBehaviour
         _beer.SetActive(true);
         HeldObject = _beer;
         _isBeerHand = true;
+    }
+    
+    public bool[] GetDish()
+    {
+        int childCount = _dish.transform.childCount;
+        bool[] activeChildren = new bool[childCount];
+        Debug.Log(childCount + activeChildren.Length);
+        
+
+        for (int i = 0; i < childCount; i++)
+        {
+            activeChildren[i] = transform.GetChild(i).gameObject.activeSelf;
+        }
+
+        return activeChildren;
     }
 }
