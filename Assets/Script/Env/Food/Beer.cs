@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Beer : MonoBehaviour, IInteract
 {
@@ -10,6 +11,7 @@ public class Beer : MonoBehaviour, IInteract
     [SerializeField] private GameObject _beer;
     [SerializeField] private Transform _popUpPos;
     [SerializeField] private int _beerType;
+    [SerializeField] private Animator _animator;
     private bool _isUsing;
     private float _timer;
     
@@ -24,6 +26,7 @@ public class Beer : MonoBehaviour, IInteract
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                _animator.SetBool("Spill", true);
                 _timer += Time.deltaTime;
                 if(_timer >= _holdingTime)
                 {
@@ -32,7 +35,12 @@ public class Beer : MonoBehaviour, IInteract
                     EventManager.OnBeerInteraction?.Invoke(false);
                     _beer.SetActive(false);
                     EventManager.OnFullBeer?.Invoke(_beerType);
+                    _animator.SetBool("Spill", false);
                 }
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                _animator.SetBool("Spill", false);
             }
         }
     }
