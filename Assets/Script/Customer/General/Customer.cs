@@ -47,7 +47,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     private void Update()
     {
         _permanenceTimer += Time.deltaTime;
-        if(_permanenceTimer >= _permanenceTime)
+        if (_permanenceTimer >= _permanenceTime)
         {
             _expectedMealCounter = 0;
         }
@@ -92,14 +92,14 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         }
         if (_expectedMealCounter <= 0)
         {
-            int tip = _baseTip + Mathf.RoundToInt(_permanenceTime);
+            int tip = _baseTip * Mathf.RoundToInt(_permanenceTime / 60);
             _coins[0].SetActive(true);
             _coins[1].SetActive(true);
-            if(_coins[0].TryGetComponent(out ICoin coin))
+            if (_coins[0].TryGetComponent(out ICoin coin))
             {
                 coin.AddCoins(_payment);
             }
-            if(_coins[1].TryGetComponent(out ICoin coin1))
+            if (_coins[1].TryGetComponent(out ICoin coin1))
             {
                 coin1.AddCoins(tip);
             }
@@ -180,7 +180,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
 
     public void ChangeHappines(int value)
     {
-        if(value > 0)
+        if (value > 0)
         {
             _permanenceTime += _permanenceTimeChanger;
         }
