@@ -22,20 +22,21 @@ public class CustomerManger : MonoBehaviour
     }
 
     private void SpawnCustomer()
-    {
+    {   
+        
         if (CheckEndPos())
         {
             while (_timer >= _spawnRate)
             {
                 int randomIndex = Random.Range(0, _customers.Length);
                 int randomEndPos = Random.Range(0, _customerEndPos.Length);
-                Debug.Log(randomIndex+randomEndPos);
                 if (!_isEndPosFull[randomEndPos] && _customers[randomIndex].activeSelf == false)
                 {
                     _customers[randomIndex].SetActive(true);
                     if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
                     {
-                        
+                        Debug.Log("Customer spawned");
+                        customer.GetTargetPos(_customerEndPos[randomEndPos]);
                     }
                     _isEndPosFull[randomEndPos] = true;
                     ResetTimer();
@@ -58,7 +59,6 @@ public class CustomerManger : MonoBehaviour
                 return true;
             }
         }
-
         return false;
     }
 
