@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     private DSDialogueContainerSO _currentDialogue;
     private DSDialogueSO _currentDialogueSO;
     private DSDialogueSO _nextDialogueSO1, _nextDialogueSO2, _nextDialogueSO3;
+    Customer _customer;
     private bool _isSingleChoice, _isMultipleChoice;
     
     
@@ -33,8 +34,9 @@ public class DialogueManager : MonoBehaviour
         EventManager.OnStartingDialogue -= OnStartingDialogue;
     }
 
-    private void OnStartingDialogue(DSDialogueContainerSO dialogueContainer, String CustomerName)
+    private void OnStartingDialogue(DSDialogueContainerSO dialogueContainer, String CustomerName, Customer customer)
     {
+        _customer = customer;
         _currentDialogue = dialogueContainer;
         _dialoguePanel.SetActive(true);
         _customerName.text = CustomerName;
@@ -109,14 +111,17 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("is multiple "+ i );
             if (i == 0)
             {
+                _customer.ChangeHappines(1);
                 _currentDialogueSO = _nextDialogueSO1;
             }
             else if (i == 1)
             {
+                _customer.ChangeHappines(0);
                 _currentDialogueSO = _nextDialogueSO2;
             }
             else if (i == 2)
             {
+                _customer.ChangeHappines(-1);
                 _currentDialogueSO = _nextDialogueSO3;
             }
             if (_currentDialogueSO == null)

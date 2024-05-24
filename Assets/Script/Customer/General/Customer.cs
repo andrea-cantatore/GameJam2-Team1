@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DS.ScriptableObjects;
 using UnityEngine;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class Customer : MonoBehaviour, IInteract, ICustomer
 {
@@ -13,6 +14,9 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     [SerializeField] GameObject[] _expectedMeal;
     [SerializeField] private int _payment;
     [SerializeField] private PlayerInteractions _playerInteractions;
+    [SerializeField] private float _permanenceTime, _permanenceTimeChanger;
+    [SerializeField] private int _baseTip;
+    private float _permanenceTimer;
     private int _expectedMealCounter;
     private Transform _targetPos;
     private Transform[] _pathPos;
@@ -24,11 +28,11 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
-        _expectedMealCounter = _expectedMeal.Length;
     }
 
     private void OnEnable()
     {
+        _expectedMealCounter = _expectedMeal.Length;
         _canMove = false;
         _alreadySpoken = false;
         _isOnLastPos = false;
@@ -41,6 +45,11 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
 
     private void Update()
     {
+        _permanenceTimer += Time.deltaTime;
+        if(_permanenceTimer >= _permanenceTime)
+        {
+            _expectedMealCounter = 0;
+        }
         if (_canMove && _expectedMealCounter > 0)
         {
             MoveToTarget();
@@ -60,7 +69,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         }
         if (!_alreadySpoken)
         {
-            EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name);
+            EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name, this);
             _alreadySpoken = true;
         }
         else
@@ -79,6 +88,10 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
                     }
                 }
             }
+        }
+        if (_expectedMealCounter <= 0)
+        {
+            int tip = _baseTip + Mathf.RoundToInt(_permanenceTime);
         }
         return true;
     }
@@ -150,6 +163,18 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         else
         {
             _pathIndex = _pathPos.Length - 1;
+        }
+    }
+
+    public void ChangeHappines(int value)
+    {
+        if(value > 0)
+        {
+            _permanenceTime += _permanenceTimeChanger;
+        }
+        else
+        {
+            _permanenceTime -= _permanenceTimeChanger;
         }
     }
 }

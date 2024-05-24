@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
     }
     
-    private void UnlockCursor(DSDialogueContainerSO dialogueContainer, String dialogue)
+    private void UnlockCursor(DSDialogueContainerSO dialogueContainer, String dialogue, Customer customer)
     
     {
         Cursor.lockState = CursorLockMode.None;

@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         _isMovementUnlocked = !cantMove;
     }
-    private void StartingDialogue(DSDialogueContainerSO containerSo, String dialogue)
+    private void StartingDialogue(DSDialogueContainerSO containerSo, String dialogue, Customer customer)
     {
         _isMovementUnlocked = !_isMovementUnlocked;
     }
