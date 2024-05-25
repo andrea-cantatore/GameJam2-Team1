@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: TankAction
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: TankAction
+  <Text>k__BackingField: Then, our tank risked her life by drawing its attention...
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Sounds like she really believed in her party!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 261fed9b19eeb414eb65465b3c966b28, type: 2}
+  - <Text>k__BackingField: That's incredibly brave of hers.
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: dd70d9eb720345342ba065205c0e721c, type: 2}
+  - <Text>k__BackingField: And you didn't help her?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 734ef24a6bfcee94ebbb061636c8aa15, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
