@@ -85,7 +85,7 @@ public class PlayerInteractions : MonoBehaviour
                                 _isHandFull = true;
                                 foreach (GameObject obj2 in _beerFoam)
                                 {
-                                    obj.SetActive(false);
+                                    obj2.SetActive(false);
                                 }
                                 return;
                             }
