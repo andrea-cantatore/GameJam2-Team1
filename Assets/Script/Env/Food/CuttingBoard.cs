@@ -58,7 +58,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         }
     }*/
 
-    // ByEmaStart
+    
     private void Interaction()
     {
         if (isCutting)
@@ -95,7 +95,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         yield return new WaitForSeconds(_cutDelay);
         _canCut = true;
     }
-    // ByEmaEnd
+    
 
     public bool Interact(bool isToAdd)
     {
