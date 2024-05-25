@@ -64,6 +64,27 @@ public class PlayerInteractions : MonoBehaviour
                         }
                         return;
                     }
+                    if (hit.transform.TryGetComponent(out ICauldron cauldron))
+                    {
+                        if(HeldObject != null && HeldObject.tag == "Bowl")
+                        {
+                            if (interactable.Interact(false))
+                            {
+                                HeldObject.transform.GetChild(0).gameObject.SetActive(true);
+                            }
+                            return;
+                        }
+                        else
+                        {
+                            if (cauldron.TakeObject(HeldObject.tag))
+                            {
+                                HeldObject.SetActive(false);
+                                HeldObject = null;
+                                _isHandFull = false;
+                                return;
+                            }
+                        }
+                    }
                     if (hit.transform.tag == "RecipeBook")
                     {
                         interactable.Interact(true);
@@ -94,6 +115,10 @@ public class PlayerInteractions : MonoBehaviour
                                     obj2.SetActive(false);
                                 }
                                 return;
+                            }
+                            if(obj.tag == hit.transform.tag && obj.tag == "Bowl")
+                            {
+                                obj.transform.GetChild(0).gameObject.SetActive(false);
                             }
                             if (obj.tag == hit.transform.tag)
                             {
