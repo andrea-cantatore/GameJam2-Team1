@@ -280,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6817488115553625179
 Transform:
   m_ObjectHideFlags: 0
@@ -2215,7 +2215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2683240157551580639, guid: 510641444a013f2419ce3912cdb72e66, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2683240157551580639, guid: 510641444a013f2419ce3912cdb72e66, type: 3}
       propertyPath: m_TagString
@@ -2732,6 +2732,10 @@ PrefabInstance:
     - target: {fileID: 2439046782349304779, guid: 57b53a727be749c448ec174d83544001, type: 3}
       propertyPath: m_Name
       value: tomato
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439046782349304779, guid: 57b53a727be749c448ec174d83544001, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
