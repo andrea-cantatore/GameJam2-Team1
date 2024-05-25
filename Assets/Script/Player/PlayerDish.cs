@@ -11,8 +11,8 @@ public class PlayerDish : MonoBehaviour, IDish
     private bool _isMeetOn;
     private bool _isNotPotatoOn;
     private bool _isFishOn;
-    private string[] _foodTags = {"SteakPick", "PotatoPick", "VegetablePick", "SteakSliced", "ChickenPick",
-        "ChickenSliced", "FishPick", "TomatoPick", "FishPick", "FishSliced"};
+    private string[] _foodTags = {"SteakPick", "PotatoSliced", "VegetableSliced", "SteakSliced", "ChickenPick",
+        "ChickenSliced", "FishPick", "TomatoSliced", "FishPick", "FishSliced"};
 
     private void Awake()
     {
