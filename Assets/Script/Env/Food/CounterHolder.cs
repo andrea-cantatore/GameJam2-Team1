@@ -18,11 +18,11 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
         _popUpPos = transform.GetChild(0);
     }
 
-    public bool TakeObject(int id, GameObject obj, bool isDish, bool isSliced)
+    public bool TakeObject(int id, GameObject obj, bool isDish, bool isSliced, int _isCooked)
     {
         if (_isHoldingDish)
         {
-            return _playerDish.GetDish(obj, obj.GetComponent<HeldFood>().IsSliced);
+            return _playerDish.GetDish(obj, obj.GetComponent<HeldFood>().IsSliced, _isCooked);
         }
         if(_isFull)
         {

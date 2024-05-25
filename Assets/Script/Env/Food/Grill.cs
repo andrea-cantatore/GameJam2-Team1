@@ -62,14 +62,19 @@ public class Grill : MonoBehaviour, IInteract, IGrill
 
     public bool Interact(bool isToAdd = true)
     {
+        if (!_isGrilling)
+        {
+            return false;
+        }
         _isGrilling = false;
         _timer = 0f;
         if (isCooked)
         {
+            Debug.Log("Cooked");
             EventManager.OnGrillPickUp?.Invoke(1, _grillingFood.tag,
                 _grillingFood.GetComponent<MeshRenderer>().material);
         }
-        if (isOverCooked)
+        else if (isOverCooked)
         {
             EventManager.OnGrillPickUp?.Invoke(2, _grillingFood.tag,
                 _grillingFood.GetComponent<MeshRenderer>().material);

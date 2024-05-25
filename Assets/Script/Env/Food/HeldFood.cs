@@ -9,9 +9,9 @@ using Random = System.Random;
 public class HeldFood : MonoBehaviour, IHeldFood, IHeld
 {
     public bool IsSliced;
-    public int _isCooked;
     Material _material;
     public int ID;
+    public int _isCooked { get; set; }
 
     private void Awake()
     {

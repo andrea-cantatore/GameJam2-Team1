@@ -7,5 +7,7 @@ public interface IHeldFood
    
    public bool IsCutted();
    public void IBasicMaterial();
-   
+
+
+   int _isCooked { get; set; }
 }
