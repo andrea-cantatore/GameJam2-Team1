@@ -1,0 +1,552 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Customer9Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Customer9
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: a0bae9fc-4177-4e06-abf9-a889ef3b7d48
+    <Name>k__BackingField: Heard
+    <Text>k__BackingField: So you heard my story already?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Aye, but I wouldn't mind listening to it again!
+      <NodeID>k__BackingField: 94b4bc8a-9ee8-4456-8b1d-2f3942633991
+    - <Text>k__BackingField: I have! What would you want to order?
+      <NodeID>k__BackingField: 
+    - <Text>k__BackingField: Not really, but I don't want to listen to it.
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 436, y: 109}
+  - <ID>k__BackingField: 94b4bc8a-9ee8-4456-8b1d-2f3942633991
+    <Name>k__BackingField: Hapey
+    <Text>k__BackingField: I'll never get tired of telling that story!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 4aa91e85-3b6c-4be4-94e6-de7834876f07
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1236, y: -9}
+  - <ID>k__BackingField: 4aa91e85-3b6c-4be4-94e6-de7834876f07
+    <Name>k__BackingField: hapey2
+    <Text>k__BackingField: Me and my party just got to the lowest floor in the dungeon...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 29943b8b-f196-4e9c-804a-8e97fe025c62
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2074, y: -28}
+  - <ID>k__BackingField: dbc6df23-cda9-4580-aa9e-3c84e831e69e
+    <Name>k__BackingField: Intro
+    <Text>k__BackingField: Today my party finally finished a very difficult quest
+      that lasted many days!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: a6bc6655-786b-4238-9f82-ab2b84bf457a
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 482, y: 644}
+  - <ID>k__BackingField: 3f859b41-5ba1-4334-994e-9fd6d1cfb355
+    <Name>k__BackingField: Expo1
+    <Text>k__BackingField: We made some rations from the slain monsters!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: You have!? That's incredibly crafty!
+      <NodeID>k__BackingField: 1084fdd2-f703-4ea4-aeb0-193bdac09fbf
+    - <Text>k__BackingField: Oh wow!
+      <NodeID>k__BackingField: 99090cb0-d362-4d04-8b25-6cfde4f6ae21
+    - <Text>k__BackingField: You ate monsters? That's gross, aren't they poisonous
+        and disease-ridden?
+      <NodeID>k__BackingField: 1def6d0f-467a-461d-bd11-b7e879900e0b
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1919, y: 595}
+  - <ID>k__BackingField: 29943b8b-f196-4e9c-804a-8e97fe025c62
+    <Name>k__BackingField: Expo2
+    <Text>k__BackingField: We faced many challenging foes but our party was injured
+      and our rations had run dry... so we had to improvise!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 3f859b41-5ba1-4334-994e-9fd6d1cfb355
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2079, y: 234}
+  - <ID>k__BackingField: 99090cb0-d362-4d04-8b25-6cfde4f6ae21
+    <Name>k__BackingField: Respo
+    <Text>k__BackingField: I know it's unusual, but we were on the brink of starvation!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: d338f3c5-3442-4e1c-b2e4-c9f85747e579
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3003, y: 638}
+  - <ID>k__BackingField: 1084fdd2-f703-4ea4-aeb0-193bdac09fbf
+    <Name>k__BackingField: Respogoode
+    <Text>k__BackingField: I'm glad to meet someone who understands!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 02afcd8c-09cf-4356-9e95-0d2a84d81c63
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2775, y: 234}
+  - <ID>k__BackingField: 02afcd8c-09cf-4356-9e95-0d2a84d81c63
+    <Name>k__BackingField: Noteasy
+    <Text>k__BackingField: It wasn't easy, but surviving is more important than being
+      picky with your food...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 99090cb0-d362-4d04-8b25-6cfde4f6ae21
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3490, y: 235}
+  - <ID>k__BackingField: 4857244b-dbb7-4b20-9d7a-40721eb43fec
+    <Name>k__BackingField: Starving
+    <Text>k__BackingField: We had almost reached the deepest level of the dungeon...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: d8732af6-2939-44ac-8cc2-f8036b9a4ae8
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1208, y: 980}
+  - <ID>k__BackingField: d8732af6-2939-44ac-8cc2-f8036b9a4ae8
+    <Name>k__BackingField: PreExpo
+    <Text>k__BackingField: However, we were injured and our rations had ran out by
+      that point... so we had to improvise!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 3f859b41-5ba1-4334-994e-9fd6d1cfb355
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1148, y: 644}
+  - <ID>k__BackingField: a6bc6655-786b-4238-9f82-ab2b84bf457a
+    <Name>k__BackingField: Storying
+    <Text>k__BackingField: Let me tell you the story of how we dealt with perilous
+      monsters and the cruelest of odds.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 4857244b-dbb7-4b20-9d7a-40721eb43fec
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 505, y: 977}
+  - <ID>k__BackingField: d338f3c5-3442-4e1c-b2e4-c9f85747e579
+    <Name>k__BackingField: ReachedEnd
+    <Text>k__BackingField: Thanks to our craftiness, we managed to reach the lowest
+      level of the dungeon. We started looking around for loot...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 99e001d8-e9e3-4d4d-94f0-9c1f8f813e0c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3713, y: 628}
+  - <ID>k__BackingField: 99e001d8-e9e3-4d4d-94f0-9c1f8f813e0c
+    <Name>k__BackingField: Drag
+    <Text>k__BackingField: When a dragon appeared!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: And you lived to tell the tale!
+      <NodeID>k__BackingField: 56a14aed-b76d-404b-be15-74f189b29261
+    - <Text>k__BackingField: Oh no! Did your party make it out?
+      <NodeID>k__BackingField: 59c53ad9-ab0c-4605-a6dc-1680aeffe94d
+    - <Text>k__BackingField: This story sounds epic, but I don't think I have the
+        time for stories...
+      <NodeID>k__BackingField: c6c3bc63-54c9-4a3f-a69a-8ca84cd4914f
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 4485, y: 621}
+  - <ID>k__BackingField: 1def6d0f-467a-461d-bd11-b7e879900e0b
+    <Name>k__BackingField: Rarara
+    <Text>k__BackingField: Would you not have done the same if you were starving?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Absolutely.
+      <NodeID>k__BackingField: b95565c9-3613-4d28-bd8d-f7f48181855d
+    - <Text>k__BackingField: Maybe...
+      <NodeID>k__BackingField: b95565c9-3613-4d28-bd8d-f7f48181855d
+    - <Text>k__BackingField: Definetely not! I wouldn't risk it!
+      <NodeID>k__BackingField: 62701e6d-332a-4301-97c0-0e314794e344
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2577, y: 1033}
+  - <ID>k__BackingField: 62701e6d-332a-4301-97c0-0e314794e344
+    <Name>k__BackingField: smhsmh
+    <Text>k__BackingField: Then you haven't been on the brink of starvation before.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 47f807d5-6586-48e6-94eb-02bf3e7acbb1
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3339, y: 1310}
+  - <ID>k__BackingField: b95565c9-3613-4d28-bd8d-f7f48181855d
+    <Name>k__BackingField: NoJudj
+    <Text>k__BackingField: Then avoid judging me for it.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 99090cb0-d362-4d04-8b25-6cfde4f6ae21
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3434, y: 1060}
+  - <ID>k__BackingField: 47f807d5-6586-48e6-94eb-02bf3e7acbb1
+    <Name>k__BackingField: Wewe
+    <Text>k__BackingField: Whatever, I'll just get a [ORDER]
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4064, y: 1570}
+  - <ID>k__BackingField: 56a14aed-b76d-404b-be15-74f189b29261
+    <Name>k__BackingField: RightRight
+    <Text>k__BackingField: That's right!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 6987aeba-5c1c-403c-8199-167cd56ea687
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5390, y: 482}
+  - <ID>k__BackingField: 59c53ad9-ab0c-4605-a6dc-1680aeffe94d
+    <Name>k__BackingField: NoKill
+    <Text>k__BackingField: Of course we have, not a single one of us was slain!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 6987aeba-5c1c-403c-8199-167cd56ea687
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5243, y: 690}
+  - <ID>k__BackingField: 6987aeba-5c1c-403c-8199-167cd56ea687
+    <Name>k__BackingField: EpicSurvive
+    <Text>k__BackingField: But we didn't merely survive!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: f220a034-1c8d-4270-bc13-25edbec2f9a5
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5909, y: 578}
+  - <ID>k__BackingField: c6c3bc63-54c9-4a3f-a69a-8ca84cd4914f
+    <Name>k__BackingField: Nail
+    <Text>k__BackingField: We fought tooth and nail!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: e059d63c-18b4-4034-9bb1-497d93d3d846
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5049, y: 984}
+  - <ID>k__BackingField: e059d63c-18b4-4034-9bb1-497d93d3d846
+    <Name>k__BackingField: Suresure
+    <Text>k__BackingField: Ya sure ya don't wanna hear it?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: On second thought- It does sound interesting
+      <NodeID>k__BackingField: b001bbe3-c7b7-4444-b95e-0fd67f36c97d
+    - <Text>k__BackingField: Yea, sorry but I have a tavern to run...
+      <NodeID>k__BackingField: 80374dc8-8197-4a03-a030-2f29cf33c7e1
+    - <Text>k__BackingField: Yeah, I don't really care about dragons.
+      <NodeID>k__BackingField: 80374dc8-8197-4a03-a030-2f29cf33c7e1
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 5289, y: 1386}
+  - <ID>k__BackingField: b001bbe3-c7b7-4444-b95e-0fd67f36c97d
+    <Name>k__BackingField: Arrarr
+    <Text>k__BackingField: Aye! So, this dragon...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: f220a034-1c8d-4270-bc13-25edbec2f9a5
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6085, y: 1297}
+  - <ID>k__BackingField: f220a034-1c8d-4270-bc13-25edbec2f9a5
+    <Name>k__BackingField: Ambush
+    <Text>k__BackingField: It ambushed us, but we held strong.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: cf2a90ff-8d98-4b97-b0c0-5710754114f1
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6209, y: 1038}
+  - <ID>k__BackingField: 80374dc8-8197-4a03-a030-2f29cf33c7e1
+    <Name>k__BackingField: Aww
+    <Text>k__BackingField: Alright then...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 3e319d93-095c-421a-a2fd-03a22d96c926
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6243, y: 1572}
+  - <ID>k__BackingField: 3e319d93-095c-421a-a2fd-03a22d96c926
+    <Name>k__BackingField: SadORder
+    <Text>k__BackingField: I'll just order a [ORDER]...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 6654, y: 1590}
+  - <ID>k__BackingField: cf2a90ff-8d98-4b97-b0c0-5710754114f1
+    <Name>k__BackingField: TankAction
+    <Text>k__BackingField: Then, our tank risked her life by drawing its attention...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Sounds like she really believed in her party!
+      <NodeID>k__BackingField: 2d7af135-5f66-4794-98b1-8ebaba3dfbd8
+    - <Text>k__BackingField: That's incredibly brave of hers.
+      <NodeID>k__BackingField: c138a1ce-49cf-4d21-8c16-9a0c15e7cb01
+    - <Text>k__BackingField: And you didn't help her?
+      <NodeID>k__BackingField: c138a319-2cbc-4e94-bb96-652e0eaecf24
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 6974, y: 1022}
+  - <ID>k__BackingField: 2d7af135-5f66-4794-98b1-8ebaba3dfbd8
+    <Name>k__BackingField: Ayeaye
+    <Text>k__BackingField: That's right!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 1b681da1-0671-4639-b835-a706a67bcd2a
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7782, y: 873}
+  - <ID>k__BackingField: 1b681da1-0671-4639-b835-a706a67bcd2a
+    <Name>k__BackingField: TeamWW
+    <Text>k__BackingField: The main ingredient for teamwork is faith in your friends...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 0aa4fead-5810-404c-861b-2224efc8959c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 8159, y: 863}
+  - <ID>k__BackingField: 0aa4fead-5810-404c-861b-2224efc8959c
+    <Name>k__BackingField: Teamw
+    <Text>k__BackingField: Faith in their skills and your own, knowing that they
+      will follow through with the plan succesfully!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: c138a1ce-49cf-4d21-8c16-9a0c15e7cb01
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 8960, y: 870}
+  - <ID>k__BackingField: c138a1ce-49cf-4d21-8c16-9a0c15e7cb01
+    <Name>k__BackingField: PlanPLan
+    <Text>k__BackingField: Once the dragon got lured to a strategic position...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 5e4cacba-06af-4609-8ea0-7d04223775d4
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 9782, y: 1248}
+  - <ID>k__BackingField: 5e4cacba-06af-4609-8ea0-7d04223775d4
+    <Name>k__BackingField: Mage
+    <Text>k__BackingField: Our mage cast his last fireball at the ceiling-
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: ec167e8a-2551-4347-a845-0801ebb89a41
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 10583, y: 1322}
+  - <ID>k__BackingField: ec167e8a-2551-4347-a845-0801ebb89a41
+    <Name>k__BackingField: Collapse
+    <Text>k__BackingField: It collapsed and killed the dragon right away!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: a47bbde6-1510-4d96-bdc6-1a8c842e1b06
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 11165, y: 1697}
+  - <ID>k__BackingField: c138a319-2cbc-4e94-bb96-652e0eaecf24
+    <Name>k__BackingField: Protecc
+    <Text>k__BackingField: I was making sure our mage was protected while he prepared
+      to cast his last fireball!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 82e716e0-6f9f-4cb1-94a5-1de6f9c3a673
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7756, y: 1510}
+  - <ID>k__BackingField: 82e716e0-6f9f-4cb1-94a5-1de6f9c3a673
+    <Name>k__BackingField: NoDwarfLeftBehind
+    <Text>k__BackingField: We weren't just going to let our tank perish!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 3e97cb53-d39c-4639-b23e-df7dfc85d58c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 8524, y: 1515}
+  - <ID>k__BackingField: 3e97cb53-d39c-4639-b23e-df7dfc85d58c
+    <Name>k__BackingField: Cast
+    <Text>k__BackingField: Anyway, once the dragon was lured to a strategic position,
+      our mage cast fireball at the ceiling right above!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: ec167e8a-2551-4347-a845-0801ebb89a41
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 9400, y: 1693}
+  - <ID>k__BackingField: a47bbde6-1510-4d96-bdc6-1a8c842e1b06
+    <Name>k__BackingField: Looting
+    <Text>k__BackingField: We celebrated and started grabbing all of its treasure
+      and riches, but before leaving....
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 70a24da8-bd33-433a-8aa3-d1580bf1cf6f
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 11989, y: 1834}
+  - <ID>k__BackingField: 70a24da8-bd33-433a-8aa3-d1580bf1cf6f
+    <Name>k__BackingField: DragRat
+    <Text>k__BackingField: We used the dragon to prepare rations for our trip back
+      to the surface!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: You ate a dragon!? What did it taste like?
+      <NodeID>k__BackingField: 8d32bba8-de9c-4f19-8cf2-544b06323cd2
+    - <Text>k__BackingField: Smart!
+      <NodeID>k__BackingField: 1aa62d5a-b8ac-4f8f-ae8b-2ce2bb027165
+    - <Text>k__BackingField: Gross!
+      <NodeID>k__BackingField: 1aa62d5a-b8ac-4f8f-ae8b-2ce2bb027165
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 12737, y: 1845}
+  - <ID>k__BackingField: 8d32bba8-de9c-4f19-8cf2-544b06323cd2
+    <Name>k__BackingField: haa
+    <Text>k__BackingField: I'm very glad you're interested!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: f4000db3-92db-46cc-9f7b-46b9aadddbae
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 13101, y: 1511}
+  - <ID>k__BackingField: f4000db3-92db-46cc-9f7b-46b9aadddbae
+    <Name>k__BackingField: Well
+    <Text>k__BackingField: Well, I'll leave it to the scholars to decipher...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: de895d9d-530f-47ba-b6a0-dbea22eb3c42
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 13836, y: 1606}
+  - <ID>k__BackingField: de895d9d-530f-47ba-b6a0-dbea22eb3c42
+    <Name>k__BackingField: Bird
+    <Text>k__BackingField: But dragon meat just tastes like spicy chicken. They kind
+      of are giant birds...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 1aa62d5a-b8ac-4f8f-ae8b-2ce2bb027165
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 14616, y: 1606}
+  - <ID>k__BackingField: 1aa62d5a-b8ac-4f8f-ae8b-2ce2bb027165
+    <Name>k__BackingField: EndEnd
+    <Text>k__BackingField: Anyway, thanks for listening to my story. I'll get a [ORDER]!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 13912, y: 1962}
+  - <ID>k__BackingField: 743763df-205a-4fce-b0d4-d0de67defe8a
+    <Name>k__BackingField: Hello
+    <Text>k__BackingField: Hello!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Are you the dwarf from that odd party?
+      <NodeID>k__BackingField: a0bae9fc-4177-4e06-abf9-a889ef3b7d48
+    - <Text>k__BackingField: Greetings!
+      <NodeID>k__BackingField: dbc6df23-cda9-4580-aa9e-3c84e831e69e
+    - <Text>k__BackingField: Are you from that party that defeated that Lich?
+      <NodeID>k__BackingField: b1886247-7377-4248-b52e-932f01097d59
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: -749, y: 627}
+  - <ID>k__BackingField: b1886247-7377-4248-b52e-932f01097d59
+    <Name>k__BackingField: Vecnaaa
+    <Text>k__BackingField: Lich? What Lich? Are you confusing me for someone else?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Probably! Sorry, how has your day been?
+      <NodeID>k__BackingField: fb0d6c0f-c149-47b4-9f94-bf5ff5dec488
+    - <Text>k__BackingField: I think I have, anyway what will your order be?
+      <NodeID>k__BackingField: 9526837d-67d9-4f7e-bbc9-1c75fa6e5f85
+    - <Text>k__BackingField: I hoped so, I just don't want to listen to any more
+        stories.
+      <NodeID>k__BackingField: a2d416c7-d38c-47dd-8c02-19b577f79e49
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: -500, y: 1284}
+  - <ID>k__BackingField: fb0d6c0f-c149-47b4-9f94-bf5ff5dec488
+    <Name>k__BackingField: NW
+    <Text>k__BackingField: No worries! I'm sure you listen to a lot of tales! Anyway...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: dbc6df23-cda9-4580-aa9e-3c84e831e69e
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 446, y: 1228}
+  - <ID>k__BackingField: a2d416c7-d38c-47dd-8c02-19b577f79e49
+    <Name>k__BackingField: Upset
+    <Text>k__BackingField: You call this customer service? Damn...
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 9526837d-67d9-4f7e-bbc9-1c75fa6e5f85
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 233, y: 1585}
+  - <ID>k__BackingField: 9526837d-67d9-4f7e-bbc9-1c75fa6e5f85
+    <Name>k__BackingField: ORdermehhh
+    <Text>k__BackingField: I'll just have some [ORDER]
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1072, y: 1534}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Heard
+  - Hapey
+  - hapey2
+  - Intro
+  - Expo1
+  - Expo2
+  - Respo
+  - Respogoode
+  - Noteasy
+  - Starving
+  - PreExpo
+  - Storying
+  - ReachedEnd
+  - Drag
+  - Rarara
+  - smhsmh
+  - NoJudj
+  - Wewe
+  - RightRight
+  - NoKill
+  - EpicSurvive
+  - Nail
+  - Suresure
+  - Arrarr
+  - Ambush
+  - Aww
+  - SadORder
+  - TankAction
+  - Ayeaye
+  - TeamWW
+  - Teamw
+  - PlanPLan
+  - Mage
+  - Collapse
+  - Protecc
+  - NoDwarfLeftBehind
+  - Cast
+  - Looting
+  - DragRat
+  - haa
+  - Well
+  - Bird
+  - EndEnd
+  - Hello
+  - Vecnaaa
+  - NW
+  - Upset
+  - ORdermehhh
+  <OldGroupedNodeNames>k__BackingField:
+    list: []

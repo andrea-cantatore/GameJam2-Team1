@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Heard
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Heard
+  <Text>k__BackingField: So you heard my story already?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Aye, but I wouldn't mind listening to it again!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 50f1ec63daf0c894e972cfcce78e5452, type: 2}
+  - <Text>k__BackingField: I have! What would you want to order?
+    <NextDialogue>k__BackingField: {fileID: 0}
+  - <Text>k__BackingField: Not really, but I don't want to listen to it.
+    <NextDialogue>k__BackingField: {fileID: 0}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
