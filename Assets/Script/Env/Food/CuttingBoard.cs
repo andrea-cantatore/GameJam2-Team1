@@ -81,12 +81,15 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         _cuttingCounter++;
         if (_requiredCutting <= _cuttingCounter)
         {
+            yield return new WaitForSeconds(1f); //ByEma
+            
             EventManager.OnCutted?.Invoke(_activeFood.tag, _activeFood.GetComponent<MeshRenderer>().material);
             _activeFood.SetActive(false);
             _activeFood = null;
             Interact(false);
             IsCuttingEmpty = true;
             _cuttingCounter = 0;
+            _animator.SetTrigger("isStopping");
         }
 
         yield return new WaitForSeconds(_cutDelay);
