@@ -12,7 +12,7 @@ public class Beer : MonoBehaviour, IInteract
     [SerializeField] private Transform _popUpPos;
     [SerializeField] private int _beerType;
     [SerializeField] private Animator _animator;
-    [SerializeField] private int _spillAmount;
+    [SerializeField] private int _spillAmount = 10;
     private bool _isUsing;
     private float _timer;
     

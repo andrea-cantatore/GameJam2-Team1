@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.50084865, g: 0.5467128, b: 0.5231303, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.5008486, g: 0.54671276, b: 0.5231303, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -279,6 +279,14 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5484823608725994692, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: _spillAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501305289951459105, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: _spillAmount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6193912475852241929, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Intensity
       value: 4
@@ -334,6 +342,10 @@ PrefabInstance:
     - target: {fileID: 8010725482545169404, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Intensity
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065053075034065256, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
+      propertyPath: _spillAmount
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8450936337683457317, guid: 7f6367435f1c9bc4b822cf287bd9c81d, type: 3}
       propertyPath: m_Intensity
@@ -753,6 +765,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584664199}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1606268569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4600827345925328462, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+  m_PrefabInstance: {fileID: 6873112029541426161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1723803294 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6961410323262699408, guid: 8e3dfda26de78964195e30dbcff0e2ec, type: 3}
@@ -894,6 +911,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2948763702943348803, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _interactables.Array.data[1]
+      value: 
+      objectReference: {fileID: 1606268569}
     - target: {fileID: 7286787070931427586, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.3
@@ -934,7 +955,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5983128140992089684, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

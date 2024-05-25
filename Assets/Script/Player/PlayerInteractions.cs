@@ -155,6 +155,7 @@ public class PlayerInteractions : MonoBehaviour
                                     HeldObject.SetActive(false);
                                     HeldObject = null;
                                 }
+                                return;
                             }
                         }
                     }
