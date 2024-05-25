@@ -1,9 +1,9 @@
-//Script ByEma per chiamare OptionsMenu con Esc
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class OptionsMenuController : MonoBehaviour
 {
-    [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private GameObject _optionsMenu;
 
     private void Update()
     {
@@ -15,7 +15,10 @@ public class OptionsMenuController : MonoBehaviour
 
     public void ActivateOptionsMenu()
     {
-        if (optionsMenu != null)
-            optionsMenu.SetActive(!optionsMenu.activeSelf);
+        if (_optionsMenu != null)
+        {
+            _optionsMenu.SetActive(!_optionsMenu.activeSelf);
+            Time.timeScale = _optionsMenu.activeSelf ? 0 : 1;
+        }
     }
 }
