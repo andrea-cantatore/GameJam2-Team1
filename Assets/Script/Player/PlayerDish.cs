@@ -57,37 +57,14 @@ public class PlayerDish : MonoBehaviour, IDish
             _isFishOn = true;
         }
 
-        if (!isSliced)
-        {
-            foreach (GameObject obj in _foods)
-            {
-                if(obj.tag == food.tag)
-                {
-                    obj.SetActive(true);
-                    _isMeetOn = true;
-                    return true;
-                }
-            }
-        }
-        if(food.tag == _foodTags[0])
-        {
-            food.tag = _foodTags[3];
-        }
-        if(food.tag == _foodTags[4])
-        {
-            food.tag = _foodTags[5];
-        }
-        if(food.tag == _foodTags[8])
-        {
-            food.tag = _foodTags[9];
-        }
+        
         foreach (GameObject obj in _foods)
         {
             if(obj.tag == food.tag)
             {
-                obj.SetActive(true);
-                _isMeetOn = true;
-                return true;
+                    obj.SetActive(true);
+                    _isMeetOn = true;
+                    return true;
             }
         }
         
