@@ -39,7 +39,7 @@ public class PlayerInteractions : MonoBehaviour
 
     private void Update()
     {
-        _isDishHand = _interactables[8].activeSelf;
+        _isDishHand = _interactables[0].activeSelf;
         if(HeldObject == null)
         {
             _isHandFull = false;
@@ -124,6 +124,14 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (hit.transform.TryGetComponent(out ICutting cutting))
                             {
+                                if((HeldObject.tag == "VegetablePick" || HeldObject.tag == "TomatoPick") || HeldObject.TryGetComponent(out IHeldFood heldFood) && heldFood.IsCooked())
+                                {
+                                    interactable.Interact(true);
+                                    HeldObject.SetActive(false);
+                                    HeldObject = null;
+                                    _isHandFull = false;
+                                    return;
+                                }
                                 if (cutting.CutInteraction(HeldObject))
                                 {
                                     interactable.Interact(true);
@@ -265,7 +273,8 @@ public class PlayerInteractions : MonoBehaviour
             }
             if (obj.tag == tag)
             {
-                obj.GetComponent<MeshRenderer>().material = material;
+                if(material != null)
+                    obj.GetComponent<MeshRenderer>().material = material;
                 obj.SetActive(true);
                 HeldObject = obj;
                 _isHandFull = true;
@@ -275,9 +284,9 @@ public class PlayerInteractions : MonoBehaviour
         return null;
     }
 
-    private void CuttedFoodPickUp(String tag, Material material)
+    private void CuttedFoodPickUp(String tag)
     {
-        GameObject toChange = InteractableCicle(tag, material);
+        GameObject toChange = InteractableCicle(tag, null);
         toChange.TryGetComponent(out IHeldFood heldFood);
         heldFood.ICutted();
     }
