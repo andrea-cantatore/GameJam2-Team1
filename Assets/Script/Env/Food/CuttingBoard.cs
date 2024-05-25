@@ -83,7 +83,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         {
             yield return new WaitForSeconds(1f); //ByEma
             
-            EventManager.OnCutted?.Invoke(_activeFood.tag, _activeFood.GetComponent<MeshRenderer>().material);
+            InvokingEvent();
             _activeFood.SetActive(false);
             _activeFood = null;
             Interact(false);
@@ -141,6 +141,26 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
             }
         }
         return false;
+    }
+    
+    private void InvokingEvent()
+    {
+        if(_activeFood.tag == "FishPick")
+            EventManager.OnCutted?.Invoke("FishSliced");
+        if(_activeFood.tag == "SteakPick")
+            EventManager.OnCutted?.Invoke("SteakSliced");
+        if(_activeFood.tag == "ChickenPick")
+            EventManager.OnCutted?.Invoke("ChickenSliced");
+        if(_activeFood.tag == "TomatoPick")
+            EventManager.OnCutted?.Invoke("TomatoSliced");
+        if(_activeFood.tag == "PotatoPick")
+            EventManager.OnCutted?.Invoke("PotatoSliced");
+        if(_activeFood.tag == "VegetablePick")
+            EventManager.OnCutted?.Invoke("VegetableSliced");
+        
+        
+        
+        
     }
     
 }

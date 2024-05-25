@@ -8,7 +8,7 @@ public class EventManager : MonoBehaviour
     public static Action<bool> OnCuttingInteraction;
     public static Action<bool> OnBookInteraction;
     public static Action<bool> OnBeerInteraction;
-    public static Action<String, Material> OnCutted;
+    public static Action<String> OnCutted;
     public static Action<int> OnFullBeer;
     
     public static Action OnDialogueEnd;
