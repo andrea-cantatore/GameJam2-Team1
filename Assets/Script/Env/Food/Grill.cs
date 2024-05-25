@@ -18,7 +18,7 @@ public class Grill : MonoBehaviour, IInteract, IGrill
     {
         _popUpPos = transform.GetChild(0);
     }
-    
+
 
     public bool GrillInteraction(String tag, Material _currentMaterial)
     {
@@ -43,14 +43,14 @@ public class Grill : MonoBehaviour, IInteract, IGrill
                     {
                         _timer = _grillTime;
                     }
-                    else if (_currentMaterial== _steakMaterials[2] 
-                             || _currentMaterial == _potatoMaterials[2] 
-                             || _currentMaterial == _chickenMaterials[2] 
+                    else if (_currentMaterial == _steakMaterials[2]
+                             || _currentMaterial == _potatoMaterials[2]
+                             || _currentMaterial == _chickenMaterials[2]
                              || _currentMaterial == _fishMaterials[2])
                     {
                         _timer = overCookTime;
                     }
-                        
+
                     StartCoroutine(GrillFood(obj));
                     return true;
                 }
@@ -64,8 +64,21 @@ public class Grill : MonoBehaviour, IInteract, IGrill
     {
         _isGrilling = false;
         _timer = 0f;
-        EventManager.OnGrillPickUp?.Invoke(isCooked ? 1 : isOverCooked ? 2 : 0,
-            _grillingFood.tag, _grillingFood.GetComponent<MeshRenderer>().material);
+        if (isCooked)
+        {
+            EventManager.OnGrillPickUp?.Invoke(1, _grillingFood.tag,
+                _grillingFood.GetComponent<MeshRenderer>().material);
+        }
+        if (isOverCooked)
+        {
+            EventManager.OnGrillPickUp?.Invoke(2, _grillingFood.tag,
+                _grillingFood.GetComponent<MeshRenderer>().material);
+        }
+        else
+        {
+            EventManager.OnGrillPickUp?.Invoke(0, _grillingFood.tag,
+                _grillingFood.GetComponent<MeshRenderer>().material);
+        }
         isCooked = false;
         isOverCooked = false;
         _grillingFood.SetActive(false);
@@ -84,25 +97,25 @@ public class Grill : MonoBehaviour, IInteract, IGrill
         {
             if (_timer >= _grillTime && !isCooked)
             {
-                if(food.tag == "SteakPick")
+                if (food.tag == "SteakPick")
                     food.GetComponent<MeshRenderer>().material = _steakMaterials[1];
-                else if(food.tag == "PotatoPick")
+                else if (food.tag == "PotatoPick")
                     food.GetComponent<MeshRenderer>().material = _potatoMaterials[1];
-                else if(food.tag == "ChickenPick")
+                else if (food.tag == "ChickenPick")
                     food.GetComponent<MeshRenderer>().material = _chickenMaterials[1];
-                else if(food.tag == "FishPick")
+                else if (food.tag == "FishPick")
                     food.GetComponent<MeshRenderer>().material = _fishMaterials[1];
                 isCooked = true;
             }
             if (_timer >= overCookTime && !isOverCooked)
             {
-                if(food.tag == "SteakPick")
+                if (food.tag == "SteakPick")
                     food.GetComponent<MeshRenderer>().material = _steakMaterials[2];
-                else if(food.tag == "PotatoPick")
+                else if (food.tag == "PotatoPick")
                     food.GetComponent<MeshRenderer>().material = _potatoMaterials[2];
-                else if(food.tag == "ChickenPick")
+                else if (food.tag == "ChickenPick")
                     food.GetComponent<MeshRenderer>().material = _chickenMaterials[2];
-                else if(food.tag == "FishPick")
+                else if (food.tag == "FishPick")
                     food.GetComponent<MeshRenderer>().material = _fishMaterials[2];
                 isOverCooked = true;
             }

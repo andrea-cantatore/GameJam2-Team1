@@ -20,6 +20,13 @@ public class PlayerDish : MonoBehaviour, IDish
     }
     public bool GetDish(GameObject food, bool isSliced)
     {
+        if(food.tag == _foodTags[1] && food.TryGetComponent(out HeldFood heldFood))
+        {
+            if(!heldFood.IsCooked())
+            {
+                return false;
+            }
+        }
         if ((food.tag == _foodTags[1] || food.tag == _foodTags[2] || food.tag == _foodTags[7]) && !isSliced)
         {
             return false;
@@ -47,6 +54,13 @@ public class PlayerDish : MonoBehaviour, IDish
         if (_isMeetOn)
         {
             return false;
+        }
+        if (TryGetComponent(out HeldFood heldFood2))
+        {
+            if(!heldFood2.IsCooked())
+            {
+                return false;
+            }
         }
         if(food.tag == _foodTags[8] && _isNotPotatoOn)
         {
