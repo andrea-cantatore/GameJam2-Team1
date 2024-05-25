@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Cauldron : MonoBehaviour, IInteract, ICauldron
 {
-    [SerializeField] private String[] _tags = { "PotatoSliced", "VegetablesSliced", "TomatoSliced", "FishSliced" };
+    [SerializeField] private String[] _tags = { "PotatoSliced", "VegetableSliced", "TomatoSliced", "FishSliced" };
     private bool[] _isInside = { false, false, false, false };
     [SerializeField] private GameObject[] _foods;
     private float _timer = 0f;
