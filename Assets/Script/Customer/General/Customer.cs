@@ -103,6 +103,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             {
                 coin1.AddCoins(tip);
             }
+            return false;
         }
         return true;
     }

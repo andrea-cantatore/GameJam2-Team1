@@ -55,7 +55,13 @@ public class PlayerInteractions : MonoBehaviour
                 {
                     if (hit.transform.TryGetComponent(out ICustomer customer))
                     {
-                        interactable.Interact(false);
+                        if (!interactable.Interact(false))
+                        {
+                            HeldObject.SetActive(false);
+                            HeldObject = null;
+                            _isHandFull = false;
+                            return;
+                        }
                         return;
                     }
                     if (hit.transform.tag == "RecipeBook")
@@ -108,9 +114,21 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         if (HeldObject != null && HeldObject.tag == "Mug")
                         {
-                            HeldObject.SetActive(false);
-                            HeldObject = null;
-                            interactable.Interact(true);
+                            bool allChildrenInactive = true;
+                            for (int i = 0; i < HeldObject.transform.childCount; i++)
+                            {
+                                if (HeldObject.transform.GetChild(i).gameObject.activeSelf)
+                                {
+                                    allChildrenInactive = false;
+                                    break;
+                                }
+                            }
+                            if (allChildrenInactive = true)
+                            {
+                                HeldObject.SetActive(false);
+                                HeldObject = null;
+                                interactable.Interact(true);
+                            }
                         }
                     }
                     if (hit.transform.tag == "Grill")
@@ -163,7 +181,7 @@ public class PlayerInteractions : MonoBehaviour
                     }
                     if (hit.transform.TryGetComponent(out ICounterHolder counterHolder))
                     {
-                        if (_isHandFull)
+                        if (_isHandFull || _isBeerHand)
                         {
                             if (_isDishHand)
                             {
@@ -182,6 +200,7 @@ public class PlayerInteractions : MonoBehaviour
                                 HeldObject.SetActive(false);
                                 HeldObject = null;
                                 _isHandFull = false;
+                                _isBeerHand = false;
                                 return;
                             }
                         }
@@ -206,7 +225,10 @@ public class PlayerInteractions : MonoBehaviour
                                         return;
                                     }
                                     obj.SetActive(true);
-                                    obj.GetComponent<MeshRenderer>().material = counterHolder.GetMaterial();
+                                    if (obj.GetComponent<MeshRenderer>().material != null)
+                                    {
+                                        obj.GetComponent<MeshRenderer>().material = counterHolder.GetMaterial();
+                                    }
                                     counterHolder.DestroyObject();
                                     HeldObject = obj;
                                     HeldObject.SetActive(true);
@@ -225,6 +247,7 @@ public class PlayerInteractions : MonoBehaviour
                 stash.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    
                     if (HeldObject != null)
                     {
                         _isHandFull = false;
