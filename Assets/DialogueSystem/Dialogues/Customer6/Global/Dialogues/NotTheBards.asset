@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
-  m_Name: Entity
+  m_Name: NotTheBards
   m_EditorClassIdentifier: 
-  <DialogueName>k__BackingField: Entity
-  <Text>k__BackingField: I feel like there's someone controlling us, deciding what
-    we do and say!
+  <DialogueName>k__BackingField: NotTheBards
+  <Text>k__BackingField: I'm not talking about the bards! I feel like there's someone
+    controlling us, deciding what we do and say!
   <Choices>k__BackingField:
   - <Text>k__BackingField: Now that you mention it, I have had the same impression
       several times myself!
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 87b7da453ac76e54080a82797694abd6, type: 2}
-  - <Text>k__BackingField: Um... maybe a good meal will help take your mind off it!
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e3393706944c2f642a1dc1cee4542d53, type: 2}
-  - <Text>k__BackingField: What a load of nonsense!
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 18cac2d271368f34ab3e1e67011d6c81, type: 2}
+  - <Text>k__BackingField: Yeah, right, of course! Would you like something to eat
+      or drink?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 23167057776ab9d4db90c0ceff8251c6, type: 2}
+  - <Text>k__BackingField: Have you been drinking by any chance?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: bc3c2153175cb234596098c54dcbc2af, type: 2}
   <DialogueType>k__BackingField: 1
   <IsStartingDialogue>k__BackingField: 0
