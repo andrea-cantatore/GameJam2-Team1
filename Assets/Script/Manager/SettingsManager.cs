@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement; //ByEma
 using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
@@ -56,4 +57,11 @@ public class SettingsManager : MonoBehaviour
     {
         Screen.fullScreen = isFull;
     }
+
+    //ByEmaStart
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    //ByEmaEnd
 }
