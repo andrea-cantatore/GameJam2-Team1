@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Choice1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Choice1
+  <Text>k__BackingField: I'll get the usual.
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Hah! If my memory was that sharp I would've studied to
+      become a potion crafter!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: c3c1320972e213b408473ccf2c0285b5, type: 2}
+  - <Text>k__BackingField: My memory isn't that good anymore.... Mind if you refresh
+      it?
+    <NextDialogue>k__BackingField: {fileID: 0}
+  - <Text>k__BackingField: Leather Soup?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: c7451bfbedb9d6d41b9ea7cb9a57d33a, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

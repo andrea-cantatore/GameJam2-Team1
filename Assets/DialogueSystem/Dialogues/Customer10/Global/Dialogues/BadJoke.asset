@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: BadJoke
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: BadJoke
+  <Text>k__BackingField: Do I look like a cow?
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Right, my bad! How about I get you our finest [ORDER]?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 084d4466c0dbe894484bf92863d62e2d, type: 2}
+  - <Text>k__BackingField: Of course not!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 472bedddc60bf454fb699975cde45b98, type: 2}
+  - <Text>k__BackingField: Of course!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: ef4be02e68626084ab965f9969521a80, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
