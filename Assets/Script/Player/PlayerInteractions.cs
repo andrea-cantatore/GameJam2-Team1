@@ -150,9 +150,11 @@ public class PlayerInteractions : MonoBehaviour
                             }
                             if (allChildrenInactive = true)
                             {
-                                HeldObject.SetActive(false);
-                                HeldObject = null;
-                                interactable.Interact(true);
+                                if (interactable.Interact(true))
+                                {
+                                    HeldObject.SetActive(false);
+                                    HeldObject = null;
+                                }
                             }
                         }
                     }
