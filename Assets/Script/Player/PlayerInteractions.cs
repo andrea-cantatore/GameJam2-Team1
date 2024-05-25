@@ -126,19 +126,16 @@ public class PlayerInteractions : MonoBehaviour
                             {
                                 if((HeldObject.tag == "VegetablePick" || HeldObject.tag == "TomatoPick") || HeldObject.TryGetComponent(out IHeldFood heldFood) && heldFood.IsCooked())
                                 {
-                                    interactable.Interact(true);
-                                    HeldObject.SetActive(false);
-                                    HeldObject = null;
-                                    _isHandFull = false;
-                                    return;
+                                    if (cutting.CutInteraction(HeldObject))
+                                    {
+                                        interactable.Interact(true);
+                                        HeldObject.SetActive(false);
+                                        HeldObject = null;
+                                        _isHandFull = false;
+                                        return;
+                                    }
                                 }
-                                if (cutting.CutInteraction(HeldObject))
-                                {
-                                    interactable.Interact(true);
-                                    HeldObject.SetActive(false);
-                                    HeldObject = null;
-                                    _isHandFull = false;
-                                }
+                                
                             }
                         }
                         else
