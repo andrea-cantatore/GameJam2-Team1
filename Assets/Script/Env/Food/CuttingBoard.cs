@@ -130,13 +130,15 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         {
             if (obj.tag == gameObject.tag)
             {
-                if (gameObject.TryGetComponent(out IHeldFood heldFood) && !heldFood.IsCooked())
+                
+                if (gameObject.TryGetComponent(out IHeldFood heldFood) && !heldFood.IsCooked() )
                 {
                     if (!obj.CompareTag("TomatoPick") && !obj.CompareTag("VegetablePick"))
                     {
                         return false;
                     }
                 }
+                Debug.Log(heldFood.IsCooked());
                 obj.SetActive(true);
                 IsCuttingEmpty = false;
                 _activeFood = obj;

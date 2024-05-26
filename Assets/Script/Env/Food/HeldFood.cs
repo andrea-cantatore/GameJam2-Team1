@@ -23,10 +23,9 @@ public class HeldFood : MonoBehaviour, IHeldFood, IHeld
         if (gameObject.tag == "PotatoSliced" || gameObject.tag == "SteakSliced" || gameObject.tag == "ChickenSliced" || gameObject.tag == "FishSliced")
         {
             IsSliced = true;
-        }
-        {
             _isCooked = 1;
         }
+        
     }
     public void ICooked(int cookValue)
     {
