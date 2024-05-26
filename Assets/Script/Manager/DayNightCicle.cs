@@ -34,7 +34,6 @@ public class DayNightCicle : MonoBehaviour
     {
         if (!_isStarted)
             return;
-        _timer += Time.deltaTime;
         if (_isDay && _isStarted)
         {
             if (_timer >= _dayDuration)
@@ -43,6 +42,10 @@ public class DayNightCicle : MonoBehaviour
                 _timer = 0;
                 _isStarted = false;
                 EventManager.IsNight?.Invoke(true);
+            }
+            else
+            {
+                _timer += Time.deltaTime;
             }
         }
     }
