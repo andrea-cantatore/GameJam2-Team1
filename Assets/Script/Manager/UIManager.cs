@@ -18,17 +18,24 @@ public class UIManager : MonoBehaviour
     {
         EventManager.StartNextNight += PreDealerScreen;
         EventManager.MoneyChanger += MoneyChanger;
+        EventManager.StartNextDay += PreDealerScreenDeactivation;
     }
     
     private void OnDisable()
     {
         EventManager.StartNextNight -= PreDealerScreen;
         EventManager.MoneyChanger -= MoneyChanger;
+        EventManager.StartNextDay -= PreDealerScreenDeactivation;
     }
     
-    public void PreDealerScreen()
+    private void PreDealerScreen()
     {
         _preDealerScreen.SetActive(true);
+    }
+
+    private void PreDealerScreenDeactivation()
+    {
+        _preDealerScreen.SetActive(false);
     }
     
     public void StartNextDay()

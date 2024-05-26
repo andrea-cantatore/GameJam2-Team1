@@ -36,8 +36,9 @@ public class CustomerManger : MonoBehaviour
             {
                 EventManager.StartNextNight?.Invoke();
             }
-            return;
         }
+        if(_isNightStarting) 
+            return;
         _timer += Time.deltaTime;
         if (_timer >= _spawnRate)
         {

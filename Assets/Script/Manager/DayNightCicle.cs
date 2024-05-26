@@ -35,7 +35,7 @@ public class DayNightCicle : MonoBehaviour
         if (!_isStarted)
             return;
         _timer += Time.deltaTime;
-        if (_isDay)
+        if (_isDay && _isStarted)
         {
             if (_timer >= _dayDuration)
             {
@@ -43,16 +43,6 @@ public class DayNightCicle : MonoBehaviour
                 _timer = 0;
                 _isStarted = false;
                 EventManager.IsNight?.Invoke(true);
-            }
-        }
-        if (!_isDay)
-        {
-            if (_isStarted)
-            {
-                _isDay = true;
-                _timer = 0;
-                _isStarted = false;
-                EventManager.IsNight?.Invoke(false);
             }
         }
     }
@@ -68,7 +58,10 @@ public class DayNightCicle : MonoBehaviour
     {
         StartCoroutine(LerpSkyboxes(skyboxNight, skyboxDay, 20f));
         StartCoroutine(LerpLight(graddientDay, 20f));
+        _isDay = true;
         _isStarted = true;
+        _timer = 0;
+        EventManager.IsNight?.Invoke(false);
     }
 
     private IEnumerator LerpSkyboxes(Texture2D a, Texture2D b, float time)
