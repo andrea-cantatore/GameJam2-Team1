@@ -148,11 +148,14 @@ public class PlayerInteractions : MonoBehaviour
                                     break;
                                 }
                             }
-                            if (allChildrenInactive = true)
+                            if (allChildrenInactive)
                             {
-                                HeldObject.SetActive(false);
-                                HeldObject = null;
-                                interactable.Interact(true);
+                                if (interactable.Interact(true))
+                                {
+                                    HeldObject.SetActive(false);
+                                    HeldObject = null;
+                                }
+                                return;
                             }
                         }
                     }
@@ -211,7 +214,7 @@ public class PlayerInteractions : MonoBehaviour
                             if (_isDishHand)
                             {
                                 if (counterHolder.TakeObject(HeldObject.GetComponent<HeldFood>().MyId(), HeldObject,
-                                        true, HeldObject.GetComponent<HeldFood>().IsSliced))
+                                        true, HeldObject.GetComponent<HeldFood>().IsSliced, HeldObject.GetComponent<HeldFood>()._isCooked))
                                 {
                                     HeldObject.SetActive(false);
                                     HeldObject = null;
@@ -220,7 +223,7 @@ public class PlayerInteractions : MonoBehaviour
                                 }
                             }
                             if (counterHolder.TakeObject(HeldObject.GetComponent<HeldFood>().MyId(), HeldObject,
-                                    false, HeldObject.GetComponent<HeldFood>().IsSliced) && !_isDishHand)
+                                    false, HeldObject.GetComponent<HeldFood>().IsSliced, HeldObject.GetComponent<HeldFood>()._isCooked) && !_isDishHand)
                             {
                                 HeldObject.SetActive(false);
                                 HeldObject = null;
@@ -300,9 +303,11 @@ public class PlayerInteractions : MonoBehaviour
 
     private void GrillPickUp(int state, String tag, Material material)
     {
+        Debug.Log(state + " state");
+        
         GameObject toChange = InteractableCicle(tag, material);
         toChange.TryGetComponent(out IHeldFood heldFood);
-        heldFood.ICooked(state);
+        heldFood._isCooked = state;
     }
 
     private GameObject InteractableCicle(String tag, Material material)

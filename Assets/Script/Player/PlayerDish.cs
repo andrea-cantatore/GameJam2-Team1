@@ -18,8 +18,13 @@ public class PlayerDish : MonoBehaviour, IDish
     {
         activeFoods = new bool[_foods.Length];
     }
-    public bool GetDish(GameObject food, bool isSliced)
+    public bool GetDish(GameObject food, bool isSliced, int isCooked)
     {
+        Debug.Log(isCooked);
+        if(food.tag == _foodTags[1] && isCooked != 1)
+        {
+            return false;
+        }
         if ((food.tag == _foodTags[1] || food.tag == _foodTags[2] || food.tag == _foodTags[7]) && !isSliced)
         {
             return false;
@@ -45,6 +50,10 @@ public class PlayerDish : MonoBehaviour, IDish
             }
         }
         if (_isMeetOn)
+        {
+            return false;
+        }
+        if(isCooked != 1)
         {
             return false;
         }

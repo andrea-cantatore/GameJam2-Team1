@@ -130,7 +130,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         {
             if (obj.tag == gameObject.tag)
             {
-                if (gameObject.TryGetComponent(out IHeldFood heldFood) && !heldFood.IsCooked() && (obj.CompareTag("SteakPick") || obj.CompareTag("FishPick")))
+                if (gameObject.TryGetComponent(out IHeldFood heldFood) && !heldFood.IsCooked())
                 {
                     return false;
                 }

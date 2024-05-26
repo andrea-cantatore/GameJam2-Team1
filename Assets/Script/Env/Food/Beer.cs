@@ -12,6 +12,7 @@ public class Beer : MonoBehaviour, IInteract
     [SerializeField] private Transform _popUpPos;
     [SerializeField] private int _beerType;
     [SerializeField] private Animator _animator;
+    [SerializeField] private int _spillAmount = 10;
     private bool _isUsing;
     private float _timer;
     
@@ -36,6 +37,7 @@ public class Beer : MonoBehaviour, IInteract
                     _beer.SetActive(false);
                     EventManager.OnFullBeer?.Invoke(_beerType);
                     _animator.SetBool("Spill", false);
+                    _spillAmount--;
                 }
             }
             if (Input.GetKeyUp(KeyCode.Mouse0))
@@ -47,6 +49,8 @@ public class Beer : MonoBehaviour, IInteract
 
     public bool Interact(bool isToAdd)
     {
+        if(_spillAmount <= 0)
+            return false;
         EventManager.OnBeerInteraction?.Invoke(true);
         _isUsing = true;
         _beer.SetActive(true);
