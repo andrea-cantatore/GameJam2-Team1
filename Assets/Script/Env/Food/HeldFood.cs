@@ -54,7 +54,8 @@ public class HeldFood : MonoBehaviour, IHeldFood, IHeld
         {
             return;
         }
-        GetComponent<Renderer>().material = _material;
+        if(TryGetComponent(out Renderer renderer))
+            renderer.material = _material;
     }
     public int MyId()
     {
