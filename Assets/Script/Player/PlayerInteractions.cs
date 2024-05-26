@@ -176,7 +176,7 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (hit.transform.TryGetComponent(out ICutting cutting))
                             {
-                                if((HeldObject.tag == "VegetablePick" || HeldObject.tag == "TomatoPick") || HeldObject.TryGetComponent(out IHeldFood heldFood) && heldFood.IsCooked())
+                                if((HeldObject.tag == "VegetablePick" || HeldObject.tag == "TomatoPick") || (HeldObject.TryGetComponent(out IHeldFood heldFood) && heldFood.IsCooked()))
                                 {
                                     if (cutting.CutInteraction(HeldObject))
                                     {

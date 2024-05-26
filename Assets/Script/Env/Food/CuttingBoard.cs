@@ -29,7 +29,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         InputManager.actionMap.PlayerInput.Interaction.started += ctx => Interaction();
         InputManager.actionMap.PlayerInput.CookInteraction.started += ctx => InputCut();
     }
-    
+
     private void OnDisable()
     {
         EventManager.OnCuttingInteraction -= CuttingInteraction;
@@ -40,7 +40,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         if(isCutting)
             Interact(false);
     }
-    
+
     private void InputCut()
     {
         if (isCutting)
@@ -58,7 +58,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         }
     }*/
 
-    
+
     private void Interaction()
     {
         if (isCutting)
@@ -77,12 +77,12 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     {
         _canCut = false;
         _animator.SetTrigger("isCutting");
-        
+
         _cuttingCounter++;
         if (_requiredCutting <= _cuttingCounter)
         {
             yield return new WaitForSeconds(1f); //ByEma
-            
+
             InvokingEvent();
             _activeFood.SetActive(false);
             _activeFood = null;
@@ -95,26 +95,26 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         yield return new WaitForSeconds(_cutDelay);
         _canCut = true;
     }
-    
+
 
     public bool Interact(bool isToAdd)
     {
         isCutting = isToAdd;
         EventManager.OnCuttingInteraction?.Invoke(isCutting);
-        
-        
+
+
         return true;
     }
 
     public void InteractionPopUp()
     {
-        if(isCutting)
+        if (isCutting)
             return;
         InteractionManager.Instance.InteractionPannel.transform.position = _popUpPos.position;
         InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text =
             "press E to Interact " + gameObject.name;
     }
-    
+
     private void CuttingInteraction(bool isCutting)
     {
         if (isCutting)
@@ -132,9 +132,11 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
             {
                 if (gameObject.TryGetComponent(out IHeldFood heldFood) && !heldFood.IsCooked())
                 {
-                    return false;
+                    if (!obj.CompareTag("TomatoPick") && !obj.CompareTag("VegetablePick"))
+                    {
+                        return false;
+                    }
                 }
-                
                 obj.SetActive(true);
                 IsCuttingEmpty = false;
                 _activeFood = obj;
@@ -143,25 +145,21 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
         }
         return false;
     }
-    
+
     private void InvokingEvent()
     {
-        if(_activeFood.tag == "FishPick")
+        if (_activeFood.tag == "FishPick")
             EventManager.OnCutted?.Invoke("FishSliced");
-        if(_activeFood.tag == "SteakPick")
+        if (_activeFood.tag == "SteakPick")
             EventManager.OnCutted?.Invoke("SteakSliced");
-        if(_activeFood.tag == "ChickenPick")
+        if (_activeFood.tag == "ChickenPick")
             EventManager.OnCutted?.Invoke("ChickenSliced");
-        if(_activeFood.tag == "TomatoPick")
+        if (_activeFood.tag == "TomatoPick")
             EventManager.OnCutted?.Invoke("TomatoSliced");
-        if(_activeFood.tag == "PotatoPick")
+        if (_activeFood.tag == "PotatoPick")
             EventManager.OnCutted?.Invoke("PotatoSliced");
-        if(_activeFood.tag == "VegetablePick")
+        if (_activeFood.tag == "VegetablePick")
             EventManager.OnCutted?.Invoke("VegetableSliced");
-        
-        
-        
-        
     }
-    
+
 }
