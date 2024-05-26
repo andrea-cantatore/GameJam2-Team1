@@ -20,7 +20,10 @@ public class HeldFood : MonoBehaviour, IHeldFood, IHeld
     }
     private void Update()
     {
-        if (gameObject.tag == "PotatoSliced")
+        if (gameObject.tag == "PotatoSliced" || gameObject.tag == "SteakSliced" || gameObject.tag == "ChickenSliced" || gameObject.tag == "FishSliced")
+        {
+            IsSliced = true;
+        }
         {
             _isCooked = 1;
         }
