@@ -97,6 +97,7 @@ public class PlayerDish : MonoBehaviour, IDish
         for (int i = 0; i < childCount; i++)
         {
             activeChildren[i] = transform.GetChild(i).gameObject.activeSelf;
+            Debug.Log("customer" + activeChildren[i]);
         }
 
         return activeChildren;

@@ -18,6 +18,13 @@ public class HeldFood : MonoBehaviour, IHeldFood, IHeld
         _material = GetComponent<Renderer>().material;
         ID = new Random().Next(0, 1000000000);
     }
+    private void Update()
+    {
+        if (gameObject.tag == "PotatoSliced")
+        {
+            _isCooked = 1;
+        }
+    }
     public void ICooked(int cookValue)
     {
         _isCooked = cookValue;

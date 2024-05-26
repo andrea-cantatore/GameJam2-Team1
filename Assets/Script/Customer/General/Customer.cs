@@ -16,7 +16,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     [SerializeField] private PlayerInteractions _playerInteractions;
     [SerializeField] private float _permanenceTime, _permanenceTimeChanger;
     [SerializeField] private int _baseTip;
-    private GameObject[] _coins;
+    [SerializeField] private GameObject[] _coins;
     private float _permanenceTimer;
     private int _expectedMealCounter;
     private Transform _targetPos;
@@ -81,7 +81,10 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
                 {
                     if (obj.TryGetComponent(out IDish dish) && obj.activeSelf)
                     {
-                        if (_playerInteractions.GetDish().SequenceEqual(dish.ActiveFood()))
+                        Debug.Log("player food: " + _playerInteractions.ActiveFood());
+                        Debug.Log("customer food: " + dish.ActiveFood());
+                        Debug.Log(_playerInteractions.ActiveFood().SequenceEqual(dish.ActiveFood()));
+                        if (_playerInteractions.ActiveFood().SequenceEqual(dish.ActiveFood()))
                         {
                             obj.SetActive(false);
                             _expectedMealCounter--;

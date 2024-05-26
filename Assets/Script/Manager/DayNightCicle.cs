@@ -9,10 +9,10 @@ public class DayNightCicle : MonoBehaviour
     [SerializeField] private float _nightDuration;
     [SerializeField] private Texture2D skyboxNight;
     [SerializeField] private Texture2D skyboxDay;
-    
+
     [SerializeField] private Gradient graddientDay;
     [SerializeField] private Gradient graddientNight;
- 
+
     [SerializeField] private Light globalLight;
     private float _timer;
     private bool _isDay = true, _isStarted = true;
@@ -23,45 +23,40 @@ public class DayNightCicle : MonoBehaviour
         EventManager.StartNextDay += StartDay;
         EventManager.StartNextNight += StartNight;
     }
-    
+
     private void OnDisable()
     {
         EventManager.StartNextDay -= StartDay;
         EventManager.StartNextNight -= StartNight;
     }
-    
+
     private void Update()
     {
+        if (!_isStarted)
+            return;
         _timer += Time.deltaTime;
         if (_isDay)
         {
-            if (_isStarted)
+            if (_timer >= _dayDuration)
             {
-                if (_timer >= _dayDuration)
-                {
-                    _isDay = false;
-                    _timer = 0;
-                    _isStarted = false;
-                    EventManager.IsNight?.Invoke(true);
-                }
+                _isDay = false;
+                _timer = 0;
+                _isStarted = false;
+                EventManager.IsNight?.Invoke(true);
             }
         }
         if (!_isDay)
         {
-            if(_timer >= _nightDuration)
+            if (_isStarted)
             {
-                if (_isStarted)
-                {
-                    _isDay = true;
-                    _timer = 0;
-                    _isStarted = false;
-                    EventManager.IsNight?.Invoke(false);
-                }
+                _isDay = true;
+                _timer = 0;
+                _isStarted = false;
+                EventManager.IsNight?.Invoke(false);
             }
         }
-        
     }
-    
+
     private void StartNight()
     {
         StartCoroutine(LerpSkyboxes(skyboxDay, skyboxNight, 10f));
@@ -88,7 +83,7 @@ public class DayNightCicle : MonoBehaviour
         }
         RenderSettings.skybox.SetTexture("_Texture1", b);
     }
-    
+
     private IEnumerator LerpLight(Gradient lightGradient, float time)
     {
         for (float i = 0; i < time; i += Time.deltaTime)

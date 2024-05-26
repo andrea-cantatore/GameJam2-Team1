@@ -53,6 +53,12 @@ public class PlayerInteractions : MonoBehaviour
                 interactable.InteractionPopUp();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    if(hit.transform.TryGetComponent(out ICoin coin))
+                    {
+                        EventManager.MoneyChanger?.Invoke(coin.ReturnCoins());
+                        hit.transform.gameObject.SetActive(false);
+                        return;
+                    }
                     if (hit.transform.TryGetComponent(out ICustomer customer))
                     {
                         if (!interactable.Interact(false))
@@ -349,16 +355,15 @@ public class PlayerInteractions : MonoBehaviour
         _isBeerHand = true;
     }
     
-    public bool[] GetDish()
+    public bool[] ActiveFood()
     {
-        int childCount = _dish.transform.childCount;
+        int childCount = HeldObject.transform.childCount;
         bool[] activeChildren = new bool[childCount];
-        Debug.Log(childCount + activeChildren.Length);
-        
 
         for (int i = 0; i < childCount; i++)
         {
-            activeChildren[i] = _dish.transform.GetChild(i).gameObject.activeSelf;
+            activeChildren[i] = HeldObject.transform.GetChild(i).gameObject.activeSelf;
+            Debug.Log("player " +activeChildren[i]);
         }
 
         return activeChildren;

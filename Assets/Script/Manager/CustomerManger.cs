@@ -32,7 +32,7 @@ public class CustomerManger : MonoBehaviour
     {
         if (_isNightStarting)
         {
-            if (!CheckAllEndPos())
+            if (CheckAllEndPos())
             {
                 EventManager.StartNextNight?.Invoke();
             }
