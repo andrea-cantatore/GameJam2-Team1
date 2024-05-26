@@ -103,17 +103,13 @@ public class ObjectSwitcher : MonoBehaviour, IInteract
 
     public bool Interact(bool isToAdd)
     {
-        EventManager.OnBookInteraction?.Invoke(isToAdd);
+        _isInteracting = !_isInteracting;
+        EventManager.OnBookInteraction?.Invoke(_isInteracting);
 
         if (_isInteracting)
         {
             _mainCamera.transform.position = _cameraOnInteraction.position;
             _mainCamera.transform.rotation = _cameraOnInteraction.rotation;
-        }
-        else
-        {
-            _mainCamera.transform.position = _originalCameraPos.position;
-            _mainCamera.transform.rotation = _originalCameraPos.rotation;
         }
         return true;
     }
