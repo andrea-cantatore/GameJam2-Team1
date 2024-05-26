@@ -13,6 +13,11 @@ public class EventManager : MonoBehaviour
     
     public static Action OnDialogueEnd;
     public static Action<DSDialogueContainerSO, String, Customer> OnStartingDialogue;
+    public static Action<bool> IsNight;
+    public static Action StartNextDay;
+    public static Action StartNextNight;
+    public static Action<Transform> OnCustomerLeave;
+    public static Action<int> MoneyChanger;
 
 }
 

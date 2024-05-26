@@ -170,6 +170,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             }
             if (_pathIndex == 0)
             {
+                EventManager.OnCustomerLeave?.Invoke(_targetPos);
                 gameObject.SetActive(false);
             }
         }

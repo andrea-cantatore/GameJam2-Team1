@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Beer : MonoBehaviour, IInteract
+public class Beer : MonoBehaviour, IInteract, IAdd
 {
 
     [SerializeField] private float _holdingTime = 5f;
@@ -63,5 +63,20 @@ public class Beer : MonoBehaviour, IInteract
         InteractionManager.Instance.InteractionPannel.transform.position = _popUpPos.position;
         InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text =
             "press E to Interact " + gameObject.name;
+    }
+    public void Change(int quantity)
+    {
+        _spillAmount += quantity;
+    }
+    public int quantity()
+    {
+        return _spillAmount;
+    }
+    public bool CanAddFood()
+    {
+        if(_spillAmount < 10)
+            return true;
+        return false;
+        
     }
 }

@@ -12,7 +12,7 @@ public class Coins : MonoBehaviour, ICoin
     }
     public void AddCoins(int coins)
     {
-        _coins += coins;
+        _coins = coins;
     }
 
 }
