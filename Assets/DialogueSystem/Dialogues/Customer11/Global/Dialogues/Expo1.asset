@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Expo1
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Expo1
+  <Text>k__BackingField: We made some rations from the slain monsters!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: You have!? That's incredibly crafty!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 39b100086840cef4fb3fd56bdfd38220, type: 2}
+  - <Text>k__BackingField: Oh wow!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 02ea93a583473724096cd819334c0ed9, type: 2}
+  - <Text>k__BackingField: You ate monsters? That's gross, aren't they poisonous
+      and disease-ridden?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 21e6afd3c9d889f45ac633bc7b0561c0, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
