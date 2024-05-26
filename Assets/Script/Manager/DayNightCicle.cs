@@ -33,7 +33,10 @@ public class DayNightCicle : MonoBehaviour
     private void Update()
     {
         if (!_isStarted)
+        {
+            _timer = 0;
             return;
+        }
         if (_isDay && _isStarted)
         {
             if (_timer >= _dayDuration)
