@@ -8,8 +8,15 @@ public class LoaderCallback : MonoBehaviour
 {
     private bool _isFirstUpdate = true;
     private float _timer;
+    private AsyncOperation _asyncLoad;
 
     [SerializeField] private float _loadingScreenDuration = 3.0f;
+
+    private void Start()
+    {
+        _asyncLoad = SceneManager.LoadSceneAsync(2);
+        _asyncLoad.allowSceneActivation = false;
+    }
 
     private void Update()
     {
@@ -24,7 +31,7 @@ public class LoaderCallback : MonoBehaviour
             _timer -= Time.deltaTime;
             if (_timer <= 0)
             {
-                SceneManager.LoadScene(2);
+                _asyncLoad.allowSceneActivation = true;
             }
         }
     }
