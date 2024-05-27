@@ -81,10 +81,8 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
                 {
                     if (obj.TryGetComponent(out IDish dish) && obj.activeSelf)
                     {
-                        Debug.Log("player food: " + _playerInteractions.ActiveFood());
-                        Debug.Log("customer food: " + dish.ActiveFood());
-                        Debug.Log(_playerInteractions.ActiveFood().SequenceEqual(dish.ActiveFood()));
-                        if (_playerInteractions.ActiveFood().SequenceEqual(dish.ActiveFood()))
+                        Debug.Log("dish id: " + dish.IDReturner() + "Player id: " + _playerInteractions.ActiveFood());
+                        if (_playerInteractions.ActiveFood() == dish.IDReturner())
                         {
                             obj.SetActive(false);
                             _expectedMealCounter--;
