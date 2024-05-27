@@ -56,6 +56,14 @@ public class Cauldron : MonoBehaviour, IInteract, ICauldron
             if(!b)
                 return false;
         }
+        foreach (GameObject obj in _foods)
+        {
+            obj.SetActive(false);
+        }
+        for(int i = 0; i < _isInside.Length; i++)
+        {
+            _isInside[i] = false;
+        }
         return true;
     }
     public void InteractionPopUp()
