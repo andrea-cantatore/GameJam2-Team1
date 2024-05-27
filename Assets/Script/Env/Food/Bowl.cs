@@ -20,4 +20,14 @@ public class Bowl : MonoBehaviour, IBowl
         }
         return _generalID;
     }
+    
+    public bool[] ReleaseDish()
+    {
+        bool[] activeFoods = new bool[_childs.Length];
+        for (int i = 0; i < _childs.Length; i++)
+        {
+            activeFoods[i] = _childs[i].activeSelf;
+        }
+        return activeFoods;
+    }
 }

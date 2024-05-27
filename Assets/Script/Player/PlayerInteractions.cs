@@ -190,7 +190,10 @@ public class PlayerInteractions : MonoBehaviour
                             }
                             if(obj.tag == hit.transform.tag && obj.tag == "Bowl")
                             {
-                                obj.transform.GetChild(0).gameObject.SetActive(false);
+                                for(int i = 0; i < obj.transform.childCount; i++)
+                                {
+                                    obj.transform.GetChild(i).gameObject.SetActive(false);
+                                }
                             }
                             if (obj.tag == hit.transform.tag && hit.transform.tag != "BeerPick")
                             {
@@ -260,15 +263,22 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         if (_isHandFull || _isBeerHand)
                         {
+                            if (HeldObject.tag == "Bowl")
+                            {
+                                if (counterHolder.TakeObject(HeldObject.GetComponent<HeldFood>().MyId(), HeldObject,
+                                        true, HeldObject.GetComponent<HeldFood>().IsSliced, HeldObject.GetComponent<HeldFood>()._isCooked))
+                                {
+                                    HeldObject.SetActive(false);
+                                    HeldObject = null;
+                                    _isHandFull = false;
+                                    return;
+                                }
+                            }
                             if (_isDishHand)
                             {
                                 if (counterHolder.TakeObject(HeldObject.GetComponent<HeldFood>().MyId(), HeldObject,
                                         true, HeldObject.GetComponent<HeldFood>().IsSliced, HeldObject.GetComponent<HeldFood>()._isCooked))
                                 {
-                                    // foreach (GameObject obj in _dishObjects)
-                                    // {
-                                    //     obj.SetActive(false);
-                                    // }
                                     HeldObject.SetActive(false);
                                     HeldObject = null;
                                     _isHandFull = false;
@@ -293,12 +303,24 @@ public class PlayerInteractions : MonoBehaviour
                                 {
                                     if (obj.tag == "Dish")
                                     {
-                                        bool[] foodOnDish = counterHolder.ReleaseDish();
+                                        bool[] foodOnDish = counterHolder.ReleaseDish(true);
                                         obj.SetActive(true);
-                                        Debug.Log("foodOnDish: " + foodOnDish);
                                         for (int i = 0; i < foodOnDish.Length; i++)
                                         {
                                             _dishObjects[i].SetActive(foodOnDish[i]);
+                                        }
+                                        HeldObject = obj;
+                                        _isHandFull = true;
+                                        counterHolder.DestroyDish();
+                                        return;
+                                    }
+                                    if(obj.tag == "Bowl")
+                                    {
+                                        bool[] foodOnBowl = counterHolder.ReleaseDish(false);
+                                        obj.SetActive(true);
+                                        for (int i = 0; i < foodOnBowl.Length; i++)
+                                        {
+                                            obj.transform.GetChild(i).gameObject.SetActive(foodOnBowl[i]);
                                         }
                                         HeldObject = obj;
                                         _isHandFull = true;

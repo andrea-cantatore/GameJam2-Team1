@@ -6,7 +6,7 @@ public interface ICounterHolder
     public bool ReleaseObject(int id);
     public Material GetMaterial();
     public void DestroyObject();
-    public bool[] ReleaseDish();
+    public bool[] ReleaseDish(bool isDish);
     public void DestroyDish();
 }
 
