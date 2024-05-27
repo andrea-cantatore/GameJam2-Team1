@@ -59,9 +59,9 @@ public class SettingsManager : MonoBehaviour
     }
 
     //ByEmaStart
-    public void LoadScene(string sceneName)
+    public void LoadScene(int sceneNumber)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneNumber);
     }
     //ByEmaEnd
 }
