@@ -23,6 +23,7 @@ public class PlayerCam : MonoBehaviour
         EventManager.OnCuttingInteraction += OnLockedCamera;
         EventManager.OnStartingDialogue += StartingDialogue;
         EventManager.OnDialogueEnd += () => _isMovementLocked = false;
+        EventManager.OnUiOpening += OnLockedCamera;
     }
     private void OnDisable()
     {
@@ -31,6 +32,7 @@ public class PlayerCam : MonoBehaviour
         EventManager.OnCuttingInteraction -= OnLockedCamera;
         EventManager.OnStartingDialogue -= StartingDialogue;
         EventManager.OnDialogueEnd -= () => _isMovementLocked = false;
+        EventManager.OnUiOpening -= OnLockedCamera;
     }
 
     private void LateUpdate()

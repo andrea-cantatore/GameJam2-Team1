@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
         EventManager.OnDialogueEnd += () => _isMovementUnlocked = true;
+        EventManager.OnUiOpening += CanMove;
     }
     private void OnDisable()
     {
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         EventManager.OnBookInteraction += CanMove;
         EventManager.OnStartingDialogue += StartingDialogue;
         EventManager.OnDialogueEnd += () => _isMovementUnlocked = true;
+        EventManager.OnUiOpening -= CanMove;
     }
 
     private void LateUpdate()

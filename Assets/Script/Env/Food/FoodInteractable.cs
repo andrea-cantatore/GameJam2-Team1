@@ -17,18 +17,23 @@ public class FoodInteractable : MonoBehaviour, IInteract, IAdd
         _popUpPos = transform.GetChild(0);
     }
 
+    private void Update()
+    {
+        if(_stackSize <= 9)
+            _Ingredients[_stackSize].SetActive(false);
+        _Ingredients[_stackSize - 1].SetActive(true);
+    }
+
     public bool Interact(bool isToAdd)
     {
         if (isToAdd)
         {
-            _Ingredients[_stackSize].SetActive(true);
             _stackSize++;
             return true;
         }
         if (!isToAdd && _stackSize > 0)
         {
             _stackSize--;
-            _Ingredients[_stackSize].SetActive(false);
             return true;
         }
         return false;
