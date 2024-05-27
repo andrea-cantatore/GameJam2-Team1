@@ -5,7 +5,6 @@ public interface IHeldFood
    public bool IsCooked();
    public void ICutted();
    
-   public bool IsCutted();
    public void IBasicMaterial();
 
 

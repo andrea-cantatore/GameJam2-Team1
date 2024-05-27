@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDish : MonoBehaviour, IDish
@@ -13,6 +10,8 @@ public class PlayerDish : MonoBehaviour, IDish
     private bool _isFishOn;
     private string[] _foodTags = {"SteakPick", "PotatoSliced", "VegetableSliced", "SteakSliced", "ChickenPick",
         "ChickenSliced", "FishPick", "TomatoSliced", "FishPick", "FishSliced"};
+    private int[] _foodID = {1,2,4,8,16,32,64,128,256,512};
+    private int _generalID;
 
     private void Awake()
     {
@@ -39,7 +38,7 @@ public class PlayerDish : MonoBehaviour, IDish
             {
                 if(obj.tag == food.tag)
                 {
-                    obj.SetActive(true);
+                    ObjSetter(obj, true);
                     if(obj.tag == _foodTags[2] || obj.tag == _foodTags[7])
                     {
                         _isNotPotatoOn = true;
@@ -71,7 +70,7 @@ public class PlayerDish : MonoBehaviour, IDish
         {
             if(obj.tag == food.tag)
             {
-                    obj.SetActive(true);
+                    ObjSetter(obj, true);
                     _isMeetOn = true;
                     return true;
             }
@@ -89,17 +88,21 @@ public class PlayerDish : MonoBehaviour, IDish
         return activeFoods;
     }
 
-    public bool[] ActiveFood()
+    public void ObjSetter(GameObject obj, bool setter)
     {
-        int childCount = transform.childCount;
-        bool[] activeChildren = new bool[childCount];
-
-        for (int i = 0; i < childCount; i++)
-        {
-            activeChildren[i] = transform.GetChild(i).gameObject.activeSelf;
-            Debug.Log("customer" + activeChildren[i]);
-        }
-
-        return activeChildren;
+        obj.SetActive(setter);
     }
+    
+    public int IDReturner()
+    {
+        for(int i = 0; i < _foods.Length; i++)
+        {
+            if(_foods[i].activeSelf)
+            {
+                _generalID += _foodID[i];
+            }
+        }
+        return _generalID;
+    }
+    
 }

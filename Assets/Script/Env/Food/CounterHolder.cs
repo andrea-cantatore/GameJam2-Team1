@@ -11,6 +11,7 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
     private GameObject _holdingObject;
     [SerializeField] private Transform _holdingPosition, _popUpPos;
     private PlayerDish _playerDish;
+    private IBowl _bowl;
     
 
     private void Awake()
@@ -36,7 +37,10 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
         if(isDish)
         {
             _isHoldingDish = true;
-            _playerDish = _holdingObject.GetComponent<PlayerDish>();
+            if(_holdingObject.TryGetComponent(out PlayerDish dish))
+                _playerDish = dish;
+            else if(_holdingObject.TryGetComponent(out IBowl bowl))
+                _bowl = bowl;
         }
         
         return true;
@@ -62,9 +66,12 @@ public class CounterHolder : MonoBehaviour, IInteract, ICounterHolder
         _isHoldingDish = false;
         _isFull = false;
     }
-    public bool[] ReleaseDish()
+    
+    public bool[] ReleaseDish(bool isDish)
     {
-        return _playerDish.ReleaseDish();
+        if(isDish)
+            return _playerDish.ReleaseDish();
+        return _bowl.ReleaseDish();
     }
     public void DestroyDish()
     {
