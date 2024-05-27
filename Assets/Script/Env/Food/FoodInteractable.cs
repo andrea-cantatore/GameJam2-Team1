@@ -10,6 +10,8 @@ public class FoodInteractable : MonoBehaviour, IInteract, IAdd
 
     [SerializeField] private int _stackSize = 1;
 
+    [SerializeField] private GameObject[] _Ingredients;
+
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
@@ -19,12 +21,14 @@ public class FoodInteractable : MonoBehaviour, IInteract, IAdd
     {
         if (isToAdd)
         {
+            _Ingredients[_stackSize].SetActive(true);
             _stackSize++;
             return true;
         }
         if (!isToAdd && _stackSize > 0)
         {
             _stackSize--;
+            _Ingredients[_stackSize].SetActive(false);
             return true;
         }
         return false;
