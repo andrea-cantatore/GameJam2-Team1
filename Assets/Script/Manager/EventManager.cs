@@ -19,8 +19,6 @@ public class EventManager : MonoBehaviour
     public static Action<Transform> OnCustomerLeave;
     public static Action<int> MoneyChanger;
     public static Action<bool> OnUiOpening;
-    
-    public static Action ResetPopUp;
 
 }
 

@@ -1,5 +1,5 @@
 public interface IDish
 {
-     public int IDReturner();
+     public bool[] ActiveFood();
 }
 

@@ -62,7 +62,7 @@ public class Beer : MonoBehaviour, IInteract, IAdd
             return;
         InteractionManager.Instance.InteractionPannel.transform.position = _popUpPos.position;
         InteractionManager.Instance.InteractionText.GetComponent<TMPro.TextMeshProUGUI>().text =
-            "press E to Interact " + gameObject.name + " " + _spillAmount + "/10";
+            "press E to Interact " + gameObject.name;
     }
     public void Change(int quantity)
     {
