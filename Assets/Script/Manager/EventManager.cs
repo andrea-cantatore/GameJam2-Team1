@@ -18,6 +18,7 @@ public class EventManager : MonoBehaviour
     public static Action StartNextNight;
     public static Action<Transform> OnCustomerLeave;
     public static Action<int> MoneyChanger;
+    public static Action<bool> OnUiOpening;
 
 }
 
