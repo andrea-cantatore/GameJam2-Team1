@@ -69,14 +69,13 @@ public class Grill : MonoBehaviour, IInteract, IGrill
             return false;
         }
         _isGrilling = false;
-        _timer = 0f;
-        if (isCooked)
+        if (_timer >= _grillTime && _timer < overCookTime)
         {
             Debug.Log("Cooked");
             EventManager.OnGrillPickUp?.Invoke(1, _grillingFood.tag,
                 _grillingFood.GetComponent<MeshRenderer>().material);
         }
-        else if (isOverCooked)
+        else if (_timer >= overCookTime)
         {
             EventManager.OnGrillPickUp?.Invoke(2, _grillingFood.tag,
                 _grillingFood.GetComponent<MeshRenderer>().material);
@@ -89,6 +88,7 @@ public class Grill : MonoBehaviour, IInteract, IGrill
         _animator.SetTrigger("Empty");
         isCooked = false;
         isOverCooked = false;
+        _timer = 0f;
         _grillingFood.SetActive(false);
         return true;
     }
