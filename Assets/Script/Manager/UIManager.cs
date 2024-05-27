@@ -47,12 +47,14 @@ public class UIManager : MonoBehaviour
     private void PreDealerScreen()
     {
         EventManager.OnUiOpening?.Invoke(true);
+        GameManager.Instance.UnlockCursor(null, null, null);
         _preDealerScreen.SetActive(true);
     }
 
     private void PreDealerScreenDeactivation()
     {
         EventManager.OnUiOpening?.Invoke(false);
+        GameManager.Instance.LockCursor();
         _preDealerScreen.SetActive(false);
     }
     
