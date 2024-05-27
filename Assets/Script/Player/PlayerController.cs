@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         EventManager.OnDialogueEnd += () => _isMovementUnlocked = true;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if(_isMovementUnlocked)
             Move();
