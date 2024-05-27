@@ -81,12 +81,27 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
                 {
                     if (obj.TryGetComponent(out IDish dish) && obj.activeSelf)
                     {
-                        Debug.Log("dish id: " + dish.IDReturner() + "Player id: " + _playerInteractions.ActiveFood());
                         if (_playerInteractions.ActiveFood() == dish.IDReturner())
                         {
                             obj.SetActive(false);
                             _expectedMealCounter--;
                         }
+                    }
+                    if (obj.TryGetComponent(out IMug mug))
+                    {
+                        if(_playerInteractions.ActiveMug() == mug.IDReturner())
+                        {
+                            obj.SetActive(false);
+                            _expectedMealCounter--;
+                        }
+                    }
+                    if (obj.TryGetComponent(out IBowl bowl))
+                    {
+                       if(_playerInteractions.ActiveBowl() == bowl.IDReturner())
+                       {
+                           obj.SetActive(false);
+                           _expectedMealCounter--;
+                       }
                     }
                 }
             }

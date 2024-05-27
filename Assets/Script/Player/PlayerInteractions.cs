@@ -409,4 +409,22 @@ public class PlayerInteractions : MonoBehaviour
         }
         return 0;
     }
+    
+    public int ActiveMug()
+    {
+        if (HeldObject.TryGetComponent(out IMug mug))
+        {
+            return mug.IDReturner();
+        }
+        return 0;
+    }
+    
+    public int ActiveBowl()
+    {
+        if (HeldObject.TryGetComponent(out IBowl bowl))
+        {
+            return bowl.IDReturner();
+        }
+        return 0;
+    }
 }

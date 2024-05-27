@@ -11,7 +11,7 @@ public class PlayerDish : MonoBehaviour, IDish
     private string[] _foodTags = {"SteakPick", "PotatoSliced", "VegetableSliced", "SteakSliced", "ChickenPick",
         "ChickenSliced", "FishPick", "TomatoSliced", "FishPick", "FishSliced"};
     private int[] _foodID = {1,2,4,8,16,32,64,128,256,512};
-    private int GeneralID;
+    private int _generalID;
 
     private void Awake()
     {
@@ -99,10 +99,10 @@ public class PlayerDish : MonoBehaviour, IDish
         {
             if(_foods[i].activeSelf)
             {
-                GeneralID += _foodID[i];
+                _generalID += _foodID[i];
             }
         }
-        return GeneralID;
+        return _generalID;
     }
     
 }
