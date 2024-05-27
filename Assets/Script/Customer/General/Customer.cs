@@ -121,8 +121,6 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         }
         if (_expectedMealCounter <= 0)
         {
-            EventManager.BoardIntClearer?.Invoke(_boardIndex);
-            _orderPopUp.transform.position = new Vector3(0,0,0);
             int tip = _baseTip * Mathf.RoundToInt((_permanenceTime - _permanenceTimer) / 60);
             _coins[0].SetActive(true);
             _coins[1].SetActive(true);
@@ -201,6 +199,8 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             }
             if (_pathIndex == 0)
             {
+                EventManager.BoardIntClearer?.Invoke(_boardIndex);
+                _orderPopUp.transform.position = new Vector3(0,0,0);
                 EventManager.OnCustomerLeave?.Invoke(_targetPos);
                 gameObject.SetActive(false);
             }
