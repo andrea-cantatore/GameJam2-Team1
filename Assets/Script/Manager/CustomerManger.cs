@@ -86,7 +86,50 @@ public class CustomerManger : MonoBehaviour
     while (_timer >= _spawnRate)
     {
         bool customerSpawned = false;
+        if (DayNightCicle.Instance.DayCount == 0)
+        {
+            for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
+            {
+                int randomIndex = Random.Range(0, _customers.Length - 2);
+                int randomEndPos = Random.Range(0, _customerEndPos.Length - 2);
 
+                if (!_isEndPosFull[randomEndPos] && !_customers[randomIndex].activeSelf)
+                {
+                    _customers[randomIndex].SetActive(true);
+                    if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
+                    {
+                        Debug.Log("Customer spawned");
+                        _animator.SetTrigger("NewCustomer");
+                        customer.GetTargetPos(_customerEndPos[randomEndPos]);
+                    }
+                    _isEndPosFull[randomEndPos] = true;
+                    customerSpawned = true;
+                    break;
+                }
+            }
+        }
+        if (DayNightCicle.Instance.DayCount == 1)
+        {
+            for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
+            {
+                int randomIndex = Random.Range(0, _customers.Length - 1);
+                int randomEndPos = Random.Range(0, _customerEndPos.Length - 1);
+
+                if (!_isEndPosFull[randomEndPos] && !_customers[randomIndex].activeSelf)
+                {
+                    _customers[randomIndex].SetActive(true);
+                    if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
+                    {
+                        Debug.Log("Customer spawned");
+                        _animator.SetTrigger("NewCustomer");
+                        customer.GetTargetPos(_customerEndPos[randomEndPos]);
+                    }
+                    _isEndPosFull[randomEndPos] = true;
+                    customerSpawned = true;
+                    break;
+                }
+            }
+        }
         for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
         {
             int randomIndex = Random.Range(0, _customers.Length);
@@ -106,6 +149,7 @@ public class CustomerManger : MonoBehaviour
                 break;
             }
         }
+        
 
         if (!customerSpawned)
         {
@@ -131,7 +175,29 @@ public class CustomerManger : MonoBehaviour
 
     private bool CheckEndPos()
     {
-        for (int i = 0; i < _isEndPosFull.Length; i++)
+        if(DayNightCicle.Instance.DayCount == 0)
+        {
+            for (int i = 0; i < _isEndPosFull.Length-2; i++)
+            {
+                if (!_isEndPosFull[i])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        if (DayNightCicle.Instance.DayCount == 1)
+        {
+            for (int i = 0; i < _isEndPosFull.Length-1; i++)
+            {
+                if (!_isEndPosFull[i])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        for (int i = 0; i < _isEndPosFull.Length-1; i++)
         {
             if (!_isEndPosFull[i])
             {

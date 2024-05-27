@@ -24,6 +24,9 @@ public class EventManager : MonoBehaviour
     public static Action<GameObject> OnOrder;
     public static Action<int> BoardIntSaver;
     public static Action<int> BoardIntClearer;
+    
+    public static Action OnWin;
+    public static Action OnLose;
 
 }
 

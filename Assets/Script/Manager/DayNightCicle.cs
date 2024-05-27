@@ -7,15 +7,28 @@ public class DayNightCicle : MonoBehaviour
 {
     [SerializeField] private float _dayDuration;
     [SerializeField] private float _nightDuration;
+    public int DayCount = 0;
     [SerializeField] private Texture2D skyboxNight;
     [SerializeField] private Texture2D skyboxDay;
 
     [SerializeField] private Gradient graddientDay;
     [SerializeField] private Gradient graddientNight;
-
+    public int _tax;
+    
     [SerializeField] private Light globalLight;
     private float _timer;
     private bool _isDay = true, _isStarted = true;
+    
+    
+    public static DayNightCicle Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
 
     private void OnEnable()
@@ -57,6 +70,11 @@ public class DayNightCicle : MonoBehaviour
 
     private void StartNight()
     {
+        if (DayCount == 2)
+        {
+            EventManager.OnWin?.Invoke();
+            Time.timeScale = 0;
+        }
         StartCoroutine(LerpSkyboxes(skyboxDay, skyboxNight, _nightDuration));
         StartCoroutine(LerpLight(graddientNight, _nightDuration));
         _isStarted = true;
@@ -64,11 +82,22 @@ public class DayNightCicle : MonoBehaviour
 
     private void StartDay()
     {
+        if (DayCount != 0)
+            UIManager.Instance.MoneyCounterInt -= _tax * DayCount;
+        else
+            UIManager.Instance.MoneyCounterInt -= _tax;
+        
+        if(UIManager.Instance.MoneyCounterInt <= 0)
+        {
+            EventManager.OnLose?.Invoke();
+            Time.timeScale = 0;
+        }
         StartCoroutine(LerpSkyboxes(skyboxNight, skyboxDay, _dayDuration));
         StartCoroutine(LerpLight(graddientDay, _dayDuration));
         _isDay = true;
         _isStarted = true;
         _timer = 0;
+        DayCount++;
         EventManager.IsNight?.Invoke(false);
     }
 

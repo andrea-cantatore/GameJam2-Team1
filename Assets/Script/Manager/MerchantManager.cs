@@ -21,6 +21,7 @@ public class MerchantManager : MonoBehaviour
     [SerializeField] private GameObject[] _foods;
     
     [SerializeField] private GameObject[] _bars;
+    [SerializeField] private TMP_Text _taxCounter;
     
     private int _moneyCounterInt;
     
@@ -39,6 +40,10 @@ public class MerchantManager : MonoBehaviour
         _costCounter.text = "0";
         _costCounterInt = 0;
         BarSetup();
+        if(DayNightCicle.Instance.DayCount!=0)
+            _taxCounter.text = "Taxes to pay: " + (DayNightCicle.Instance._tax * DayNightCicle.Instance.DayCount);
+        else
+            _taxCounter.text = "Taxes to pay: " + (DayNightCicle.Instance._tax );
     }
 
     public void AddFood(int index)
