@@ -10,6 +10,7 @@ public class CustomerManger : MonoBehaviour
     [SerializeField] private float _spawnRate;
     private bool _isNightStarting;
     private float _timer;
+    [SerializeField] private Animator _animator;
 
     private void Start()
     {
@@ -64,6 +65,8 @@ public class CustomerManger : MonoBehaviour
                         customer.GetTargetPos(_customerEndPos[randomEndPos]);
                     }
                     _isEndPosFull[randomEndPos] = true;
+                    _animator.SetTrigger("NewCustomer");
+                    
                     ResetTimer();
                 }
             }
