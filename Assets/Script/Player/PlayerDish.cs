@@ -102,7 +102,9 @@ public class PlayerDish : MonoBehaviour, IDish
                 _generalID += _foodID[i];
             }
         }
-        return _generalID;
+        int temp = _generalID;
+        _generalID = 0;
+        return temp;
     }
     
 }
