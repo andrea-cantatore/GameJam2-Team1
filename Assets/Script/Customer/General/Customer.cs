@@ -17,6 +17,9 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     [SerializeField] private float _permanenceTime, _permanenceTimeChanger;
     [SerializeField] private int _baseTip;
     [SerializeField] private GameObject[] _coins;
+    [SerializeField] private GameObject _orderPopUp;
+    private Transform _orderPopUpOriginPos;
+    private int _boardIndex;
     private float _permanenceTimer;
     private int _expectedMealCounter;
     private Transform _targetPos;
@@ -29,10 +32,12 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
+        _orderPopUpOriginPos = _orderPopUp.transform;
     }
 
     private void OnEnable()
     {
+        _boardIndex = 100;
         _expectedMealCounter = _expectedMeal.Length;
         _canMove = false;
         _alreadySpoken = false;
@@ -42,6 +47,12 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         {
             obj.SetActive(true);
         }
+        EventManager.BoardIntSaver += SetBoardIndex;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.BoardIntSaver -= SetBoardIndex;
     }
 
     private void Update()
@@ -70,8 +81,9 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         }
         if (!_alreadySpoken)
         {
-            EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name, this);
             _alreadySpoken = true;
+            EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name, this);
+            EventManager.OnOrder?.Invoke(_orderPopUp);
         }
         else
         {
@@ -81,6 +93,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
                 {
                     if (obj.TryGetComponent(out IDish dish) && obj.activeSelf)
                     {
+                        Debug.Log(_playerInteractions.ActiveFood() + " " + dish.IDReturner());
                         if (_playerInteractions.ActiveFood() == dish.IDReturner())
                         {
                             obj.SetActive(false);
@@ -108,6 +121,8 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         }
         if (_expectedMealCounter <= 0)
         {
+            EventManager.BoardIntClearer?.Invoke(_boardIndex);
+            _orderPopUp.transform.position = new Vector3(0,0,0);
             int tip = _baseTip * Mathf.RoundToInt((_permanenceTime - _permanenceTimer) / 60);
             _coins[0].SetActive(true);
             _coins[1].SetActive(true);
@@ -206,5 +221,11 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         {
             _permanenceTime -= _permanenceTimeChanger;
         }
+    }
+    
+    public void SetBoardIndex(int index)
+    {
+        if(_alreadySpoken && _boardIndex == 100)
+            _boardIndex = index;
     }
 }

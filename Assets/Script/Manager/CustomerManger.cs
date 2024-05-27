@@ -40,11 +40,15 @@ public class CustomerManger : MonoBehaviour
         }
         if(_isNightStarting) 
             return;
-        _timer += Time.deltaTime;
-        if (_timer >= _spawnRate)
+        if (CheckEndPos())
         {
-            SpawnCustomer();
+            _timer += Time.deltaTime;
+            if (_timer >= _spawnRate)
+            {
+                SpawnCustomer();
+            }
         }
+            
     }
 
     /*private void SpawnCustomer()

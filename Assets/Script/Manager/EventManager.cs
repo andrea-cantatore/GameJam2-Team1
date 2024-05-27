@@ -21,6 +21,9 @@ public class EventManager : MonoBehaviour
     public static Action<bool> OnUiOpening;
     
     public static Action ResetPopUp;
+    public static Action<GameObject> OnOrder;
+    public static Action<int> BoardIntSaver;
+    public static Action<int> BoardIntClearer;
 
 }
 
