@@ -17,6 +17,8 @@ public class Mug : MonoBehaviour, IMug
                 _generalID += _childsID[i];
             }
         }
-        return _generalID;
+        int temp = _generalID;
+        _generalID = 0;
+        return temp;
     }
 }
