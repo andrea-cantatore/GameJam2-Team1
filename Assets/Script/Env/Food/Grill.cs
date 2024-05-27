@@ -14,6 +14,8 @@ public class Grill : MonoBehaviour, IInteract, IGrill
     private float _timer = 0f;
     [SerializeField] Material[] _steakMaterials, _potatoMaterials, _chickenMaterials, _fishMaterials;
 
+    [SerializeField] private Animator _animator; // ByEma
+
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
@@ -84,6 +86,7 @@ public class Grill : MonoBehaviour, IInteract, IGrill
             EventManager.OnGrillPickUp?.Invoke(0, _grillingFood.tag,
                 _grillingFood.GetComponent<MeshRenderer>().material);
         }
+        _animator.SetTrigger("Empty");
         isCooked = false;
         isOverCooked = false;
         _grillingFood.SetActive(false);
@@ -111,6 +114,7 @@ public class Grill : MonoBehaviour, IInteract, IGrill
                 else if (food.tag == "FishPick")
                     food.GetComponent<MeshRenderer>().material = _fishMaterials[1];
                 isCooked = true;
+                _animator.SetTrigger("CookedAlarm");
             }
             if (_timer >= overCookTime && !isOverCooked)
             {
@@ -123,6 +127,7 @@ public class Grill : MonoBehaviour, IInteract, IGrill
                 else if (food.tag == "FishPick")
                     food.GetComponent<MeshRenderer>().material = _fishMaterials[2];
                 isOverCooked = true;
+                _animator.SetTrigger("BurnedAlarm");
             }
             _timer += Time.deltaTime;
             yield return null;
