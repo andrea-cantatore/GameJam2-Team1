@@ -36,6 +36,10 @@ public class Cauldron : MonoBehaviour, IInteract, ICauldron
             }
             if(_timer >= _cookingTime)
             {
+                for(int i = 0; i < _isInside.Length; i++)
+                {
+                    _isInside[i] = false;
+                }
                 foreach (GameObject food in _foods)
                 {
                     food.SetActive(false);
