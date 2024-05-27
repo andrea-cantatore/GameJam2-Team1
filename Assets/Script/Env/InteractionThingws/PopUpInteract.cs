@@ -6,8 +6,17 @@ using UnityEngine;
 public class PopUpInteract : MonoBehaviour
 {
     private Vector3 _popUpStartPos;
-    private float _timer;
+
+    private void OnEnable()
+    {
+        EventManager.ResetPopUp += ResetPos;
+    }
     
+    private void OnDisable()
+    {
+        EventManager.ResetPopUp -= ResetPos;
+    }
+
     private void Awake()
     {
         _popUpStartPos = transform.position;
@@ -17,14 +26,10 @@ public class PopUpInteract : MonoBehaviour
     {
         transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
         
-        if(transform.position != _popUpStartPos)
-        {
-            _timer += Time.deltaTime;
-            if (_timer >= 0.5f)
-            {
-                transform.position = _popUpStartPos;
-                _timer = 0;
-            }
-        }
+    }
+    
+    private void ResetPos()
+    {
+        transform.position = _popUpStartPos;
     }
 }
