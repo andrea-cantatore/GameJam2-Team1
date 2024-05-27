@@ -82,10 +82,7 @@ public class DayNightCicle : MonoBehaviour
 
     private void StartDay()
     {
-        if (DayCount != 0)
-            UIManager.Instance.MoneyCounterInt -= _tax * DayCount;
-        else
-            UIManager.Instance.MoneyCounterInt -= _tax;
+        EventManager.MoneyChanger.Invoke(-(_tax * (DayCount + 1)));
         
         if(UIManager.Instance.MoneyCounterInt <= 0)
         {
