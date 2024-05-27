@@ -134,7 +134,10 @@ public class PlayerInteractions : MonoBehaviour
                         {
                             if (interactable.Interact(false))
                             {
-                                HeldObject.transform.GetChild(0).gameObject.SetActive(true);
+                                for (int i = 0; i < HeldObject.transform.childCount; i++)
+                                {
+                                    HeldObject.transform.GetChild(i).gameObject.SetActive(true);
+                                }
                             }
                             return;
                         }
