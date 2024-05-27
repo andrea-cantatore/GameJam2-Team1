@@ -47,7 +47,7 @@ public class CustomerManger : MonoBehaviour
         }
     }
 
-    private void SpawnCustomer()
+    /*private void SpawnCustomer()
     {   
         
         if (CheckEndPos())
@@ -62,16 +62,57 @@ public class CustomerManger : MonoBehaviour
                     if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
                     {
                         Debug.Log("Customer spawned");
+                        _animator.SetTrigger("NewCustomer");
                         customer.GetTargetPos(_customerEndPos[randomEndPos]);
                     }
                     _isEndPosFull[randomEndPos] = true;
-                    _animator.SetTrigger("NewCustomer");
                     
                     ResetTimer();
                 }
             }
         }
+    }*/
+
+    //ByEmaStart
+    private void SpawnCustomer()
+{
+    if (!CheckEndPos())
+        return;
+
+    while (_timer >= _spawnRate)
+    {
+        bool customerSpawned = false;
+
+        for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
+        {
+            int randomIndex = Random.Range(0, _customers.Length);
+            int randomEndPos = Random.Range(0, _customerEndPos.Length);
+
+            if (!_isEndPosFull[randomEndPos] && !_customers[randomIndex].activeSelf)
+            {
+                _customers[randomIndex].SetActive(true);
+                if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
+                {
+                    Debug.Log("Customer spawned");
+                    _animator.SetTrigger("NewCustomer");
+                    customer.GetTargetPos(_customerEndPos[randomEndPos]);
+                }
+                _isEndPosFull[randomEndPos] = true;
+                customerSpawned = true;
+                break;
+            }
+        }
+
+        if (!customerSpawned)
+        {
+            Debug.LogWarning("No available customers to spawn");
+            break;
+        }
+
+        ResetTimer();
     }
+}
+    //ByEmaEnd
     
     private void IsNight(bool isNight)
     {
