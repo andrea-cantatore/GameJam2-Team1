@@ -334,7 +334,9 @@ public class PlayerInteractions : MonoBehaviour
                     }
                 }
             }
+            return;
         }
+        EventManager.ResetPopUp?.Invoke();
     }
 
     private void GrillInteraction(GameObject obj)
