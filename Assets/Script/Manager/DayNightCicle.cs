@@ -48,6 +48,8 @@ public class DayNightCicle : MonoBehaviour
             }
             else
             {
+                float rotationAngle = Mathf.Lerp(0, 360, _timer / _dayDuration);
+                globalLight.transform.rotation = Quaternion.Euler(rotationAngle, 0, 0);
                 _timer += Time.deltaTime;
             }
         }
@@ -55,15 +57,15 @@ public class DayNightCicle : MonoBehaviour
 
     private void StartNight()
     {
-        StartCoroutine(LerpSkyboxes(skyboxDay, skyboxNight, 10f));
-        StartCoroutine(LerpLight(graddientNight, 10f));
+        StartCoroutine(LerpSkyboxes(skyboxDay, skyboxNight, _nightDuration));
+        StartCoroutine(LerpLight(graddientNight, _nightDuration));
         _isStarted = true;
     }
 
     private void StartDay()
     {
-        StartCoroutine(LerpSkyboxes(skyboxNight, skyboxDay, 20f));
-        StartCoroutine(LerpLight(graddientDay, 20f));
+        StartCoroutine(LerpSkyboxes(skyboxNight, skyboxDay, _dayDuration));
+        StartCoroutine(LerpLight(graddientDay, _dayDuration));
         _isDay = true;
         _isStarted = true;
         _timer = 0;
