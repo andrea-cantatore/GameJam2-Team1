@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Kira
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Kira
+  <Text>k__BackingField: That way, if there are any mimics in your barrels you will
+    just kill them!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Good idea! How about some beef strips?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 35b7f08c921319141836e87e0dcd50b7, type: 2}
+  - <Text>k__BackingField: There are no mimics in my kitchen!
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 3143edf4a2e82fd4dbc700d77d9832e9, type: 2}
+  - <Text>k__BackingField: You'd eat mimic meat?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 542ca1bee00b7254683757ba35424860, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
