@@ -24,7 +24,7 @@ public class door : MonoBehaviour
         if(other.transform.TryGetComponent(out ICustomer customer))
         {
             _doorAnimator.SetBool("IsOpen", false);
-            wait();
+            StartCoroutine(wait());
         }
     }
     private IEnumerator wait()
