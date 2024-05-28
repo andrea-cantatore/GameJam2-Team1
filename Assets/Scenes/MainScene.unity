@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.49170774, g: 0.43660754, b: 0.32034513, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.5686564, g: 0.4994651, b: 0.34382334, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3735,6 +3735,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8525653234612291173, guid: 67658d3d66ea93546890948321dbfe36, type: 3}
+      propertyPath: _baseTip
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525653234612291173, guid: 67658d3d66ea93546890948321dbfe36, type: 3}
+      propertyPath: _payment
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525653234612291173, guid: 67658d3d66ea93546890948321dbfe36, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 1074227399}
@@ -3742,6 +3750,10 @@ PrefabInstance:
       propertyPath: _coins.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8525653234612291173, guid: 67658d3d66ea93546890948321dbfe36, type: 3}
+      propertyPath: _dialogueContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: dd90cdee53ccd414ebbe3c7a1503d6d1, type: 2}
     - target: {fileID: 8525653234612291173, guid: 67658d3d66ea93546890948321dbfe36, type: 3}
       propertyPath: _playerInteractions
       value: 
@@ -4294,9 +4306,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8525653234612291173, guid: 705a987fe7029b843929a6e2f8157df2, type: 3}
+      propertyPath: _baseTip
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525653234612291173, guid: 705a987fe7029b843929a6e2f8157df2, type: 3}
+      propertyPath: _payment
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525653234612291173, guid: 705a987fe7029b843929a6e2f8157df2, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 289390814}
+    - target: {fileID: 8525653234612291173, guid: 705a987fe7029b843929a6e2f8157df2, type: 3}
+      propertyPath: _permanenceTime
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8525653234612291173, guid: 705a987fe7029b843929a6e2f8157df2, type: 3}
       propertyPath: _playerInteractions
       value: 
@@ -8769,6 +8793,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 562052202945112495, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _baseTip
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 562052202945112495, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 562052202945112495, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 233089693}
@@ -8796,6 +8828,10 @@ PrefabInstance:
       propertyPath: _audioData
       value: 
       objectReference: {fileID: 11400000, guid: d6b21e16156d84b4d82a2414e8a58bd6, type: 2}
+    - target: {fileID: 1532281368878297074, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1532281368878297074, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
@@ -8841,9 +8877,25 @@ PrefabInstance:
       value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 2857796647929065890, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _baseTip
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2857796647929065890, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2857796647929065890, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 430778391}
+    - target: {fileID: 2857796647929065890, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _permanenceTime
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 2857796647929065890, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _dialogueContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 68c20d34641694d499217beb2793324b, type: 2}
     - target: {fileID: 2857796647929065890, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _playerInteractions
       value: 
@@ -8965,6 +9017,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1591960402}
     - target: {fileID: 3424651327594617427, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _dialogueContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: cf94e1758931b80498df5f12a69ed901, type: 2}
+    - target: {fileID: 3424651327594617427, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _playerInteractions
       value: 
       objectReference: {fileID: 1842561249}
@@ -9001,6 +9057,10 @@ PrefabInstance:
       value: 1.4199998
       objectReference: {fileID: 0}
     - target: {fileID: 3986501939466711737, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986501939466711737, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 73506118}
@@ -9017,9 +9077,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4594630453601097582, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594630453601097582, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 1597864075}
+    - target: {fileID: 4594630453601097582, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _dialogueContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 8358dabdeeeb03e48a2b2ecfb4f57b2f, type: 2}
     - target: {fileID: 4594630453601097582, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _playerInteractions
       value: 
@@ -9077,6 +9145,10 @@ PrefabInstance:
       value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6436948472735207223, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436948472735207223, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 2134595976}
@@ -9099,6 +9171,10 @@ PrefabInstance:
     - target: {fileID: 6779317978872074018, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937161887867022963, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6937161887867022963, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
@@ -9185,9 +9261,21 @@ PrefabInstance:
       value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 8497817290154345556, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _baseTip
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497817290154345556, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _payment
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497817290154345556, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _orderPopUp
       value: 
       objectReference: {fileID: 2043665229}
+    - target: {fileID: 8497817290154345556, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
+      propertyPath: _dialogueContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: f007551ac123e5c4698d90529e1a8136, type: 2}
     - target: {fileID: 8497817290154345556, guid: 3ee5d7d40474c914f94b6433ec6c0af5, type: 3}
       propertyPath: _playerInteractions
       value: 
