@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text _choice1Text, _choice2Text, _choice3Text;
     [SerializeField] private TMP_Text _dialogueText;
     [SerializeField] private TMP_Text _customerName;
+    [SerializeField] private AudioData _audioData;
     private DSDialogueContainerSO _currentDialogue;
     private DSDialogueSO _currentDialogueSO;
     private DSDialogueSO _nextDialogueSO1, _nextDialogueSO2, _nextDialogueSO3;
@@ -76,9 +77,8 @@ public class DialogueManager : MonoBehaviour
             _nextDialogueSO3 = _currentDialogueSO.Choices[2].NextDialogue;
             RandomChoicesPos();
         }
-        
-        Debug.Log("_currentDialogueSO: " + _currentDialogueSO.name);
-        Debug.Log("Choices: " + string.Join(", ", _currentDialogueSO.Choices));
+        int index = Random.Range(0, _audioData.CustomerTalk.Length - 1);
+        AudioManager.instance.PlaySFX(_audioData.CustomerTalk[index], transform);
         
     }
 
