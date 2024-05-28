@@ -36,12 +36,12 @@ MonoBehaviour:
     <Text>k__BackingField: I've been all the way to the Shire and back. What's your
       best meal here?
     <Choices>k__BackingField:
-    - <Text>k__BackingField: We have a roast that even Gimli would love.
+    - <Text>k__BackingField: We have a fish stew that even Gloin would love.
       <NodeID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
     - <Text>k__BackingField: Our stew is as hearty as the ones made in Rivendell.
         Would you like to order?
       <NodeID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
-    - <Text>k__BackingField: Just some regular meals, nothing special.
+    - <Text>k__BackingField: Just some regular stew, nothing special.
       <NodeID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
@@ -60,39 +60,9 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 1499, y: 2502}
-  - <ID>k__BackingField: e3398a32-b2f6-4ac0-bf22-5c2363b041b7
-    <Name>k__BackingField: C1
-    <Text>k__BackingField: Straight to the point, I see. What kind of meat do you
-      have?
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: We've got a fine roast that Gimli himself would enjoy.
-      <NodeID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
-    - <Text>k__BackingField: How about our famous stew instead? Would you like to
-        order?
-      <NodeID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
-    - <Text>k__BackingField: Just some regular meat. Want it or not?
-      <NodeID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 1499, y: 3000}
-  - <ID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
-    <Name>k__BackingField: A2
-    <Text>k__BackingField: A roast fit for Gimli, eh? Sounds good. Serve it up with
-      ale.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Coming right up! You'll love our roast and ale.
-      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
-    - <Text>k__BackingField: I'll get that started. Anything else you'd like to know
-        about the tales?
-      <NodeID>k__BackingField: 65079f29-f8b3-4281-a5a7-5fbeb8b8f5bd
-    - <Text>k__BackingField: Fine, but don't expect anything fancy.
-      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 2388, y: 1501}
   - <ID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
     <Name>k__BackingField: A3
-    <Text>k__BackingField: Regular meals, you say? Better be good.
+    <Text>k__BackingField: Regular stew, you say? Better be good.
     <Choices>k__BackingField:
     - <Text>k__BackingField: It'll be good, trust me. One regular meal and ale coming
         up.
@@ -109,7 +79,7 @@ MonoBehaviour:
     <Name>k__BackingField: C2
     <Text>k__BackingField: Just stew, huh? Better be hearty.
     <Choices>k__BackingField:
-    - <Text>k__BackingField: It is, trust me. One stew and ale coming up.
+    - <Text>k__BackingField: It is, trust me. One fish stew and ale coming up.
       <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
     - <Text>k__BackingField: I'll get that started for you. Any tales from your travels
         you'd like to share?
@@ -143,16 +113,16 @@ MonoBehaviour:
     - <Text>k__BackingField: "I\u2019ve never been to such places, but your stories
         must be fascinating. Your meal is on its way."
       <NodeID>k__BackingField: 63630a31-86d1-4aa3-8228-710ac554babb
-    - <Text>k__BackingField: "Paths of the dead? Sounds like nonsense. Here\u2019s
-        your food."
+    - <Text>k__BackingField: Paths of the dead? Sounds like nonsense. I'll just make
+        your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 3280, y: 2001}
   - <ID>k__BackingField: 65079f29-f8b3-4281-a5a7-5fbeb8b8f5bd
     <Name>k__BackingField: F1
-    <Text>k__BackingField: Nothing else for now. Just the roast and ale. Tell me,
-      have you ever seen a dragon?
+    <Text>k__BackingField: Nothing else for now. Just the fish stew and red ale.
+      Tell me, have you ever seen a dragon?
     <Choices>k__BackingField:
     - <Text>k__BackingField: No dragons, but I've heard many tales. Let me get your
         meal.
@@ -160,7 +130,7 @@ MonoBehaviour:
     - <Text>k__BackingField: No dragons, but I've seen my fair share of trouble.
         Let me get that roast for you.
       <NodeID>k__BackingField: 327f1e56-91d1-47e3-b115-997cb48bc223
-    - <Text>k__BackingField: Dragons? You're dreaming. Here's your food.
+    - <Text>k__BackingField: Dragons? You're dreaming. I'll just make your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
@@ -174,7 +144,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
     - <Text>k__BackingField: I've heard the stories. Let me get that stew for you.
       <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
-    - <Text>k__BackingField: Balrog? Just stories. Here's your food.
+    - <Text>k__BackingField: Balrog? Just stories. I'll just make your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
@@ -188,16 +158,16 @@ MonoBehaviour:
       <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
     - <Text>k__BackingField: Mirkwood sounds terrifying. Your meal is on its way.
       <NodeID>k__BackingField: 63630a31-86d1-4aa3-8228-710ac554babb
-    - <Text>k__BackingField: "Giant spiders? Sounds like nonsense. Here\u2019s your
-        food."
+    - <Text>k__BackingField: Giant spiders? Sounds like nonsense. I'll just make
+        your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 3280, y: 3000}
   - <ID>k__BackingField: 9c135480-f049-4593-9778-a3866aa2c71d
     <Name>k__BackingField: F5
-    <Text>k__BackingField: Nothing else for now. Just the stew and ale. Do you know
-      the tale of the Ents in Fangorn?
+    <Text>k__BackingField: Nothing else for now. Just the fish stew and a red ale.
+      Do you know the tale of the Ents in Fangorn?
     <Choices>k__BackingField:
     - <Text>k__BackingField: Yes, the walking trees. Fascinating! Your meal will
         be right up.
@@ -205,8 +175,8 @@ MonoBehaviour:
     - <Text>k__BackingField: "I\u2019ve heard the stories. Let me get that stew for
         you."
       <NodeID>k__BackingField: 4c502c9c-0605-4db7-9d26-d3bcf539eacd
-    - <Text>k__BackingField: "Walking trees? Sounds like nonsense. Here\u2019s your
-        food."
+    - <Text>k__BackingField: Walking trees? Sounds like nonsense. I'll just make
+        your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
@@ -221,7 +191,7 @@ MonoBehaviour:
       <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
     - <Text>k__BackingField: I can't imagine. Let me get your meal.
       <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
-    - <Text>k__BackingField: Smaug? Just another tale. Here's your food.
+    - <Text>k__BackingField: Smaug? Just another tale. I'll just make your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
@@ -237,7 +207,7 @@ MonoBehaviour:
     - <Text>k__BackingField: "I\u2019ve heard tales of elves, but never met one.
         Let me get your food."
       <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
-    - <Text>k__BackingField: Elves? Just myths. Here's your food.
+    - <Text>k__BackingField: Elves? Just myths. I'll just make your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
@@ -252,14 +222,57 @@ MonoBehaviour:
     - <Text>k__BackingField: Hard to say, but the tales are fascinating. Let me get
         your stew.
       <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
-    - <Text>k__BackingField: Belief is one thing, reality another. Here's your food.
+    - <Text>k__BackingField: Belief is one thing, reality another. I'll just make
+        your meal.
       <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 4169, y: 3501}
+  - <ID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    <Name>k__BackingField: Happy
+    <Text>k__BackingField: thank you very much, I will wait here for my fish stew
+      with red ale; your hospitality could match that of Tom Bombadil!
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5499, y: 2111}
+  - <ID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
+    <Name>k__BackingField: A2
+    <Text>k__BackingField: A stew fit for Gloin, eh? Sounds good. Serve it up with
+      red ale.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Coming right up! You'll love our roast and ale.
+      <NodeID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
+    - <Text>k__BackingField: I'll get that started. Anything else you'd like to know
+        about the tales?
+      <NodeID>k__BackingField: 65079f29-f8b3-4281-a5a7-5fbeb8b8f5bd
+    - <Text>k__BackingField: Fine, but don't expect anything fancy.
+      <NodeID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 2388, y: 1501}
+  - <ID>k__BackingField: e3398a32-b2f6-4ac0-bf22-5c2363b041b7
+    <Name>k__BackingField: C1
+    <Text>k__BackingField: Straight to the point, I see. What kind of stew do you
+      have?
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: We've got a fine fish stew that Gloin himself would
+        enjoy.
+      <NodeID>k__BackingField: 19543709-6a22-4bf1-99f2-fbbdaf9fe841
+    - <Text>k__BackingField: How about our famous stew instead? Would you like to
+        order?
+      <NodeID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
+    - <Text>k__BackingField: Just some regular stew. Want it or not?
+      <NodeID>k__BackingField: 42fe64c8-43f9-496c-9f36-19d3b96f638c
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: 1499, y: 3000}
   - <ID>k__BackingField: 4b4076bf-f942-4114-918e-524eaaaf8d2e
     <Name>k__BackingField: B2
-    <Text>k__BackingField: No need for fancy talk. Just get me the stew and ale.
+    <Text>k__BackingField: No need for fancy talk. Just get me the fish stew and
+      a red ale.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Right away! One stew and ale coming up.
       <NodeID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
@@ -271,18 +284,10 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 2388, y: 2502}
-  - <ID>k__BackingField: 2e19f79d-8b9d-44f3-9464-1ff182eee5b4
-    <Name>k__BackingField: Happy
-    <Text>k__BackingField: The customer enjoys the meal and praises the inn.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5499, y: 2111}
   - <ID>k__BackingField: b2394bbf-84f6-437d-943f-3e7e7dc443b5
     <Name>k__BackingField: Neutral
-    <Text>k__BackingField: The customer is satisfied but doesn't show much emotion.
+    <Text>k__BackingField: I will wait here for my fish stew with red ale, but hurry,
+      I have to set off again in search of new hidden riches!
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -291,7 +296,8 @@ MonoBehaviour:
     <Position>k__BackingField: {x: 5499, y: 2528}
   - <ID>k__BackingField: 58fa4acc-d3f1-4914-950a-ae3b88407db0
     <Name>k__BackingField: Angry
-    <Text>k__BackingField: The customer grumbles and shows displeasure.
+    <Text>k__BackingField: Your hospitality could easily be surpassed even by the
+      balrog! just give me my fish stew with red ale, and hurry!
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -303,8 +309,6 @@ MonoBehaviour:
   - LordOfTheRing
   - A1
   - B1
-  - C1
-  - A2
   - A3
   - C2
   - D1
@@ -316,8 +320,10 @@ MonoBehaviour:
   - G1
   - G2
   - G3
-  - B2
   - Happy
+  - A2
+  - C1
+  - B2
   - Neutral
   - Angry
   <OldGroupedNodeNames>k__BackingField:
