@@ -1,38 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+using System.Collections;
 
-public class LoaderCallback : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    private bool _isFirstUpdate = true;
-    private float _timer;
-    private AsyncOperation _asyncLoad;
+    private float timer = 0f;
+    private float timeToLoad = 1f;
 
-    [SerializeField] private float _loadingScreenDuration = 3.0f;
-
-    private void Start()
+    public void LoadScene(int SceneIndex)
     {
-        _asyncLoad = SceneManager.LoadSceneAsync(2);
-        _asyncLoad.allowSceneActivation = false;
+        StartCoroutine(LoadSceneASync(SceneIndex));
     }
-
-    private void Update()
+    
+    private IEnumerator LoadSceneASync(int SceneIndex)
     {
-        if (_isFirstUpdate)
+        if(timer < timeToLoad)
         {
-            _isFirstUpdate = false;
-            _timer = _loadingScreenDuration;
+            timer += Time.deltaTime;
+            yield return null;
         }
-
-        if (_timer > 0)
+        timer = 0f;
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneIndex);
+        Debug.Log(operation.progress);
+        while (!operation.isDone)
         {
-            _timer -= Time.deltaTime;
-            if (_timer <= 0)
-            {
-                _asyncLoad.allowSceneActivation = true;
-            }
+            yield return null;
         }
     }
 }
