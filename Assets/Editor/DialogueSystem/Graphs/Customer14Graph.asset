@@ -418,18 +418,10 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 6048, y: 1997}
-  - <ID>k__BackingField: fe81f57a-3f55-4e9a-867c-fa3368297b68
-    <Name>k__BackingField: Neutral2
-    <Text>k__BackingField: The customer orders food and leaves without much fuss.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 7249, y: 248}
   - <ID>k__BackingField: ae545008-1ed4-48fd-932f-f172e3c736e8
     <Name>k__BackingField: Happy1
-    <Text>k__BackingField: The customer leaves with a smile, feeling understood.
+    <Text>k__BackingField: You understand me, innkeeper. I'll have the Chicken with
+      Assorted Side Dishes and an amber ale to celebrate our chat.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -438,26 +430,18 @@ MonoBehaviour:
     <Position>k__BackingField: {x: 7249, y: 748}
   - <ID>k__BackingField: 0fa17cf3-af75-4792-b8e9-18b40af26e7a
     <Name>k__BackingField: Neutral1
-    <Text>k__BackingField: The customer orders food and is satisfied with the service.
+    <Text>k__BackingField: I'll just have the Chicken with Assorted Side Dishes and
+      an amber ale. Thank you.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 7249, y: -2}
-  - <ID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
-    <Name>k__BackingField: Angry
-    <Text>k__BackingField: The customer gets upset and leaves in a huff.
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 7249, y: 498}
   - <ID>k__BackingField: ff5e8230-d081-4bcb-b9db-baabcb3091fe
     <Name>k__BackingField: Happy2
-    <Text>k__BackingField: The customer feels listened to and appreciated, leaving
-      content.
+    <Text>k__BackingField: You've been a great listener. I'll have the Chicken with
+      Assorted Side Dishes and an amber ale, please.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -466,12 +450,8 @@ MonoBehaviour:
     <Position>k__BackingField: {x: 7249, y: 998}
   - <ID>k__BackingField: d165d93a-dde6-4f62-8381-baaf6a72d67b
     <Name>k__BackingField: Happy3
-    <Text>k__BackingField: 'The customer shares their dreams and philosophies, leaving
-      happy.
-
-      
-
-'
+    <Text>k__BackingField: This has been enlightening! I'll take the Chicken with
+      Assorted Side Dishes and an amber ale to toast our conversation.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -533,6 +513,26 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 1877, y: 998}
+  - <ID>k__BackingField: fe81f57a-3f55-4e9a-867c-fa3368297b68
+    <Name>k__BackingField: Neutral2
+    <Text>k__BackingField: I'll take the Chicken with Assorted Side Dishes and an
+      amber ale. Nothing more.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 248}
+  - <ID>k__BackingField: f3b05fee-3636-4cd7-a214-281248d396dd
+    <Name>k__BackingField: Angry
+    <Text>k__BackingField: Fine! Just give me the Chicken with Assorted Side Dishes
+      and an amber ale. I'm done talking.
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 7249, y: 498}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - TheMadMan
@@ -562,15 +562,15 @@ MonoBehaviour:
   - L3
   - M1
   - M2
-  - Neutral2
   - Happy1
   - Neutral1
-  - Angry
   - Happy2
   - Happy3
   - I1
   - K1
   - B2
   - C3
+  - Neutral2
+  - Angry
   <OldGroupedNodeNames>k__BackingField:
     list: []
