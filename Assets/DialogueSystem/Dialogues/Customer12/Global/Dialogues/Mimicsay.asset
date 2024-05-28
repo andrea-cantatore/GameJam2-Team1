@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
+  m_Name: Mimicsay
+  m_EditorClassIdentifier: 
+  <DialogueName>k__BackingField: Mimicsay
+  <Text>k__BackingField: That's what a MIMIC would say!
+  <Choices>k__BackingField:
+  - <Text>k__BackingField: Huh?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9306a1a793a64c7499a7303c81be2069, type: 2}
+  - <Text>k__BackingField: I'm a what now?
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 9306a1a793a64c7499a7303c81be2069, type: 2}
+  - <Text>k__BackingField: I know. *Wink at him*
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 8d81e0c9a8549a34d9754bd91e6c5e52, type: 2}
+  <DialogueType>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0

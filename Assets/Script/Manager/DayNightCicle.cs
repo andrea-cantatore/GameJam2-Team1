@@ -14,14 +14,12 @@ public class DayNightCicle : MonoBehaviour
     [SerializeField] private Gradient graddientDay;
     [SerializeField] private Gradient graddientNight;
     public int _tax;
-    [SerializeField] private Animator _doorAnimator;
     
     [SerializeField] private Light globalLight;
     private float _timer;
     private bool _isDay = true, _isStarted = true;
     
     [SerializeField] private AudioData _audioData;
-    private AudioClip _openDoorSound, _closeDoorSound;
     
     
     public static DayNightCicle Instance;
@@ -33,14 +31,7 @@ public class DayNightCicle : MonoBehaviour
             Instance = this;
         }
     }
-
-    private void Start()
-    {
-        _closeDoorSound = _audioData.DoorClose;
-        _openDoorSound = _audioData.DoorOpen;
-        AudioManager.instance.PlaySFX(_openDoorSound, transform);
-        _doorAnimator.SetTrigger("Open");
-    }
+    
 
     private void OnEnable()
     {
@@ -81,7 +72,6 @@ public class DayNightCicle : MonoBehaviour
 
     private void StartNight()
     {
-        _doorAnimator.SetTrigger("Close");
         if (DayCount == 2)
         {
             EventManager.OnWin?.Invoke();
@@ -94,8 +84,6 @@ public class DayNightCicle : MonoBehaviour
 
     private void StartDay()
     {
-        AudioManager.instance.PlaySFX(_openDoorSound, transform);
-        _doorAnimator.SetTrigger("Open");
         EventManager.MoneyChanger.Invoke(-(_tax * (DayCount + 1)));
         
         if(UIManager.Instance.MoneyCounterInt <= 0)
