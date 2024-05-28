@@ -84,7 +84,6 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
         {
             _alreadySpoken = true;
             EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name, this);
-            EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name, this);
             EventManager.OnOrder?.Invoke(_orderPopUp);
             return false;
         }
