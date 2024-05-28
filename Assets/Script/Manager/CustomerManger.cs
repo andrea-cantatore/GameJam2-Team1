@@ -15,6 +15,10 @@ public class CustomerManger : MonoBehaviour
     [SerializeField] private AudioData _audioData;
 
 
+    private void Awake()
+    {
+        _timer = _spawnRate;
+    }
     private void OnEnable()
     {
         EventManager.OnCustomerLeave += CustomerLeave;
