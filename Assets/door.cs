@@ -13,8 +13,8 @@ public class door : MonoBehaviour
     {
         if(other.transform.TryGetComponent(out ICustomer customer))
         {
+            AudioManager.instance.PlaySFX(_audioData.DoorOpen, transform);
             _doorAnimator.SetBool("IsOpen", true);
-            wait();
         }
         
     }
@@ -23,13 +23,10 @@ public class door : MonoBehaviour
     {
         if(other.transform.TryGetComponent(out ICustomer customer))
         {
+            AudioManager.instance.PlaySFX(_audioData.DoorClose, transform);
             _doorAnimator.SetBool("IsOpen", false);
-            StartCoroutine(wait());
         }
     }
-    private IEnumerator wait()
-    {
-        yield return new WaitForSeconds(0.5f);
-        AudioManager.instance.PlaySFX(_audioData.DoorClose, transform);
-    }
+    
+    
 }
