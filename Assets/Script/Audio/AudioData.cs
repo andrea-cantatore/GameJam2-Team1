@@ -13,7 +13,7 @@ public class AudioData : ScriptableObject
     public AudioClip DoorClose; // Door Close Sound (Evening)
     public AudioClip Rooster; // Announces Day Starting
     public AudioClip Voices; // Customer Voices (3+ customers at the Conter)
-    public AudioClip CustomerTalk; // Customer Talk Sound (Requires slower customer text generation)
+    public AudioClip[] CustomerTalk; // Customer Talk Sound (Requires slower customer text generation)
     public AudioClip CoinsCollection; // Collect Coins From Conter
 
     [Header("Event Sounds")] 
