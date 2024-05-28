@@ -17,6 +17,9 @@ public class PlayerInteractions : MonoBehaviour
 
     [SerializeField] private GameObject[] _beerFoam;
     [SerializeField] private GameObject _beer;
+    
+    [SerializeField] private AudioData _audioData;
+    private AudioClip _coinSound;
 
 
     private void Awake()
@@ -115,11 +118,12 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         EventManager.MoneyChanger?.Invoke(coin.ReturnCoins());
                         hit.transform.gameObject.SetActive(false);
+                        AudioManager.instance.PlaySFX(_audioData.CoinsCollection, transform);
                         return;
                     }
                     if (hit.transform.TryGetComponent(out ICustomer customer))
                     {
-                        if (!interactable.Interact(false))
+                        if (interactable.Interact(false))
                         {
                             HeldObject.SetActive(false);
                             HeldObject = null;

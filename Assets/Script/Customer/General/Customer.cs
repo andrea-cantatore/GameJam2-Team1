@@ -74,6 +74,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
 
     public bool Interact(bool isToAdd)
     {
+        bool something = false;
         if (_expectedMealCounter <= 0)
         {
             MoveBack();
@@ -84,13 +85,18 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             _alreadySpoken = true;
             EventManager.OnStartingDialogue?.Invoke(_dialogueContainer, gameObject.name, this);
             EventManager.OnOrder?.Invoke(_orderPopUp);
+            return false;
         }
         else
         {
+            
             foreach (GameObject obj in _expectedMeal)
             {
+                if (!obj.activeSelf)
+                    continue;
                 if (_playerInteractions.HeldObject.tag == obj.tag)
                 {
+                    Debug.Log("checking " + obj.tag + " " + _playerInteractions.HeldObject.tag);
                     if (obj.TryGetComponent(out IDish dish) && obj.activeSelf)
                     {
                         Debug.Log(_playerInteractions.ActiveFood() + " " + dish.IDReturner());
@@ -98,23 +104,31 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
                         {
                             obj.SetActive(false);
                             _expectedMealCounter--;
+                            something = true;
+                            break;
                         }
                     }
-                    if (obj.TryGetComponent(out IMug mug))
+                    else if (obj.TryGetComponent(out IMug mug))
                     {
-                        if(_playerInteractions.ActiveMug() == mug.IDReturner())
+                        Debug.Log(_playerInteractions.ActiveFood() + " " + mug.IDReturner());
+                        if (_playerInteractions.ActiveFood() == mug.IDReturner())
                         {
                             obj.SetActive(false);
                             _expectedMealCounter--;
+                            something = true;
+                            break;
                         }
                     }
-                    if (obj.TryGetComponent(out IBowl bowl))
+                    else if (obj.TryGetComponent(out IBowl bowl))
                     {
-                       if(_playerInteractions.ActiveBowl() == bowl.IDReturner())
-                       {
-                           obj.SetActive(false);
-                           _expectedMealCounter--;
-                       }
+                        Debug.Log(_playerInteractions.ActiveFood() + " " + bowl.IDReturner());
+                        if (_playerInteractions.ActiveBowl() == bowl.IDReturner())
+                        {
+                            obj.SetActive(false);
+                            _expectedMealCounter--;
+                            something = true;
+                            break;
+                        }
                     }
                 }
             }
@@ -132,9 +146,9 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             {
                 coin1.AddCoins(tip);
             }
-            return false;
+            return true;
         }
-        return true;
+        return something;
     }
 
     public void InteractionPopUp()
@@ -200,7 +214,7 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             if (_pathIndex == 0)
             {
                 EventManager.BoardIntClearer?.Invoke(_boardIndex);
-                _orderPopUp.transform.position = new Vector3(0,0,0);
+                _orderPopUp.transform.position = new Vector3(0, 0, 0);
                 EventManager.OnCustomerLeave?.Invoke(_targetPos);
                 gameObject.SetActive(false);
             }
@@ -222,10 +236,10 @@ public class Customer : MonoBehaviour, IInteract, ICustomer
             _permanenceTime -= _permanenceTimeChanger;
         }
     }
-    
+
     public void SetBoardIndex(int index)
     {
-        if(_alreadySpoken && _boardIndex == 100)
+        if (_alreadySpoken && _boardIndex == 100)
             _boardIndex = index;
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,24 +12,21 @@ public class CustomerManger : MonoBehaviour
     private bool _isNightStarting;
     private float _timer;
     [SerializeField] private Animator _animator;
+    [SerializeField] private AudioData _audioData;
 
-    private void Start()
-    {
-        SpawnCustomer();
-    }
 
     private void OnEnable()
     {
         EventManager.OnCustomerLeave += CustomerLeave;
         EventManager.IsNight += IsNight;
     }
-    
+
     private void OnDisable()
     {
         EventManager.OnCustomerLeave -= CustomerLeave;
         EventManager.IsNight -= IsNight;
     }
-    
+
     private void Update()
     {
         if (_isNightStarting)
@@ -38,7 +36,7 @@ public class CustomerManger : MonoBehaviour
                 EventManager.StartNextNight?.Invoke();
             }
         }
-        if(_isNightStarting) 
+        if (_isNightStarting)
             return;
         if (CheckEndPos())
         {
@@ -48,12 +46,11 @@ public class CustomerManger : MonoBehaviour
                 SpawnCustomer();
             }
         }
-            
     }
 
     /*private void SpawnCustomer()
-    {   
-        
+    {
+
         if (CheckEndPos())
         {
             while (_timer >= _spawnRate)
@@ -70,7 +67,7 @@ public class CustomerManger : MonoBehaviour
                         customer.GetTargetPos(_customerEndPos[randomEndPos]);
                     }
                     _isEndPosFull[randomEndPos] = true;
-                    
+
                     ResetTimer();
                 }
             }
@@ -79,13 +76,12 @@ public class CustomerManger : MonoBehaviour
 
     //ByEmaStart
     private void SpawnCustomer()
-{
-    if (!CheckEndPos())
-        return;
-
-    while (_timer >= _spawnRate)
     {
+        if (_timer < _spawnRate || !CheckEndPos())
+            return;
+
         bool customerSpawned = false;
+
         if (DayNightCicle.Instance.DayCount == 0)
         {
             for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
@@ -98,7 +94,7 @@ public class CustomerManger : MonoBehaviour
                     _customers[randomIndex].SetActive(true);
                     if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
                     {
-                        Debug.Log("Customer spawned");
+                        AudioManager.instance.PlaySFX(_audioData.BellRing, transform);
                         _animator.SetTrigger("NewCustomer");
                         customer.GetTargetPos(_customerEndPos[randomEndPos]);
                     }
@@ -120,7 +116,7 @@ public class CustomerManger : MonoBehaviour
                     _customers[randomIndex].SetActive(true);
                     if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
                     {
-                        Debug.Log("Customer spawned");
+                        AudioManager.instance.PlaySFX(_audioData.BellRing, transform);
                         _animator.SetTrigger("NewCustomer");
                         customer.GetTargetPos(_customerEndPos[randomEndPos]);
                     }
@@ -130,38 +126,38 @@ public class CustomerManger : MonoBehaviour
                 }
             }
         }
-        for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
+        if (DayNightCicle.Instance.DayCount == 3)
         {
-            int randomIndex = Random.Range(0, _customers.Length);
-            int randomEndPos = Random.Range(0, _customerEndPos.Length);
-
-            if (!_isEndPosFull[randomEndPos] && !_customers[randomIndex].activeSelf)
+            for (int attempt = 0; attempt < _customers.Length * _customerEndPos.Length; attempt++)
             {
-                _customers[randomIndex].SetActive(true);
-                if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
+                int randomIndex = Random.Range(0, _customers.Length);
+                int randomEndPos = Random.Range(0, _customerEndPos.Length);
+
+                if (!_isEndPosFull[randomEndPos] && !_customers[randomIndex].activeSelf)
                 {
-                    Debug.Log("Customer spawned");
-                    _animator.SetTrigger("NewCustomer");
-                    customer.GetTargetPos(_customerEndPos[randomEndPos]);
+                    _customers[randomIndex].SetActive(true);
+                    if (_customers[randomIndex].TryGetComponent(out ICustomer customer))
+                    {
+                        AudioManager.instance.PlaySFX(_audioData.BellRing, transform);
+                        _animator.SetTrigger("NewCustomer");
+                        customer.GetTargetPos(_customerEndPos[randomEndPos]);
+                    }
+                    _isEndPosFull[randomEndPos] = true;
+                    customerSpawned = true;
+                    break;
                 }
-                _isEndPosFull[randomEndPos] = true;
-                customerSpawned = true;
-                break;
             }
         }
-        
 
-        if (!customerSpawned)
+
+        if(customerSpawned)
         {
-            Debug.LogWarning("No available customers to spawn");
-            break;
+            ResetTimer();
         }
 
-        ResetTimer();
     }
-}
     //ByEmaEnd
-    
+
     private void IsNight(bool isNight)
     {
         _isNightStarting = isNight;
@@ -175,9 +171,9 @@ public class CustomerManger : MonoBehaviour
 
     private bool CheckEndPos()
     {
-        if(DayNightCicle.Instance.DayCount == 0)
+        if (DayNightCicle.Instance.DayCount == 0)
         {
-            for (int i = 0; i < _isEndPosFull.Length-2; i++)
+            for (int i = 0; i < _isEndPosFull.Length - 2; i++)
             {
                 if (!_isEndPosFull[i])
                 {
@@ -188,7 +184,7 @@ public class CustomerManger : MonoBehaviour
         }
         if (DayNightCicle.Instance.DayCount == 1)
         {
-            for (int i = 0; i < _isEndPosFull.Length-1; i++)
+            for (int i = 0; i < _isEndPosFull.Length - 1; i++)
             {
                 if (!_isEndPosFull[i])
                 {
@@ -197,7 +193,7 @@ public class CustomerManger : MonoBehaviour
             }
             return false;
         }
-        for (int i = 0; i < _isEndPosFull.Length-1; i++)
+        for (int i = 0; i < _isEndPosFull.Length - 1; i++)
         {
             if (!_isEndPosFull[i])
             {
@@ -206,7 +202,7 @@ public class CustomerManger : MonoBehaviour
         }
         return false;
     }
-    
+
     private bool CheckAllEndPos()
     {
         for (int i = 0; i < _isEndPosFull.Length; i++)
@@ -218,7 +214,7 @@ public class CustomerManger : MonoBehaviour
         }
         return true;
     }
-    
+
     private void CustomerLeave(Transform customer)
     {
         for (int i = 0; i < _customerEndPos.Length; i++)

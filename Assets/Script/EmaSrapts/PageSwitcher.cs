@@ -10,6 +10,7 @@ public class ObjectSwitcher : MonoBehaviour, IInteract
     [SerializeField] private float _switchDelay = 1.0f;
     [SerializeField] private Transform _cameraOnInteraction;
     [SerializeField] private Transform _originalCameraPos;
+    [SerializeField] private AudioData _audioData;
 
     private int _currentIndex = 0;
     private bool _canSwitch = true;
@@ -52,10 +53,12 @@ public class ObjectSwitcher : MonoBehaviour, IInteract
             if (Input.GetKeyDown(KeyCode.D))
             {
                 SwitchToNextObject();
+                AudioManager.instance.PlaySFX(_audioData.PageChange, transform);
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
                 SwitchToPreviousObject();
+                AudioManager.instance.PlaySFX(_audioData.PageChange, transform);
             }
         }
     }

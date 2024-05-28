@@ -15,6 +15,7 @@ public class Beer : MonoBehaviour, IInteract, IAdd
     [SerializeField] private int _spillAmount = 10;
     private bool _isUsing;
     private float _timer;
+    [SerializeField] private AudioData _audioData;
     
     private void Awake()
     {
@@ -27,6 +28,8 @@ public class Beer : MonoBehaviour, IInteract, IAdd
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                if(_timer == 0)
+                    AudioManager.instance.PlaySFX(_audioData.BeerPouring, transform);
                 _animator.SetBool("Spill", true);
                 _timer += Time.deltaTime;
                 if(_timer >= _holdingTime)

@@ -13,12 +13,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpVelocity;
     private Rigidbody _rb;
     private bool _isMovementUnlocked = true;
+    private float timer = 0;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
     }
-    
+
+    private void Start()
+    {
+        _walkSound = _audioData.WalkSound;
+    }
+
     private void OnEnable()
     {
         EventManager.OnBeerInteraction += CanMove;
@@ -49,6 +55,12 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = InputManager.actionMap.PlayerInput.Movement.ReadValue<Vector2>();
         Vector3 direction = (transform.right * movement.x + transform.forward * movement.y).normalized;
         _rb.velocity = new Vector3(direction.x * _moveVelocity, _rb.velocity.y, direction.z * _moveVelocity);
+        if (_rb.velocity.magnitude > 0.1f && timer >= 0.5f)
+        {
+            AudioManager.instance.PlaySFX(_walkSound, transform);
+            timer = 0;
+        }
+        timer += Time.deltaTime;
     }
     private void CanMove(bool cantMove)
     {

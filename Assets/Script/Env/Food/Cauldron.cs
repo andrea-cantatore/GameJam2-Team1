@@ -13,6 +13,7 @@ public class Cauldron : MonoBehaviour, IInteract, ICauldron
     [SerializeField] private Animator _animator;
     private Transform _popUpPos;
     private bool _isCooking = false;
+    [SerializeField] private AudioData _audioData;
 
     private void Awake()
     {
@@ -82,6 +83,7 @@ public class Cauldron : MonoBehaviour, IInteract, ICauldron
         {
             if (_tags[i] == tag && !_isInside[i])
             {
+                AudioManager.instance.PlaySFX(_audioData.DropCauldron, transform);
                 _isInside[i] = true;
                 _foods[i].SetActive(true);
                 _timer = 0f;

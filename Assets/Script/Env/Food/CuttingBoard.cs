@@ -17,6 +17,8 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     [SerializeField] private Animator _animator; // ByEma
     [SerializeField] private float _cutDelay = 1f; // ByEma
     private bool _canCut = true; // ByEma
+    
+    [SerializeField] private AudioData _audioData;
 
     private void Awake()
     {
@@ -77,7 +79,7 @@ public class CuttingBoard : MonoBehaviour, IInteract, ICutting
     {
         _canCut = false;
         _animator.SetTrigger("isCutting");
-
+        AudioManager.instance.PlaySFX(_audioData.Cutting, transform);
         _cuttingCounter++;
         if (_requiredCutting <= _cuttingCounter)
         {

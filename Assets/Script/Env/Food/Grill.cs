@@ -16,6 +16,8 @@ public class Grill : MonoBehaviour, IInteract, IGrill
 
     [SerializeField] private Animator _animator; // ByEma
 
+    [SerializeField] private AudioData _audioData;
+    
     private void Awake()
     {
         _popUpPos = transform.GetChild(0);
@@ -38,6 +40,7 @@ public class Grill : MonoBehaviour, IInteract, IGrill
                     _grillingFood = obj;
                     obj.SetActive(true);
                     _isGrilling = true;
+                    AudioManager.instance.PlaySFX(_audioData.FoodOnGrill, transform);
                     if (_currentMaterial == _steakMaterials[1]
                         || _currentMaterial == _potatoMaterials[1]
                         || _currentMaterial == _chickenMaterials[1]
